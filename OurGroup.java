@@ -9,6 +9,7 @@ public class OurGroup {
         groupMembers.add("Kantaphong Pititnorasate"); //หัวหน้ากลุ่ม
         groupMembers.add("Timakarn Akepatchimsiri");
         groupMembers.add("Thidarat Piajan");
+        groupMembers.add("Bussakorn Palatorn");
     }
     public Vector<String> getGroupMembers () {
         return groupMembers;
