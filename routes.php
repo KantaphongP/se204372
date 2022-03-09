@@ -1,5 +1,5 @@
 <?php
-$controllers = array('pages'=>['home','error']) ; 
+$controllers = array('pages'=>['home','error'],'company'=>['index','newCompany','addCompany','search','updateForm','update','deleteConfirm','delete']) ; 
 function call($controller ,$action){
     //echo "routes to ".$controller."-".$action."<br>" ;
     require_once("controllers/".$controller."_controller.php");
@@ -7,18 +7,10 @@ function call($controller ,$action){
     {
         case "pages" : $controller = new PagesController() ; break ;
 
-        case "workcycle" :  require_once("./models/workcycle.php"); 
-                            require_once("./models/fieldhospital.php"); 
-                            $controller = new WorkCycleController(); break ;
+        case "company" :  require_once("./models/company.php"); 
+                            $controller = new CompanyController(); break ;
         
-        case "workcycledetail" :  require_once("./models/wddoctor.php"); 
-                                  require_once("./models/wdstaff.php");
-                                  require_once("./models/workcycle.php"); 
-                                  require_once("./models/workcycledetail.php");
-                                  require_once("./models/doctor.php");
-                                  require_once("./models/staff.php");
-                                  require_once("./models/position.php"); 
-                                  $controller = new WorkCycleDetailController(); break ;
+       
 
     }
     $controller->{$action}(); 
