@@ -13,6 +13,7 @@ if(isset($_GET['controller'])&&isset($_GET['action']))
     <body>
         <?php echo "controller= ".$controller.",action=".$action;?>
         <br>[<a href="?controller=pages&action=home">home</a>]
+        [<a href="?controller=login&action=signin">เข้าสู่ระบบ</a>]
         [<a href="?controller=company&action=index">Company</a>]
       <br>
          
