@@ -7,7 +7,6 @@ function call($controller ,$action){
     {
         case "pages" : $controller = new PagesController() ; break ;
 
-        case "company" :  require_once("./models/company.php"); 
                             $controller = new CompanyController(); break ;
         
         case "login" : require_once("./models/student.php");

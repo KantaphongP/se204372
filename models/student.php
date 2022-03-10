@@ -16,7 +16,25 @@
         $this->email=$email;
         $this->phone_s=$phone_s;
         
+    } 
+    public static function sign($id_s,$password)
+    {
+        require("connection_connect.php");
+        $sql="SELECT * FROM company WHERE id_c='$id_c'";
+        $result=$conn->query($sql);
+        $my_row=$result->fetch_assoc();
+        $id_c = $my_row['id_c'];
+        $name_c = $my_row['name_c'];
+        $address_c= $my_row['address_c'];
+        $phone_c=$my_row['phone_c'];
+        $quantity = $my_row['quantity'];
+        $income=$my_row['income'];
+        require("connection_close.php");
+        return new Company($id_c,$name_c,$address_c,$phone_c,$quantity,$income);
+
+
     }
+
     public static function getAll()
     {
         $studentList=[];
@@ -54,7 +72,9 @@
         require("connection_close.php");
         return new Company($id_c,$name_c,$address_c,$phone_c,$quantity,$income);
 
+
     }
+   
     public static function search($key)
     {
         $companyList=[];
