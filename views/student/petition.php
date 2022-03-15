@@ -1,5 +1,6 @@
 
 <form method="get" action="">
+<label>วันที่ <input type="date" name="date_d"/></label><br>
 <label>ชื่อ <input type="text" name="name_s" 
     value="<?php echo $student->name_s;?>"/></label><br>
 <label>รหัสนิสิต <input type="text" name="id_s"
