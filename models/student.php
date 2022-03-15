@@ -43,8 +43,8 @@
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
-            $id_s = $my_row['id_t'];
-            $name_s = $my_row['name_t'];
+            $id_s = $my_row['id_s'];
+            $name_s = $my_row['name_s'];
             $lastname_s=$my_row['lastname_s'];
             $password=$my_row['password'];
             $email=$my_row['email'];
