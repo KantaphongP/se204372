@@ -21,6 +21,17 @@
     }
     public function petition()
     {
+        $petition_List=Petition::getAll();
+        require_once("./views/lecturer/petition.php");
+    }
+    public function search()
+    {
+        $key=$_GET['key'];
+        $petition_List=Petition::search($key);
+        require_once('./views/lecturer/petition.php');
+    }
+    public function detailpet()
+    {
         
     }
    

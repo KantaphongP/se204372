@@ -6,17 +6,15 @@
         <button type="submit" name="action" value="search">
 search</button>
 </form>
-<tr><td>name_c</td><td>quantity</td><td>income</td><td>update</td><td>delete</td></tr>
-<?php foreach($company_List as $company)
+<tr><td>วันที่ส่ง</td><td>ชื่อ</td><td>คำร้อง</td><td>การอนุมัติ</td></tr>
+<?php foreach($petition_List as $petition)
 {
-        echo "<tr><td>$company->name_c</td>
-        <td>$company->quantity</td>
-        <td>$company->income</td>
+        echo "<tr><td>$petition->date_d</td>
+        <td>$petition->name_s</td>
+       
        <td>
-        <a href=?controller=company&action=updateForm&id_c=$company->id_c>update</a>
-        </td><td>
-        <a href=?controller=company&action=deleteConfirm&id_c=$company->id_c>delete</a>
-        </td></tr>";
+        <a href=?controller=lecturer&action=detailpet&id_p=$petition->id_p>update</a>
+        </td> <td>$petition->status_approve</td></tr>";
 }
 echo "</table>";
 ?>
