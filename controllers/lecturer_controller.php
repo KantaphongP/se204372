@@ -46,7 +46,7 @@
     public function no()
     {
         $id_p=$_GET['id_p'];
-        Petition::update($id_p);
+        Petition::update2($id_p);
         LecturerController::petition();
     }
    
