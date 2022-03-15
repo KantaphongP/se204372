@@ -17,8 +17,12 @@
        else
        {
         $student=Student::get($id_s);
-        require_once("./views/student/petition.php");
+        require_once("./views/student/welcome.php");
        }
+    }
+    public function petition()
+    {
+        
     }
    
 

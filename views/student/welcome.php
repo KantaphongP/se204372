@@ -1,0 +1,1 @@
+<br>ใบยื่นคำขอฝึกงาน <a href=?controller=company&action=newCompany> click</a><br>
