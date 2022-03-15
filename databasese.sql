@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 15, 2022 at 07:52 PM
+-- Generation Time: Mar 15, 2022 at 08:01 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -73,7 +73,7 @@ CREATE TABLE `internship_record` (
 --
 
 CREATE TABLE `lecturer` (
-  `id_l` int(11) NOT NULL,
+  `id_l` varchar(11) NOT NULL,
   `name_l` varchar(50) NOT NULL,
   `lastname_l` varchar(50) NOT NULL,
   `passwords` varchar(11) NOT NULL
@@ -84,7 +84,7 @@ CREATE TABLE `lecturer` (
 --
 
 INSERT INTO `lecturer` (`id_l`, `name_l`, `lastname_l`, `passwords`) VALUES
-(0, 'อนุมัติ', 'อนุมัติ', 'jjjjj');
+('jjjjj', 'อนุมัติ', 'อนุมัติ', 'jjjjj');
 
 -- --------------------------------------------------------
 
@@ -96,7 +96,6 @@ CREATE TABLE `petition` (
   `id_p` int(11) NOT NULL,
   `date_d` date NOT NULL,
   `id_t` int(11) NOT NULL,
-  `id_l` int(11) DEFAULT NULL,
   `id_c` int(11) NOT NULL,
   `id_s` varchar(11) NOT NULL,
   `status_ap_company` varchar(12) NOT NULL,
@@ -116,8 +115,8 @@ CREATE TABLE `petition` (
 -- Dumping data for table `petition`
 --
 
-INSERT INTO `petition` (`id_p`, `date_d`, `id_t`, `id_l`, `id_c`, `id_s`, `status_ap_company`, `position_s`, `name_getbook`, `position_g`, `name_hr`, `phone_hr`, `email_hr`, `apartment`, `date_start`, `date_end`, `status_approve`) VALUES
-(3, '2022-03-02', 1, NULL, 1, 'b6220503555', 'รอดำเนินการ', 'เล่นเกม', 'มี่', 'หัวหน้าหมู', 'มี่', '7777777', 'thidarat.pi@ku.th', 'มี', '2022-03-01', '2022-03-01', 'ไม่อนุมัติ');
+INSERT INTO `petition` (`id_p`, `date_d`, `id_t`, `id_c`, `id_s`, `status_ap_company`, `position_s`, `name_getbook`, `position_g`, `name_hr`, `phone_hr`, `email_hr`, `apartment`, `date_start`, `date_end`, `status_approve`) VALUES
+(3, '2022-03-02', 1, 1, 'b6220503555', 'รอดำเนินการ', 'เล่นเกม', 'มี่', 'หัวหน้าหมู', 'มี่', '7777777', 'thidarat.pi@ku.th', 'มี', '2022-03-01', '2022-03-01', 'อนุมัติ');
 
 -- --------------------------------------------------------
 
@@ -196,7 +195,6 @@ ALTER TABLE `lecturer`
 ALTER TABLE `petition`
   ADD PRIMARY KEY (`id_p`),
   ADD KEY `id_t` (`id_t`),
-  ADD KEY `id_l` (`id_l`),
   ADD KEY `id_c` (`id_c`),
   ADD KEY `id_s` (`id_s`);
 
@@ -256,7 +254,6 @@ ALTER TABLE `internship_record`
 ALTER TABLE `petition`
   ADD CONSTRAINT `petition_ibfk_1` FOREIGN KEY (`id_c`) REFERENCES `company` (`id_c`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `petition_ibfk_3` FOREIGN KEY (`id_t`) REFERENCES `type` (`id_t`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `petition_ibfk_4` FOREIGN KEY (`id_l`) REFERENCES `lecturer` (`id_l`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `petition_ibfk_5` FOREIGN KEY (`id_s`) REFERENCES `student` (`id_s`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
