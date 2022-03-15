@@ -168,6 +168,39 @@
      }
     
 
+     public static function getInf($id_s)
+    {
+        require("connection_connect.php");
+        $sql="SELECT * FROM petition natural join student WHERE id_s='$id_s'";
+        $result=$conn->query($sql);
+        $my_row=$result->fetch_assoc();
+        $id_p=$my_row['id_p'];
+        $id_t=$my_row['id_t'];
+        $id_c=$my_row['id_c'];
+        //$name_c=$my_row['name_c'];
+        //$income=$my_row['income'];
+        //$address_c=$my_row['address_c'];
+        $id_s=$my_row['id_s'];
+        $name_s=$my_row['name_s'];
+        $lastname_s=$my_row['lastname_s'];
+        $phone_s=$my_row['phone_s'];
+        $email_s=$my_row['email'];
+        //$date_d=$my_row['date_d'];
+        $status_ap_company=$my_row['status_ap_company'];
+        $position_s=$my_row['position_s'];
+        $name_getbook=$my_row['name_getbook'];
+        $position_g=$my_row['position_g'];
+        $name_hr=$my_row['name_hr'];
+        $phone_hr=$my_row['phone_hr'];
+        $email_hr=$my_row['email_hr'];
+        $apartment=$my_row['apartment'];
+        $date_start=$my_row['date_start'];
+        $date_end=$my_row['date_end'];
+        $status_approve=$my_row['status_approve']; 
+        require("connection_close.php");
+        return new Petition($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d);
+
+    }
 
 
 }
