@@ -21,10 +21,10 @@
     public  $address_c;
     public  $phone_s;
     public $email_s;
+    public $lastname_s;
 
 
-
-    public function __construct($name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d)
+    public function __construct($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d)
     {
         $this->id_p = $id_p;
         $this->id_t = $id_t;
@@ -48,6 +48,7 @@
         $this->address_c=$address_c;
         $this->email_s=$email_s;
         $this->phone_s=$phone_s;
+        $this->lastname_s=$lastname_s;
        
      
     }
@@ -66,6 +67,7 @@
         $address_c=$my_row['address_c'];
         $id_s=$my_row['id_s'];
         $name_s=$my_row['name_s'];
+        $lastname_s=$my_row['lastname_s'];
         $phone_s=$my_row['phone_s'];
         $email_s=$my_row['email'];
         $date_d=$my_row['date_d'];
@@ -81,7 +83,7 @@
         $date_end=$my_row['date_end'];
         $status_approve=$my_row['status_approve']; 
         require("connection_close.php");
-        return new Petition($name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d);
+        return new Petition($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d);
 
     }
     public static function getAll()
@@ -100,6 +102,7 @@
             $address_c=$my_row['address_c'];
             $id_s=$my_row['id_s'];
             $name_s=$my_row['name_s'];
+            $lastname_s=$my_row['lastname_s'];
             $phone_s=$my_row['phone_s'];
             $email_s=$my_row['email'];
             $date_d=$my_row['date_d'];
@@ -116,7 +119,7 @@
             $status_approve=$my_row['status_approve']; 
            
           
-            $petitionList[] = new Petition($name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d);
+            $petitionList[] = new Petition($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d);
         }
         require("connection_close.php");
         return $petitionList;
