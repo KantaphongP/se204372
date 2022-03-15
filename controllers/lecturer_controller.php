@@ -19,6 +19,10 @@
         require_once("./views/lecturer/welcome.php");
        }
     }
+    public function petition()
+    {
+        
+    }
    
 
 }
