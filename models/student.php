@@ -2,35 +2,37 @@
      public $id_s;
      public $name_s;
     public $lastname_s;
-    public $password;
+    public $passwords;
      public $email;
     public $phone_s;
     
   
-    public function __construct($id_s,$name_s,$lastname_s,$password,$email,$phone_s)
+    public function __construct($id_s,$name_s,$lastname_s,$passwords,$email,$phone_s)
     {
         $this->id_s = $id_s;
         $this->name_s = $name_s;
         $this->lastname_s = $lastname_s;
-        $this->password = $password;
+        $this->passwords = $passwords;
         $this->email=$email;
         $this->phone_s=$phone_s;
         
     } 
-    public static function sign($id_s,$password)
+    public static function sign($id_s,$passwords)
     {
         require("connection_connect.php");
-        $sql="SELECT * FROM company WHERE id_c='$id_c'";
+        $sql="SELECT * FROM student WHERE id_s='$id_s' AND passwords ='$passwords'";
         $result=$conn->query($sql);
         $my_row=$result->fetch_assoc();
-        $id_c = $my_row['id_c'];
-        $name_c = $my_row['name_c'];
-        $address_c= $my_row['address_c'];
-        $phone_c=$my_row['phone_c'];
-        $quantity = $my_row['quantity'];
-        $income=$my_row['income'];
+        if(is_null($my_row['id_s']))
+        {
+            $y=1;
+        }
+        else
+        {
+            $y=2;
+        }
         require("connection_close.php");
-        return new Company($id_c,$name_c,$address_c,$phone_c,$quantity,$income);
+        return $y;
 
 
     }
@@ -46,7 +48,7 @@
             $id_s = $my_row['id_s'];
             $name_s = $my_row['name_s'];
             $lastname_s=$my_row['lastname_s'];
-            $password=$my_row['password'];
+            $password=$my_row['passwords'];
             $email=$my_row['email'];
             $phone_s=$my_row['phone_s'];
             $studentList[] = new Student($id_s,$name_s,$lastname_s,$password,$email,$phone_s);
@@ -57,20 +59,20 @@
 
     }
     
-    public static function get($id_p)
+    public static function get($id_s)
     {
         require("connection_connect.php");
-        $sql="SELECT * FROM company WHERE id_c='$id_c'";
+        $sql="SELECT * FROM student WHERE id_s='$id_s' ";
         $result=$conn->query($sql);
         $my_row=$result->fetch_assoc();
-        $id_c = $my_row['id_c'];
-        $name_c = $my_row['name_c'];
-        $address_c= $my_row['address_c'];
-        $phone_c=$my_row['phone_c'];
-        $quantity = $my_row['quantity'];
-        $income=$my_row['income'];
+        $id_s = $my_row['id_s'];
+        $name_s = $my_row['name_s'];
+        $lastname_s=$my_row['lastname_s'];
+        $password=$my_row['passwords'];
+        $email=$my_row['email'];
+        $phone_s=$my_row['phone_s'];
         require("connection_close.php");
-        return new Company($id_c,$name_c,$address_c,$phone_c,$quantity,$income);
+        return new Student($id_s,$name_s,$lastname_s,$password,$email,$phone_s);
 
 
     }
