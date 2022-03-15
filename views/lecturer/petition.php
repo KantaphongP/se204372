@@ -13,7 +13,7 @@ search</button>
         <td>$petition->name_s</td>
        
        <td>
-        <a href=?controller=lecturer&action=detailpet&id_p=$petition->id_p>update</a>
+        <a href=?controller=lecturer&action=detailpet&id_p=$petition->id_p>see</a>
         </td> <td>$petition->status_approve</td></tr>";
 }
 echo "</table>";

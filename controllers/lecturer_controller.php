@@ -32,7 +32,10 @@
     }
     public function detailpet()
     {
-        
+        $id_p=$_GET['id_p'];
+        echo $id_p;
+        $petition=Petition::get($id_p);
+        require_once('./views/lecturer/detail.php');
     }
    
 

@@ -16,11 +16,15 @@
     public $date_start;
     public $date_end;
     public $status_approve;
-  
+    public  $name_c;
+    public $income;
+    public  $address_c;
+    public  $phone_s;
+    public $email_s;
 
 
 
-    public function __construct($id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d)
+    public function __construct($name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d)
     {
         $this->id_p = $id_p;
         $this->id_t = $id_t;
@@ -39,38 +43,65 @@
         $this->date_start=$date_start;
         $this->date_end=$date_end;
         $this->status_approve=$status_approve;
+        $this->name_c=$name_c;
+        $this->income=$income;
+        $this->address_c=$address_c;
+        $this->email_s=$email_s;
+        $this->phone_s=$phone_s;
+       
      
     }
     
     public static function get($id_p)
     {
         require("connection_connect.php");
-        $sql="SELECT * FROM company WHERE id_c='$id_c'";
+        $sql="SELECT * FROM petition natural join student natural join company WHERE id_p='$id_p'";
         $result=$conn->query($sql);
         $my_row=$result->fetch_assoc();
-        $id_c = $my_row['id_c'];
-        $name_c = $my_row['name_c'];
-        $address_c= $my_row['address_c'];
-        $phone_c=$my_row['phone_c'];
-        $quantity = $my_row['quantity'];
+        $id_p=$my_row['id_p'];
+        $id_t=$my_row['id_t'];
+        $id_c=$my_row['id_c'];
+        $name_c=$my_row['name_c'];
         $income=$my_row['income'];
+        $address_c=$my_row['address_c'];
+        $id_s=$my_row['id_s'];
+        $name_s=$my_row['name_s'];
+        $phone_s=$my_row['phone_s'];
+        $email_s=$my_row['email'];
+        $date_d=$my_row['date_d'];
+        $status_ap_company=$my_row['status_ap_company'];
+        $position_s=$my_row['position_s'];
+        $name_getbook=$my_row['name_getbook'];
+        $position_g=$my_row['position_g'];
+        $name_hr=$my_row['name_hr'];
+        $phone_hr=$my_row['phone_hr'];
+        $email_hr=$my_row['email_hr'];
+        $apartment=$my_row['apartment'];
+        $date_start=$my_row['date_start'];
+        $date_end=$my_row['date_end'];
+        $status_approve=$my_row['status_approve']; 
         require("connection_close.php");
-        return new Company($id_c,$name_c,$address_c,$phone_c,$quantity,$income);
+        return new Petition($name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d);
 
     }
     public static function getAll()
     {
         $petitionList=[];
         require("connection_connect.php");
-        $sql="SELECT * FROM petition natural join student ";
+        $sql="SELECT * FROM petition natural join student natural join company ";
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
             $id_p=$my_row['id_p'];
             $id_t=$my_row['id_t'];
             $id_c=$my_row['id_c'];
+            $name_c=$my_row['name_c'];
+            $income=$my_row['income'];
+            $address_c=$my_row['address_c'];
             $id_s=$my_row['id_s'];
             $name_s=$my_row['name_s'];
+            $phone_s=$my_row['phone_s'];
+            $email_s=$my_row['email'];
             $date_d=$my_row['date_d'];
             $status_ap_company=$my_row['status_ap_company'];
             $position_s=$my_row['position_s'];
@@ -85,7 +116,7 @@
             $status_approve=$my_row['status_approve']; 
            
           
-            $petitionList[] = new Petition($id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d);
+            $petitionList[] = new Petition($name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d);
         }
         require("connection_close.php");
         return $petitionList;
