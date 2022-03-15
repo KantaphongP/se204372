@@ -37,6 +37,18 @@
         $petition=Petition::get($id_p);
         require_once('./views/lecturer/detail.php');
     }
+    public function approve()
+    {
+        $id_p=$_GET['id_p'];
+        Petition::update($id_p);
+        LecturerController::petition();
+    }
+    public function no()
+    {
+        $id_p=$_GET['id_p'];
+        Petition::update($id_p);
+        LecturerController::petition();
+    }
    
 
 }

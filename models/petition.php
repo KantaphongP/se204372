@@ -147,35 +147,26 @@
 
     }
    
-     public static function Add($id_t,$id_c,$id_s,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$date_d)
-     { 
-        
-        require("connection_connect.php");
-        $sql = "INSERT INTO `petition`( `date_d`,`id_t`, `id_c`, `id_s`, `status_ap_company`, `position_s`, `name_getbook`, `position_g`, `name_hr`, `phone_hr`, `email_hr`, `apartment`, `date_start`, `date_end`, `status_approve`)
-         VALUES ('$date_d',$id_t,$id_c,'$id_s','รอดำเนินการ','$position_s','$name_getbook','$position_g','$name_hr','$phone_hr','$email_hr','$apartment','$date_start','$date_end','รอดำเนินการ');";
-        $result = $conn->query($sql);
-  
-        require("connection_close.php");
-        return  ;
-     }
-    
-     public static function update($id_c,$name_c,$address_c,$phone_c,$quantity,$income)
+     
+     public static function update($id_p)
      {
         require("connection_connect.php");
-        $sql="UPDATE `company` SET `id_c`=$id_c,`name_c`='$name_c',`address_c`='$address_c',`phone_c`='$phone_c',`quantity`=$quantity,`income`=$income WHERE id_c=$id_c";
+        $sql="UPDATE `petition` SET `status_approve`='อนุมัติ' WHERE id_p=$id_p;";
         $result=$conn->query($sql);
         require("connection_close.php");
         return ;
         
      }
-     public static function delete($id_c)
+     public static function update2($id_p)
      {
-         require_once("connection_connect.php");
-         $sql="DELETE FROM `company` WHERE id_c=$id_c";
-         $result=$conn->query($sql);
-         require("connection_close.php");
-         return ;
+        require("connection_connect.php");
+        $sql="UPDATE `petition` SET `status_approve`='ไม่อนุมัติ' WHERE id_p=$id_p;";
+        $result=$conn->query($sql);
+        require("connection_close.php");
+        return ;
+        
      }
+    
 
 
 

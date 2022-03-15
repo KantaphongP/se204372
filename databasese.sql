@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 15, 2022 at 03:37 PM
+-- Generation Time: Mar 15, 2022 at 07:52 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -75,8 +75,16 @@ CREATE TABLE `internship_record` (
 CREATE TABLE `lecturer` (
   `id_l` int(11) NOT NULL,
   `name_l` varchar(50) NOT NULL,
-  `lastname_l` varchar(50) NOT NULL
+  `lastname_l` varchar(50) NOT NULL,
+  `passwords` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `lecturer`
+--
+
+INSERT INTO `lecturer` (`id_l`, `name_l`, `lastname_l`, `passwords`) VALUES
+(0, 'อนุมัติ', 'อนุมัติ', 'jjjjj');
 
 -- --------------------------------------------------------
 
@@ -86,11 +94,12 @@ CREATE TABLE `lecturer` (
 
 CREATE TABLE `petition` (
   `id_p` int(11) NOT NULL,
+  `date_d` date NOT NULL,
   `id_t` int(11) NOT NULL,
   `id_l` int(11) DEFAULT NULL,
-  `id_c` int(11) DEFAULT NULL,
+  `id_c` int(11) NOT NULL,
   `id_s` varchar(11) NOT NULL,
-  `status_ap_company` varchar(10) NOT NULL,
+  `status_ap_company` varchar(12) NOT NULL,
   `position_s` varchar(50) NOT NULL,
   `name_getbook` varchar(50) NOT NULL,
   `position_g` varchar(50) NOT NULL,
@@ -100,15 +109,15 @@ CREATE TABLE `petition` (
   `apartment` varchar(5) NOT NULL,
   `date_start` date NOT NULL,
   `date_end` date NOT NULL,
-  `status_approve` varchar(10) NOT NULL
+  `status_approve` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `petition`
 --
 
-INSERT INTO `petition` (`id_p`, `id_t`, `id_l`, `id_c`, `id_s`, `status_ap_company`, `position_s`, `name_getbook`, `position_g`, `name_hr`, `phone_hr`, `email_hr`, `apartment`, `date_start`, `date_end`, `status_approve`) VALUES
-(1, 1, NULL, NULL, 'b6220503555', 'รอดำเนินกา', 'proplayer', 'อนุชัย คงจะทน', 'ผู้อำนวยความสะดวก', 'กานตะนา คำคง', '99999', 'katama@g.com', 'ไม่มี', '2022-03-03', '2022-05-05', 'รอดำเนินกา');
+INSERT INTO `petition` (`id_p`, `date_d`, `id_t`, `id_l`, `id_c`, `id_s`, `status_ap_company`, `position_s`, `name_getbook`, `position_g`, `name_hr`, `phone_hr`, `email_hr`, `apartment`, `date_start`, `date_end`, `status_approve`) VALUES
+(3, '2022-03-02', 1, NULL, 1, 'b6220503555', 'รอดำเนินการ', 'เล่นเกม', 'มี่', 'หัวหน้าหมู', 'มี่', '7777777', 'thidarat.pi@ku.th', 'มี', '2022-03-01', '2022-03-01', 'ไม่อนุมัติ');
 
 -- --------------------------------------------------------
 
@@ -214,16 +223,10 @@ ALTER TABLE `company`
   MODIFY `id_c` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `lecturer`
---
-ALTER TABLE `lecturer`
-  MODIFY `id_l` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `petition`
 --
 ALTER TABLE `petition`
-  MODIFY `id_p` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_p` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `type`
