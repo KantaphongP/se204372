@@ -77,12 +77,12 @@
 
     }
    
-     public static function Add($id_t,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve)
+     public static function Add($id_t,$id_c,$id_s,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end)
      { 
         
         require("connection_connect.php");
-        $sql = "INSERT INTO `petition`( `id_t`, `id_s`, `status_ap_company`, `position_s`, `name_getbook`, `position_g`, `name_hr`, `phone_hr`, `email_hr`, `apartment`, `date_start`, `date_end`, `status_approve`)
-         VALUES ($id_t,'$id_s','$status_ap_company','$position_s','$name_getbook','$position_g','$name_hr','$phone_hr','$email_hr','$apartment','$date_start','$date_end','$status_approve');";
+        $sql = "INSERT INTO `petition`( `id_t`, `id_c`, `id_s`, `status_ap_company`, `position_s`, `name_getbook`, `position_g`, `name_hr`, `phone_hr`, `email_hr`, `apartment`, `date_start`, `date_end`, `status_approve`)
+         VALUES ($id_t,$id_c,'$id_s','รอดำเนินการ','$position_s','$name_getbook','$position_g','$name_hr','$phone_hr','$email_hr','$apartment','$date_start','$date_end','รอดำเนินการ');";
         $result = $conn->query($sql);
   
         require("connection_close.php");

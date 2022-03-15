@@ -1,5 +1,5 @@
 <?php
-$controllers = array('pages'=>['home','error'],'company'=>['index','newCompany','addCompany','search','updateForm','update','deleteConfirm','delete'],'login'=>['signin','check','petition']) ; 
+$controllers = array('pages'=>['home','error'],'company'=>['index','newCompany','addCompany','search','updateForm','update','deleteConfirm','delete'],'login'=>['signin','check','petition','index','addpetition']) ; 
 function call($controller ,$action){
     //echo "routes to ".$controller."-".$action."<br>" ;
     require_once("controllers/".$controller."_controller.php");
@@ -12,6 +12,8 @@ function call($controller ,$action){
         
         case "login" : require_once("./models/student.php");
                         require_once("./models/petition.php");
+                        require_once("./models/company.php");
+                        require_once("./models/type.php");
                              $controller = new SigninController(); break ;
         
 
