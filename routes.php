@@ -1,5 +1,5 @@
 <?php
-$controllers = array('pages'=>['home','error'],'company'=>['index','newCompany','addCompany','search','updateForm','update','deleteConfirm','delete'],'login'=>['signin','check','petition','index','addpetition'],'lecturer'=>['signin','check']) ; 
+$controllers = array('pages'=>['home','error'],'company'=>['index','newCompany','addCompany','search','updateForm','update','deleteConfirm','delete'],'login'=>['signin','check','petition','index','addpetition'],'lecturer'=>['signin','check'],'status_petition'=>['statusPetition']) ; 
 function call($controller ,$action){
     //echo "routes to ".$controller."-".$action."<br>" ;
     require_once("controllers/".$controller."_controller.php");
@@ -17,6 +17,11 @@ function call($controller ,$action){
                              $controller = new SigninController(); break ;
         case "lecturer":require_once("./models/lecturer.php");
                         $controller = new LecturerController(); break ;
+
+        case "status_petition": require_once("./models/student.php");
+                                require_once("./models/petition.php");
+                                require_once("./models/company.php");
+                                $controller = new StatusPetitionController(); break;
 
        
 
