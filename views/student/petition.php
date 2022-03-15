@@ -1,6 +1,6 @@
 
 <form method="get" action="">
-<label> รหัสรายละเอียด <input type="text" name="id_doc"/> </label><br>
+<label> ชื่อ <input type="text" name="id_s"/> </label><br>
 <label> จำนวนสีสกรีน <input type="number" name="print_color"/> </label><br>
 <label> จำนวนที่สั่ง <input type="number" name="amount_order_cus"/> </label><br>
 <label> รหัสออเดอร์ <select name="id_order_cus">

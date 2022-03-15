@@ -24,6 +24,8 @@
     {
         $id_s=$_GET['id_s'];
         echo $id_s;
+        $student=Student::get($id_s);
+        require_once("./views/student/petition.php");
     }
    
 
