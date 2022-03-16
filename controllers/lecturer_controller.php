@@ -1,7 +1,7 @@
 <?php class LecturerController{
     public function signin()
     {
-        require_once("./views/lecturer/signin.php");
+        require_once("./views/sign_in/signin.php");
     }
     public function check()
     {
@@ -11,7 +11,7 @@
        echo $check;
        if($check ==1)
        {
-        require_once("./views/lecturer/signin.php");
+        require_once("./views/sign_in/signin.php");
        }
        else
        {
