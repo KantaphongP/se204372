@@ -1,5 +1,5 @@
 <?php 
-    echo "สถานะการยื่นคำร้องขอฝึกงาน : $inf_pet->status_approve <br>
+    echo "<h2>สถานะการยื่นคำร้องขอฝึกงาน : $inf_pet->status_approve </h2>
     <h3>ข้อมูลนักศึกษา</h3>
     ชื่อ : $student_sp->name_s $student_sp->lastname_s รหัสนิสิต : $student_sp->id_s <br>
     เบอร์โทรศัพท์ : $student_sp->phone_s<br>
