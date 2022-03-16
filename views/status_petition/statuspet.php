@@ -10,7 +10,7 @@
     echo "ระยะการฝึกงาน : $inf_pet->date_start ถึง $inf_pet->date_end <br>";
     echo "ชื่อสถานประกอบการ : $inf_pet->name_c<br>";
     echo "สถานที่ตั้ง : $inf_pet->address_c<br>";
-    echo "จำนวนค่าตอบแทน : $inf_pet->income<br>";
+    echo "จำนวนค่าตอบแทน : $inf_pet->income บาท/วัน<br>";
     echo "ชื่อผู้ประสานงาน : $inf_pet->name_hr<br>";
     echo "เบอร์โทรศัพท์ : $inf_pet->phone_hr<br>";
     echo "ที่พัก : $inf_pet->apartment<br>";
