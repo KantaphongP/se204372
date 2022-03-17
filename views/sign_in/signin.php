@@ -1,15 +1,5 @@
 
 <style>
-  
-  @font-face {
-    font-family: 'DB Ozone X';
-    src: url('se/DB-Ozone-X-Med-v32.eot');
-    src: url('se/DB-Ozone-X-Med-v32.eot?#iefix') format('embedded-opentype'),
-         url('se/DB-Ozone-X-Med-v32.woff2') format('woff2'),
-         url('se/DB-Ozone-X-Med-v32.woff') format('woff'),
-         url('se/DB-Ozone-X-Med-v32.ttf')  format('truetype'),
-         url('se/DB-Ozone-X-Med-v32.svg#DB Ozone X') format('svg');
-}
 
 {
     box-sizing:border-box;
@@ -47,8 +37,7 @@ body {
     margin:0;
     height: 100%;
     background:#FFF;
-    font-family: 'DB Ozone X' !important;
-    font-style:bold;
+    font-family: 'DB Ozone X' , sans-serif !important;
 }
 .form{
     font-family: 'DB Ozone X';
