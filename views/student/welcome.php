@@ -100,24 +100,33 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
+.greet {
+  position : absolute ;
+  width : 100% ;
+  height : 100% ; 
+  top : 30%; 
+  left : 12% ;
+}
 .greet label{
   position : absolute ; 
-  top : 33%; 
-  left : 12% ;
+  top : 0%; 
+  left : 0.8% ;
+  
   font-size: 600%; 
 }
 
 .greet a{
   position : absolute ; 
-  top : 45%; 
-  left : 16.2% ;
+  top : 10%; 
+  left : 4% ;
+  float : center ; 
   font-size: 250%;
 }
 .greet a1{
   position : absolute ; 
-  top : 50%; 
-  left : 15.7% ;
+  top : 14%; 
+  left : 3.5% ;
+  float : center ; 
   font-size: 250%;
 }
 .img{
