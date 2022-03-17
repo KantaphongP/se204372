@@ -19,7 +19,7 @@
     height: 166px;
     font-style: bold;
     font-weight: 700;
-    font-size: 600%;
+    font-size: 300%;
     line-height: 83px;
     text-align: center;
     color: #000000;
@@ -37,11 +37,11 @@ body {
     margin:0;
     height: 100%;
     background:#FFF;
-    font-family: 'DB Ozone X' , sans-serif !important;
+    font-family: 'Noto Sans Thai', sans-serif;
 }
 .form{
-    font-family: 'DB Ozone X';
-    font-size:18px;
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-size:16px;
     font-style:bold;
     border:1px solid #000;
     position:absolute;
@@ -139,6 +139,12 @@ border-radius: 15px;
 </style>
 <!DOCTYPE html>
 <html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet">
+    </head>
 
 <body>
     <div class="title">
