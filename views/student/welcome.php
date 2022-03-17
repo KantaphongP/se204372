@@ -20,13 +20,13 @@ body {
 }
 .user a {
   position: absolute;
-  
+  right : 0%;
   font-size: 40px;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  z-index:1;
+  z-index:2;
 }
 .user label {
   position: fixed;

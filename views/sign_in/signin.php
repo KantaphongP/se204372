@@ -8,11 +8,11 @@
 {
     box-sizing:border-box;
 }
-.img {
-    position : fixed;
-    left:55%;
-    top : 13.5%;
-    z-index:1;    
+.img{
+  position : absolute ; 
+  z-index: 1;
+  top : -5.8%;
+  left : 50% ; 
 }
 .h1 {
     text-align:center;
@@ -29,6 +29,30 @@
     text-align: center;
     color: #000000;
 }*/
+.title {
+    position : absolute ;
+  width : 100% ;
+  height : 100% ; 
+  top : 4%; 
+  left : 22% ;
+  z-index: 2;
+}
+.title h1{
+    position : absolute ; 
+  top : 0%; 
+  left : 1% ;
+  float : center ; 
+  font-size: 500%;
+}
+
+.title h2{
+    position : absolute ; 
+  top : 8%; 
+  left : 0% ;
+  float : center ; 
+  font-size: 500%;   
+}
+
 .body .title {
     text-align:center;
     font-size:50px;
@@ -42,6 +66,7 @@
     height: 10%;
     left: 0px;
     background: #2F4F58;
+    z-index: 2;
 }
 body {
     overflow:hidden;
@@ -66,6 +91,7 @@ body {
     transform:translate(-50%,50%);
     width: 28%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 3;
 }
 .form .tab-header {
     height:50px;
@@ -147,8 +173,10 @@ border-radius: 15px;
     </head>
 
 <body>
-<div>
-    <h1>ระบบจัดการการฝึกงานแบบออนไลน์สำหรับภาควิชาวิศวกรรมคอมพิวเตอร์</h1> 
+    
+<div class ="title">
+    <h1>ระบบจัดการการฝึกงานแบบออนไลน์</h1> 
+    <h2>สำหรับภาควิชาวิศวกรรมคอมพิวเตอร์</h2> 
 </div>
     
     
@@ -187,9 +215,8 @@ border-radius: 15px;
         </div>
     </div>
     <div class="img">  
-    <img src="Collab-pana.png" alt="Intern" style="width: 100%; float: right;">
+    <img src="Collab-pana.png" alt="Intern" width="120%" height="120%">
     </div>
-    
     <div class="footer">
 </body>
 </html>
