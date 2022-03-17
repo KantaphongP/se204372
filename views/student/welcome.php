@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {
-  font-family : "FC Iconic"  ,"FC Iconic", fantasy  ;
+  font-family : "FC Iconic"  ,"FC Iconic", sans-serif ;
 }
 .footer {
     position: fixed;
@@ -100,6 +100,30 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.greet {
+  position : absolute ; 
+  top : 30%; 
+  left : 10% ;
+}
+.greet label{
+  top : 20%;
+  font-size: 600%; 
+}
+
+.greet a{
+  position : absolute ; 
+  top : 90%; 
+  left : 25% ;
+  font-size: 250%;
+}
+.greet a1{
+  position : absolute ; 
+  top : 120%; 
+  left : 25% ;
+  font-size: 250%;
+}
+
+
 </style>
 </head>
 <body>
@@ -107,8 +131,6 @@ body {
 <div class="user">
 <label> <?php echo  "$student->name_s  $student->lastname_s";?> </label>
 <br><br><a href="?controller=login&action=signin">logout</a>
-  
- 
 </div>
 
 <div class="navbar">
@@ -128,6 +150,11 @@ body {
     <a>ตรวจสอบประวัติ </a>
     </div>
   </div> 
+</div>
+<div class ="greet">
+  <label>Welcome <?php echo  "$student->name_s  $student->lastname_s";?></label>
+  <br><a> ระบบจัดการการฝึกงานแบบออนไลน์</a>
+  <br><a1>สำหรับภาควิชาวิศวกรรมคอมพิวเตอร์</a1>
 </div>
 <div class="footer">
 
