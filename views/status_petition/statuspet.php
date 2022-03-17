@@ -150,7 +150,49 @@ body {
   background: #FFD058;
   padding: 20px; 
   width: 100px;
-  height: 20px;  
+  height: 15px;  
+  position: absolute;
+  left: 800px;
+  top: 170px;
+  text-align: center;
+}
+
+#rcorners3 {
+  border-radius: 10px;
+  border: 2px solid #000000;
+  background: #E5E5E5;
+  width: 500px;
+  height: 200px;  
+  position: absolute;
+  left: 80px;
+  top: 370px;
+  text-align: left;
+  
+}
+#rcorners4 {
+  border-radius: 10px;
+  border: 2px solid #000000;
+  background: #E5E5E5;
+  width: 500px;
+  height: 200px;  
+  position: absolute;
+  left: 900px;
+  top: 370px;
+  text-align: left;
+  
+}
+
+#rcorners5 {
+  border-radius: 10px;
+  border: 2px solid #000000;
+  background: #E5E5E5;
+  width: 500px;
+  height: 200px;  
+  position: absolute;
+  left: 80px;
+  top: 650px;
+  text-align: left;
+  
 }
 </style>
 </head>
@@ -189,27 +231,26 @@ body {
   <label>ข่าวสารการฝึกงาน</label>
 </div>-->
 <body>
-<p id="rcorners2"><?php echo $inf_pet->status_approve ?></p>
-</body>
-
-<?php 
-    echo "<h2>สถานะการยื่นคำร้องขอฝึกงาน : $inf_pet->status_approve </h2>
-    <h3>ข้อมูลนักศึกษา</h3>
-    ชื่อ : $student_sp->name_s $student_sp->lastname_s รหัสนิสิต : $student_sp->id_s <br>
+<h1 style="text-align:left;">สถานะการยื่นคำร้องขอฝึกงาน :</h1>
+<h1 id="rcorners2"><?php echo $inf_pet->status_approve ?></h1>
+<p id="rcorners3"><?php echo "ชื่อ : $student_sp->name_s $student_sp->lastname_s รหัสนิสิต : $student_sp->id_s <br>
     เบอร์โทรศัพท์ : $student_sp->phone_s<br>
-    อีเมล : $student_sp->email<br><br>
-    <h3>ข้อมูลการฝึกงาน</h3>
-    ตำแหน่งที่ไปฝึก : $inf_pet->position_s<br>
-    ชื่อผู้ที่จะให้ภาควิชาฯออกหนังสือ : $inf_pet->name_getbook<br>
-    ตำแหน่งของผู้ที่จะให้ภาควิชาฯออกหนังสือ : $inf_pet->position_g<br>
-    ระยะการฝึกงาน : $inf_pet->date_start ถึง $inf_pet->date_end <br>
-    <h3>ข้อมูลสถานประกอบการ</h3>
-    ชื่อสถานประกอบการ : $inf_pet->name_c<br>
+    อีเมล : $student_sp->email" ?></p>
+<p id="rcorners5"><?php echo "ชื่อสถานประกอบการ : $inf_pet->name_c<br>
     สถานที่ตั้ง : $inf_pet->address_c<br>
     จำนวนค่าตอบแทน : $inf_pet->income บาท/วัน<br>
     ชื่อผู้ประสานงาน : $inf_pet->name_hr<br>
     เบอร์โทรศัพท์ : $inf_pet->phone_hr<br>
-    ที่พัก : $inf_pet->apartment<br>";
+    ที่พัก : $inf_pet->apartment" ?></p>
+<p id="rcorners4"><?php echo "ชื่อ : $student_sp->name_s $student_sp->lastname_s รหัสนิสิต : $student_sp->id_s <br>
+    เบอร์โทรศัพท์ : $student_sp->phone_s<br>
+    อีเมล : $student_sp->email" ?></p>
+</body>
+
+<?php 
+    echo "<h3>ข้อมูลนักศึกษา</h3>
+    <h3>ข้อมูลการฝึกงาน</h3>
+    <h3>ข้อมูลสถานประกอบการ</h3>";
     
 
 ?>
