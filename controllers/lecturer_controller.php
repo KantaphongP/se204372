@@ -15,7 +15,7 @@
        }
        else
        {
-        $student=Lecturer::get($id_l);
+        $lecturer=Lecturer::get($id_l);
         require_once("./views/lecturer/welcome.php");
        }
     }
