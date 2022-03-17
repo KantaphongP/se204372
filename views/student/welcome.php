@@ -124,8 +124,9 @@ body {
   position : absolute ; 
   z-index: 1;
   top : 0%;
-  right : 0% ;
+  left : 50% ; 
 }
+
 
 .footer {
     position: fixed;
@@ -177,7 +178,7 @@ body {
   <br><a1>สำหรับภาควิชาวิศวกรรมคอมพิวเตอร์</a1>
 </div>
 <div class="img">
-<img src="Welcome-pana.png" alt="Welcome" width="950px" height="950px">
+<img src="Welcome-pana.png" alt="Welcome" width="100%" height="100%">
 </div>
 <div class="footer">
   <label>ข่าวสารการฝึกงาน</label>
