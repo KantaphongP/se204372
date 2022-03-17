@@ -3,12 +3,12 @@
   
   @font-face {
     font-family: 'DB Ozone X';
-    src: url('fonts/DB-Ozone-X-Med-v32.eot');
-    src: url('fonts/DB-Ozone-X-Med-v32.eot?#iefix') format('embedded-opentype'),
-         url('fonts/DB-Ozone-X-Med-v32.woff2') format('woff2'),
-         url('fonts/DB-Ozone-X-Med-v32.woff') format('woff'),
-         url('fonts/DB-Ozone-X-Med-v32.ttf')  format('truetype'),
-         url('fonts/DB-Ozone-X-Med-v32.svg#DB Ozone X') format('svg');
+    src: url('se/DB-Ozone-X-Med-v32.eot');
+    src: url('se/DB-Ozone-X-Med-v32.eot?#iefix') format('embedded-opentype'),
+         url('se/DB-Ozone-X-Med-v32.woff2') format('woff2'),
+         url('se/DB-Ozone-X-Med-v32.woff') format('woff'),
+         url('se/DB-Ozone-X-Med-v32.ttf')  format('truetype'),
+         url('se/DB-Ozone-X-Med-v32.svg#DB Ozone X') format('svg');
 }
 
 {
@@ -25,16 +25,16 @@
     
 .p {
     font-family: 'DB Ozone X';
-        position: absolute;
-height: 166px;
-font-style: bold;
-font-weight: 700;
-font-size: 600%;
-line-height: 83px;
-text-align: center;
-color: #000000;
-    }
-    .footer {
+    position: absolute;
+    height: 166px;
+    font-style: bold;
+    font-weight: 700;
+    font-size: 600%;
+    line-height: 83px;
+    text-align: center;
+    color: #000000;
+}
+.footer {
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -47,7 +47,7 @@ body {
     margin:0;
     height: 100%;
     background:#FFF;
-    font-family: 'DB Ozone X';
+    font-family: 'DB Ozone X' !important;
     font-style:bold;
 }
 .form{
@@ -130,55 +130,68 @@ border-radius: 15px;
 .form .tab-content > div {
     display:none;
 }
+.title label
+{
+    position : absolute ; 
+    top : 10%; 
+    left : 23% ;
+    font-size: 500%; 
+}
+
+.title a
+{
+    position : absolute ; 
+    top : 20%; 
+    left : 22.5% ;
+    font-size: 500%; 
+}
 
 
 </style>
 <!DOCTYPE html>
 <html>
-    <body>
-        <p>ระบบจัดการการฝึกงานแบบออนไลน์สำหรับภาควิชาวิศวกรรมคอมพิวเตอร์</p>
 
-  <img src="Collab-pana.png" alt="Intern" style="width: 50%; float: right;">
-    
-        
-
-<div class="form">
-    <div class="tab-header">
-        <div class="active">สำหรับนิสิต</div>
-        <div>สำหรับอาจารย์</div>
+<body>
+    <div class="title">
+    <label>ระบบจัดการการฝึกงานแบบออนไลน์</label>
+    <a>สำหรับภาควิชาวิศวกรรมคอมพิวเตอร์</a>
     </div>
-    <div class="tab-content">
-        <div class="tab-body active">
-            <form method="get" action="">
-                <div class="form-element">
-                <label> บัญชีผู้ใช้เครือข่ายนนทรี <input type="text" name="id_s"/> </label></div>
-                <div class="form-element">
-                <label> รหัสผ่าน <input type="text" name="passwords"/> </label></div>
-                <div class="form-element">
-                <input type="hidden" name="controller" value = "login"/></div>
-                <div class="form-element">
-                <button type="submit"name="action" value= "check">เข้าสู่ระบบ </button></div>
+    <img src="Collab-pana.png" alt="Intern" style="width: 50%; float: right;">
+    <div class="form">
+        <div class="tab-header">
+            <div class="active">สำหรับนิสิต</div>
+                <div>สำหรับอาจารย์</div>
+        </div>
+        <div class="tab-content">
+            <div class="tab-body active">
+                <form method="get" action="">
+                    <div class="form-element">
+                        <label> บัญชีผู้ใช้เครือข่ายนนทรี <input type="text" name="id_s"/> </label></div>
+                    <div class="form-element">
+                        <label> รหัสผ่าน <input type="text" name="passwords"/> </label></div>
+                    <div class="form-element">
+                        <input type="hidden" name="controller" value = "login"/></div>
+                    <div class="form-element">
+                        <button type="submit"name="action" value= "check">เข้าสู่ระบบ </button></div>
             
-            </form>
-        </div>
-        <div class="tab-body">
-        <form method="get" action="">
-        <div class="form-element">
-                <label> บัญชีผู้ใช้เครือข่ายนนทรี <input type="text" name="id_l"/> </label></div>
-                <div class="form-element">
-                <label> รหัสผ่าน <input type="text" name="passwords"/> </label></div>
-                <div class="form-element">
-                <input type="hidden" name="controller" value = "lecturer"/></div>
-                <div class="form-element">
-                <button type="submit"name="action" value= "check">เข้าสู่ระบบ </button></div>
+                </form>
+            </div>
+            <div class="tab-body">
+                <form method="get" action="">
+                    <div class="form-element">
+                        <label> บัญชีผู้ใช้เครือข่ายนนทรี <input type="text" name="id_l"/> </label></div>
+                    <div class="form-element">
+                    <label> รหัสผ่าน <input type="text" name="passwords"/> </label></div>
+                    <div class="form-element">
+                    <input type="hidden" name="controller" value = "lecturer"/></div>
+                    <div class="form-element">
+                    <button type="submit"name="action" value= "check">เข้าสู่ระบบ </button></div>
 
-        </form>
+                </form>
+            </div>
         </div>
-        
     </div>
-</div>
-<div class="footer">
-
+     <div class="footer">
 </body>
 </html>
 <script>
