@@ -29,6 +29,15 @@ body {
   padding: 14px 16px;
   text-decoration: none;
 }
+.user label {
+  position: fixed;
+  right : 0%;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
 
 .navbar {
@@ -96,8 +105,9 @@ body {
 <body>
 
 <div class="user">
-<a href="?controller=login&action=signin">logout</a>
-  <a> <?php echo  "$student->name_s  $student->lastname_s";?> </a>
+<label> <?php echo  "$student->name_s  $student->lastname_s";?> </label>
+<br><br><a href="?controller=login&action=signin">logout</a>
+  
  
 </div>
 
