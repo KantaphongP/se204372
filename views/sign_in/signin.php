@@ -2,22 +2,21 @@
 {
     box-sizing:border-box;
     }
-    .img picture{
-        position: absolute;
-        left:70%;
-    }
-    .babe label {
+    .img {
+
+    float: right;
+    
+}
+    
+.p {
+        font-family: 'FC Iconic', 'FC Iconic', sans-serif;
         position: absolute;
 height: 166px;
-
-
-font-family: 'PT Sans';
-font-style: normal;
+font-style: bold;
 font-weight: 700;
-font-size: 50px;
+font-size: 60px;
 line-height: 83px;
 text-align: center;
-
 color: #000000;
     }
     .footer {
@@ -30,9 +29,12 @@ color: #000000;
 }
 body {
     background:#FFF;
-    font-family:"DB HelvethaicaMon X Bd v3.2";
+    font-family: 'FC Iconic', 'FC Iconic', sans-serif;
 }
 .form{
+    font-family: 'FC Iconic', 'FC Iconic', sans-serif;
+    font-size:18px;
+    font-style:bold;
     border:1px solid #000;
     position:absolute;
     background-color: #2F4F58;
@@ -40,7 +42,7 @@ body {
     left: 30%;
     bottom: 40%;
     transform:translate(-50%,50%);
-    width: 300px;
+    width: 28%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .form .tab-header {
@@ -62,38 +64,46 @@ body {
 
 }
 .form .tab-content {
+
     color:#FFF;
     padding: 20px;
 }
 .form .tab-content .form-element {
+
     color:#FFF;
     margin:10px 0px;
 }
 .form .tab-content .form-element input{
     width:100%;
     padding: 10px;
-    border: 1px solid #aaa;
     font-size:16px;
-    background:#f5f5f5;
-    border-radius:5px;
     outline:none;
     margin-top: 3px;
+    background: #C4C4C4;
+border: 1px solid #FFF;
+box-sizing: border-box;
+border-radius: 15px;
 }
 .form .tab-content .form-element label{
+    left:30%;
    color:#FFF;
 
 }
 .form .tab-content .form-element button{
+    font-family: 'FC Iconic', 'FC Iconic', sans-serif;
+    font-size:16px;
+    font-style:bold;
    margin-top:5px;
-   width:100%;
+   width:30%;
    padding: 10px;
    border: none;
    outline:none;
    background:#FF735C;
    border : 1px solid #000;
-   color:#FFFF;
+   color:#000;
    cursor: pointer;
-   border-radius:5px;
+   border-radius:50px;
+   
 }
 .form .tab-content > div.active {
     display:block;
@@ -106,43 +116,39 @@ body {
 </style>
 <!DOCTYPE html>
 <html>
-    <div class="babe">
-        <label>ระบบจัดการการฝึกงานแบบออนไลน์สำหรับภาควิชาวิศวกรรมคอมพิวเตอร์</label>
-</div>
-<div class="img">
-<picture>
-  <img src="Collab-pana.png" alt="Flowers" style="width: 1077px; height: 694px; ">
-</picture>
-</div>
+        <p>ระบบจัดการการฝึกงานแบบออนไลน์สำหรับภาควิชาวิศวกรรมคอมพิวเตอร์</p>
+
+  <img src="Collab-pana.png" alt="Intern" style="width: 50%; float: right;">
+
 <div class="form">
     <div class="tab-header">
-        <div class="active">Student</div>
-        <div>Teacher</div>
+        <div class="active">สำหรับนิสิต</div>
+        <div>สำหรับอาจารย์</div>
     </div>
     <div class="tab-content">
         <div class="tab-body active">
             <form method="get" action="">
                 <div class="form-element">
-                <label> username <input type="text" name="id_s"/> </label></div>
+                <label> บัญชีผู้ใช้เครือข่ายนนทรี <input type="text" name="id_s"/> </label></div>
                 <div class="form-element">
-                <label> password <input type="text" name="passwords"/> </label></div>
+                <label> รหัสผ่าน <input type="text" name="passwords"/> </label></div>
                 <div class="form-element">
                 <input type="hidden" name="controller" value = "login"/></div>
                 <div class="form-element">
-                <button type="submit"name="action" value= "check">sign in </button></div>
+                <button type="submit"name="action" value= "check">เข้าสู่ระบบ </button></div>
             
             </form>
         </div>
         <div class="tab-body">
         <form method="get" action="">
         <div class="form-element">
-                <label> username <input type="text" name="id_l"/> </label></div>
+                <label> บัญชีผู้ใช้เครือข่ายนนทรี <input type="text" name="id_l"/> </label></div>
                 <div class="form-element">
-                <label> password <input type="text" name="passwords"/> </label></div>
+                <label> รหัสผ่าน <input type="text" name="passwords"/> </label></div>
                 <div class="form-element">
                 <input type="hidden" name="controller" value = "lecturer"/></div>
                 <div class="form-element">
-                <button type="submit"name="action" value= "check">sign in </button></div>
+                <button type="submit"name="action" value= "check">เข้าสู่ระบบ </button></div>
 
         </form>
         </div>
