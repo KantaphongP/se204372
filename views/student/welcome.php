@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {
-  font-family : "Copperplate"  , fantasy  ;
+  font-family : "FC Iconic"  ,"FC Iconic", fantasy  ;
 }
 .footer {
     position: fixed;
@@ -23,7 +23,7 @@ body {
 }
 .user a {
   float: right;
-  font-size: 16px;
+  font-size: 40px;
   color: white;
   text-align: center;
   padding: 14px 16px;
@@ -39,7 +39,7 @@ body {
 
 .navbar a {
   float: left;
-  font-size: 16px;
+  font-size: 25px;
   color: white;
   text-align: center;
   padding: 14px 16px;
@@ -52,7 +52,7 @@ body {
 }
 
 .dropdown .dropbtn {
-  font-size: 16px;  
+  font-size: 25px;  
   border: none;
   outline: none;
   color: white;
@@ -109,7 +109,7 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-    <a href=?controller=login&action=petition&id_s=<?php echo $student->id_s; ?>>ใบยื่นคำขอฝึกงาน </a>
+    <a href=?controller=login&action=petition&id_s=>ใบยื่นคำขอฝึกงาน </a>
     <a href=?controller=status_petition&action=statusPetition&id_s=>ตรวจสอบสถานะ</a>
     <a>ประวัติการฝึกงาน</a>
     <a>ตรวจสอบคำร้อง</a>
