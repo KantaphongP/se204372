@@ -150,10 +150,10 @@ body {
   border: 2px solid #385A64;
   background: #FFD058;
   padding: 20px; 
-  width: 100px;
+  width: 140px;
   height: 15px;  
   left: 650px;
-  top: 10px;
+  top: 23px;
   position: absolute;
   text-align: center;
 }
@@ -270,7 +270,7 @@ body {
     </div>
 
     <div class= "boxstudent">
-        <p id="rcorners3" style="font-size: 26px;"><?php echo "<b>ชื่อ : </b> $student_sp->name_s $student_sp->lastname_s <b>รหัสนิสิต :</b> $student_sp->id_s <br>
+        <p id="rcorners3" style="font-size: 28px;"><?php echo "<b>ชื่อ : </b> $student_sp->name_s $student_sp->lastname_s <b>รหัสนิสิต :</b> $student_sp->id_s <br>
             <b>เบอร์โทรศัพท์ :</b> $student_sp->phone_s<br>
             <b>อีเมล :</b> $student_sp->email" ?></p>
     </div>
@@ -280,7 +280,7 @@ body {
     </div>
 
     <div class="boxintern">
-        <p id="rcorners5"><?php echo "<b>ชื่อสถานประกอบการ :</b> $inf_pet->name_c<br>
+        <p id="rcorners5" style="font-size: 28px;"><?php echo "<b>ชื่อสถานประกอบการ :</b> $inf_pet->name_c<br>
             <b>สถานที่ตั้ง :</b> $inf_pet->address_c<br>
             <b>จำนวนค่าตอบแทน :</b> $inf_pet->income บาท/วัน<br>
             <b>ชื่อผู้ประสานงาน :</b> $inf_pet->name_hr<br>
@@ -293,7 +293,7 @@ body {
     </div>
 
     <div class="boxcom">
-        <p id="rcorners4"><?php echo "<b>ชื่อสถานประกอบการ :</b> $inf_pet->name_c<br>
+        <p id="rcorners4" style="font-size: 28px;"><?php echo "<b>ชื่อสถานประกอบการ :</b> $inf_pet->name_c<br>
             <b>สถานที่ตั้ง :</b> $inf_pet->address_c<br>
             <b>จำนวนค่าตอบแทน :</b> $inf_pet->income บาท/วัน<br>
             <b>ชื่อผู้ประสานงาน :</b> $inf_pet->name_hr 
