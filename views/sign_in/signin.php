@@ -150,20 +150,13 @@ border-radius: 15px;
 </style>
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
     <head>
         <link rel="stylesheet" href="css/style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet">
     </head>
-=======
-<head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Noto+Sans+Thai&display=swap" rel="stylesheet">
-</head>
->>>>>>> 465b65b77123f2a1d0dfc35a2195568e10571603
+
 
 <body>
     <div class="title">
