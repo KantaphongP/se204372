@@ -144,6 +144,7 @@ body {
   color : white ;
 }
 
+
 #rcorners2 {
   border-radius: 25px;
   border: 2px solid #385A64;
@@ -151,9 +152,9 @@ body {
   padding: 20px; 
   width: 100px;
   height: 15px;  
+  left: 650px;
+  top: 10px;
   position: absolute;
-  left: 800px;
-  top: 170px;
   text-align: center;
 }
 
@@ -162,7 +163,7 @@ body {
   border: 2px solid #000000;
   background: #E5E5E5;
   width: 500px;
-  height: 200px;  
+  height: 150px;  
   position: absolute;
   left: 80px;
   top: 370px;
@@ -187,13 +188,41 @@ body {
   border: 2px solid #000000;
   background: #E5E5E5;
   width: 500px;
-  height: 200px;  
+  height: 250px;  
   position: absolute;
   left: 80px;
-  top: 650px;
+  top: 610px;
   text-align: left;
   
 }
+.titlestatus{
+    position: absolute;
+    left: 4.5%;
+    top: 17%;
+    font-size: 200%;
+}
+
+.titlestu{
+    position: absolute;
+    left: 4.5%;
+    top: 30%;
+    font-size: 200%;
+}
+
+.titleintern{
+    position: absolute;
+    left: 4.5%;
+    top: 55%;
+    font-size: 200%;
+}
+
+.titlecom{
+    position: absolute;
+    left: 47.5%;
+    top: 30%;
+    font-size: 200%;
+}
+
 </style>
 </head>
 <body>
@@ -221,39 +250,59 @@ body {
     </div>
   </div> 
 </div>
-<div class ="greet">
+<!--<div class ="greet">
   
-<!--</div>
+</div>
 <div class="img">
 <img src="Welcome-pana.png" alt="Welcome" width="900px" height="900px">
 </div>
 <div class="footer">
   <label>ข่าวสารการฝึกงาน</label>
 </div>-->
-<body>
-<h1 style="text-align:left;">สถานะการยื่นคำร้องขอฝึกงาน :</h1>
-<h1 id="rcorners2"><?php echo $inf_pet->status_approve ?></h1>
-<p id="rcorners3"><?php echo "ชื่อ : $student_sp->name_s $student_sp->lastname_s รหัสนิสิต : $student_sp->id_s <br>
-    เบอร์โทรศัพท์ : $student_sp->phone_s<br>
-    อีเมล : $student_sp->email" ?></p>
-<p id="rcorners5"><?php echo "ชื่อสถานประกอบการ : $inf_pet->name_c<br>
-    สถานที่ตั้ง : $inf_pet->address_c<br>
-    จำนวนค่าตอบแทน : $inf_pet->income บาท/วัน<br>
-    ชื่อผู้ประสานงาน : $inf_pet->name_hr<br>
-    เบอร์โทรศัพท์ : $inf_pet->phone_hr<br>
-    ที่พัก : $inf_pet->apartment" ?></p>
-<p id="rcorners4"><?php echo "ชื่อ : $student_sp->name_s $student_sp->lastname_s รหัสนิสิต : $student_sp->id_s <br>
-    เบอร์โทรศัพท์ : $student_sp->phone_s<br>
-    อีเมล : $student_sp->email" ?></p>
-</body>
-
-<?php 
-    echo "<h3>ข้อมูลนักศึกษา</h3>
-    <h3>ข้อมูลการฝึกงาน</h3>
-    <h3>ข้อมูลสถานประกอบการ</h3>";
     
+    <div class ="titlestatus">
+        <h1 style="text-align:left;">สถานะการยื่นคำร้องขอฝึกงาน : </h1>
+        <h1 id="rcorners2" style="font-size: 40px;"><?php echo $inf_pet->status_approve ?></h1>
+    </div>
 
-?>
+    <div class ="titlestu">
+        <h3>ข้อมูลนักศึกษา</h3>
+    </div>
+
+    <div class= "boxstudent">
+        <p id="rcorners3" style="font-size: 26px;"><?php echo "<b>ชื่อ : </b> $student_sp->name_s $student_sp->lastname_s <b>รหัสนิสิต :</b> $student_sp->id_s <br>
+            <b>เบอร์โทรศัพท์ :</b> $student_sp->phone_s<br>
+            <b>อีเมล :</b> $student_sp->email" ?></p>
+    </div>
+
+    <div class ="titleintern">
+        <h3>ข้อมูลการฝึกงาน</h3>
+    </div>
+
+    <div class="boxintern">
+        <p id="rcorners5"><?php echo "<b>ชื่อสถานประกอบการ :</b> $inf_pet->name_c<br>
+            <b>สถานที่ตั้ง :</b> $inf_pet->address_c<br>
+            <b>จำนวนค่าตอบแทน :</b> $inf_pet->income บาท/วัน<br>
+            <b>ชื่อผู้ประสานงาน :</b> $inf_pet->name_hr<br>
+            <b>เบอร์โทรศัพท์ :</b> $inf_pet->phone_hr<br>
+            <b>ที่พัก :</b> $inf_pet->apartment" ?></p>
+    </div>
+
+    <div class ="titlecom">
+        <h3>ข้อมูลสถานประกอบการ</h3>
+    </div>
+
+    <div class="boxcom">
+        <p id="rcorners4"><?php echo "<b>ชื่อสถานประกอบการ :</b> $inf_pet->name_c<br>
+            <b>สถานที่ตั้ง :</b> $inf_pet->address_c<br>
+            <b>จำนวนค่าตอบแทน :</b> $inf_pet->income บาท/วัน<br>
+            <b>ชื่อผู้ประสานงาน :</b> $inf_pet->name_hr 
+            <b>เบอร์โทรศัพท์ :</b> $inf_pet->phone_hr<br>
+            <b>ที่พัก :</b> $inf_pet->apartment" ?></p>
+    </div>
+
+
+
 
 </body>
 </html>
