@@ -1,5 +1,5 @@
 <?php
-$controllers = array('pages'=>['home','error'],'company'=>['index','newCompany','addCompany','search','updateForm','update','deleteConfirm','delete'],'login'=>['signin','check','petition','index','addpetition'],'lecturer'=>['signin','check','petition','search','detailpet','approve','no'],'status_petition'=>['statusPetition']) ; 
+$controllers = array('pages'=>['home','error'],'company'=>['index','indexs','searchs','newCompany','addCompany','search','updateForm','update','deleteConfirm','delete'],'login'=>['signin','check','petition','index','addpetition'],'lecturer'=>['signin','check','petition','search','detailpet','approve','no'],'status_petition'=>['statusPetition']) ; 
 function call($controller ,$action){
     //echo "routes to ".$controller."-".$action."<br>" ;
     require_once("controllers/".$controller."_controller.php");

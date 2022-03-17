@@ -4,6 +4,11 @@
         $company_List=Company::getAll();
         require_once("./views/company/index_company.php");
     }
+    public function indexs()
+    {
+        $company_List=Company::getAll();
+        require_once("./views/company/indexs_company.php");
+    }
     public function newCompany(){
         $company_List=Company::getAll();
         require_once('./views/company/new_company.php');
@@ -43,6 +48,12 @@
         $key=$_GET['key'];
         $company_List=Company::search($key);
         require_once('./views/company/index_company.php');
+    }
+    public function searchs()
+    {
+        $key=$_GET['key'];
+        $company_List=Company::search($key);
+        require_once('./views/company/indexs_company.php');
     }
     public function deleteConfirm()
     {

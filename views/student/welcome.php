@@ -96,14 +96,14 @@ body {
 <body>
 
 <div class="user">
-<a href="#news">logout</a>
+<a href="?controller=login&action=signin">logout</a>
   <a>บุษบา บานาน่า </a>
  
 </div>
 
 <div class="navbar">
   <a href="#home">หน้าแรก</a>
-  <a href="#news">ค้นหาสถานประกอบการ</a>
+  <a href="?controller=company&action=indexs">ค้นหาสถานประกอบการ</a>
   <div class="dropdown">
     <button class="dropbtn">การฝึกงาน 
       <i class="fa fa-caret-down"></i>
