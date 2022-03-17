@@ -19,14 +19,14 @@ body {
   z-index:0;
 }
 .user a {
-  position: absolute;
-  
+    position: absolute;
+  right : 0%;
   font-size: 40px;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  z-index:1;
+  z-index:2;
 }
 .user label {
   position: fixed;
@@ -157,6 +157,11 @@ body {
   position: absolute;
   text-align: center;
 }
+#rcorners2 a{
+    position: absolute;
+    top:10%;
+    left: 28%;
+}
 
 #rcorners3 {
   border-radius: 10px;
@@ -166,10 +171,18 @@ body {
   height: 150px;  
   position: absolute;
   left: 80px;
-  top: 370px;
+  top: 350px;
   text-align: left;
   
 }
+
+#rcorners3 a{
+    position: absolute;
+    top:15%;
+    left: 5%;
+    line-height: 35px;
+}
+
 #rcorners4 {
   border-radius: 10px;
   border: 2px solid #000000;
@@ -178,23 +191,38 @@ body {
   height: 200px;  
   position: absolute;
   left: 900px;
-  top: 370px;
+  top: 350px;
   text-align: left;
   
+}
+
+#rcorners4 a{
+    position: absolute;
+    top:8%;
+    left: 5%;
+    line-height: 35px;
 }
 
 #rcorners5 {
   border-radius: 10px;
   border: 2px solid #000000;
   background: #E5E5E5;
-  width: 500px;
-  height: 250px;  
+  width: 530px;
+  height: 320px;  
   position: absolute;
   left: 80px;
-  top: 610px;
+  top: 590px;
   text-align: left;
   
 }
+
+#rcorners5 a{
+    position: absolute;
+    top:8%;
+    left: 5%;
+    line-height: 35px;
+}
+
 .titlestatus{
     position: absolute;
     left: 4.5%;
@@ -205,21 +233,21 @@ body {
 .titlestu{
     position: absolute;
     left: 4.5%;
-    top: 30%;
+    top: 28%;
     font-size: 200%;
 }
 
 .titleintern{
     position: absolute;
     left: 4.5%;
-    top: 55%;
+    top: 53%;
     font-size: 200%;
 }
 
 .titlecom{
     position: absolute;
     left: 47.5%;
-    top: 30%;
+    top: 28%;
     font-size: 200%;
 }
 
@@ -262,7 +290,7 @@ body {
     
     <div class ="titlestatus">
         <h1 style="text-align:left;">สถานะการยื่นคำร้องขอฝึกงาน : </h1>
-        <h1 id="rcorners2" style="font-size: 40px;"><?php echo $inf_pet->status_approve ?></h1>
+        <h1 id="rcorners2" style="font-size: 40px; " ><a><?php echo $inf_pet->status_approve ?></a></h1>
     </div>
 
     <div class ="titlestu">
@@ -270,9 +298,9 @@ body {
     </div>
 
     <div class= "boxstudent">
-        <p id="rcorners3" style="font-size: 28px;"><?php echo "<b>ชื่อ : </b> $student_sp->name_s $student_sp->lastname_s <b>รหัสนิสิต :</b> $student_sp->id_s <br>
+        <p id="rcorners3" style="font-size: 28px;" ><a><?php echo "<b>ชื่อ : </b> $student_sp->name_s $student_sp->lastname_s <b>รหัสนิสิต :</b> $student_sp->id_s <br>
             <b>เบอร์โทรศัพท์ :</b> $student_sp->phone_s<br>
-            <b>อีเมล :</b> $student_sp->email" ?></p>
+            <b>อีเมล :</b> $student_sp->email" ?></a></p>
     </div>
 
     <div class ="titleintern">
@@ -280,12 +308,11 @@ body {
     </div>
 
     <div class="boxintern">
-        <p id="rcorners5" style="font-size: 28px;"><?php echo "<b>ชื่อสถานประกอบการ :</b> $inf_pet->name_c<br>
-            <b>สถานที่ตั้ง :</b> $inf_pet->address_c<br>
-            <b>จำนวนค่าตอบแทน :</b> $inf_pet->income บาท/วัน<br>
-            <b>ชื่อผู้ประสานงาน :</b> $inf_pet->name_hr<br>
-            <b>เบอร์โทรศัพท์ :</b> $inf_pet->phone_hr<br>
-            <b>ที่พัก :</b> $inf_pet->apartment" ?></p>
+        <p id="rcorners5" style="font-size: 28px;"><a><?php echo "<b>ชื่อสถานประกอบการ :</b> $inf_pet->name_c<br>
+            <b>ตำแหน่งที่ไปฝึก :</b> $inf_pet->position_s<br>
+            <b>ชื่อผู้ที่จะให้ภาควิชาฯออกหนังสือ :</b> <br>$inf_pet->name_getbook<br>
+            <b>ตำแหน่งของผู้ที่จะให้ภาควิชาฯออกหนังสือ :</b> <br>$inf_pet->position_g<br>
+            <b>ระยะการฝึกงาน :</b> <br>$inf_pet->date_start <b>ถึง</b> $inf_pet->date_end" ?></a></p>
     </div>
 
     <div class ="titlecom">
@@ -293,12 +320,12 @@ body {
     </div>
 
     <div class="boxcom">
-        <p id="rcorners4" style="font-size: 28px;"><?php echo "<b>ชื่อสถานประกอบการ :</b> $inf_pet->name_c<br>
+        <p id="rcorners4" style="font-size: 28px;"><a><?php echo "<b>ชื่อสถานประกอบการ :</b> $inf_pet->name_c<br>
             <b>สถานที่ตั้ง :</b> $inf_pet->address_c<br>
             <b>จำนวนค่าตอบแทน :</b> $inf_pet->income บาท/วัน<br>
             <b>ชื่อผู้ประสานงาน :</b> $inf_pet->name_hr 
             <b>เบอร์โทรศัพท์ :</b> $inf_pet->phone_hr<br>
-            <b>ที่พัก :</b> $inf_pet->apartment" ?></p>
+            <b>ที่พัก :</b> $inf_pet->apartment" ?></a></p>
     </div>
 
 
