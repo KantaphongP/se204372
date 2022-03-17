@@ -144,6 +144,7 @@ body {
   color : white ;
 }
 
+
 #rcorners2 {
   border-radius: 25px;
   border: 2px solid #385A64;
@@ -151,9 +152,9 @@ body {
   padding: 20px; 
   width: 100px;
   height: 15px;  
+  left: 650px;
+  top: 10px;
   position: absolute;
-  left: 800px;
-  top: 170px;
   text-align: center;
 }
 
@@ -162,7 +163,7 @@ body {
   border: 2px solid #000000;
   background: #E5E5E5;
   width: 500px;
-  height: 200px;  
+  height: 150px;  
   position: absolute;
   left: 80px;
   top: 370px;
@@ -187,13 +188,41 @@ body {
   border: 2px solid #000000;
   background: #E5E5E5;
   width: 500px;
-  height: 200px;  
+  height: 250px;  
   position: absolute;
   left: 80px;
-  top: 650px;
+  top: 610px;
   text-align: left;
   
 }
+.titlestatus{
+    position: absolute;
+    left: 4.5%;
+    top: 17%;
+    font-size: 200%;
+}
+
+.titlestu{
+    position: absolute;
+    left: 4.5%;
+    top: 30%;
+    font-size: 200%;
+}
+
+.titleintern{
+    position: absolute;
+    left: 4.5%;
+    top: 55%;
+    font-size: 200%;
+}
+
+.titlecom{
+    position: absolute;
+    left: 47.5%;
+    top: 30%;
+    font-size: 200%;
+}
+
 </style>
 </head>
 <body>
@@ -230,11 +259,10 @@ body {
 <div class="footer">
   <label>ข่าวสารการฝึกงาน</label>
 </div>-->
-<body>
     
     <div class ="titlestatus">
-        <h1 style="text-align:left;">สถานะการยื่นคำร้องขอฝึกงาน :</h1>
-        <h1 id="rcorners2"><?php echo $inf_pet->status_approve ?></h1>
+        <h1 style="text-align:left;">สถานะการยื่นคำร้องขอฝึกงาน : </h1>
+        <h1 id="rcorners2" style="font-size: 40px;"><?php echo $inf_pet->status_approve ?></h1>
     </div>
 
     <div class ="titlestu">
@@ -242,7 +270,7 @@ body {
     </div>
 
     <div class= "boxstudent">
-        <p id="rcorners3"><?php echo "<b>ชื่อ : </b> $student_sp->name_s $student_sp->lastname_s รหัสนิสิต : $student_sp->id_s <br>
+        <p id="rcorners3" style="font-size: 26px;"><?php echo "<b>ชื่อ : </b> $student_sp->name_s $student_sp->lastname_s <b>รหัสนิสิต :</b> $student_sp->id_s <br>
             <b>เบอร์โทรศัพท์ :</b> $student_sp->phone_s<br>
             <b>อีเมล :</b> $student_sp->email" ?></p>
     </div>
@@ -265,13 +293,16 @@ body {
     </div>
 
     <div class="boxcom">
-        <p id="rcorners4"><?php echo "<b>ชื่อ :</b> $student_sp->name_s $student_sp->lastname_s รหัสนิสิต : $student_sp->id_s <br>
-            <b>เบอร์โทรศัพท์ :</b> $student_sp->phone_s<br>
-            <b>อีเมล :</b> $student_sp->email" ?></p>
+        <p id="rcorners4"><?php echo "<b>ชื่อสถานประกอบการ :</b> $inf_pet->name_c<br>
+            <b>สถานที่ตั้ง :</b> $inf_pet->address_c<br>
+            <b>จำนวนค่าตอบแทน :</b> $inf_pet->income บาท/วัน<br>
+            <b>ชื่อผู้ประสานงาน :</b> $inf_pet->name_hr 
+            <b>เบอร์โทรศัพท์ :</b> $inf_pet->phone_hr<br>
+            <b>ที่พัก :</b> $inf_pet->apartment" ?></p>
     </div>
 
 
-</body>
+
 
 </body>
 </html>
