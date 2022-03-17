@@ -150,7 +150,7 @@ body {
   border: 2px solid #385A64;
   background: #FFD058;
   padding: 20px; 
-  width: 140px;
+  width: 180px;
   height: 15px;  
   left: 650px;
   top: 23px;
@@ -159,8 +159,11 @@ body {
 }
 #rcorners2 a{
     position: absolute;
-    top:10%;
-    left: 28%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+       
 }
 
 #rcorners3 {
