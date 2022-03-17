@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+
 body {
   font-family : "FC Iconic"  ,"FC Iconic", sans-serif ;
   margin: 0; 
@@ -143,6 +144,14 @@ body {
   color : white ;
 }
 
+#rcorners2 {
+  border-radius: 25px;
+  border: 2px solid #385A64;
+  background: #FFD058;
+  padding: 20px; 
+  width: 100px;
+  height: 20px;  
+}
 </style>
 </head>
 <body>
@@ -179,6 +188,9 @@ body {
 <div class="footer">
   <label>ข่าวสารการฝึกงาน</label>
 </div>-->
+<body>
+<p id="rcorners2"><?php echo $inf_pet->status_approve ?></p>
+</body>
 
 <?php 
     echo "<h2>สถานะการยื่นคำร้องขอฝึกงาน : $inf_pet->status_approve </h2>
