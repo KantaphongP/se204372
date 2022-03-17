@@ -15,10 +15,11 @@ body {
 .user {
   overflow: hidden;
   background-color: #385a64;
-  height :80;
+  height :90;
 }
 .user a {
-  float: right;
+  position: fixed;
+  left :50%;
   font-size: 40px;
   color: white;
   text-align: center;
@@ -146,8 +147,8 @@ body {
 <body>
 
 <div class="user">
-<label> <?php echo  "$student->name_s  $student->lastname_s";?> </label>
-<br><br><a href="?controller=login&action=signin">logout</a>
+<!--<label> <?php echo  "$student->name_s  $student->lastname_s";?> </label>-->
+<a href="?controller=login&action=signin">logout</a>
 </div>
 
 <div class="navbar">
