@@ -1,20 +1,35 @@
+
 <style>
+  
+  @font-face {
+    font-family: 'DB Ozone X';
+    src: url('fonts/DB-Ozone-X-Med-v32.eot');
+    src: url('fonts/DB-Ozone-X-Med-v32.eot?#iefix') format('embedded-opentype'),
+         url('fonts/DB-Ozone-X-Med-v32.woff2') format('woff2'),
+         url('fonts/DB-Ozone-X-Med-v32.woff') format('woff'),
+         url('fonts/DB-Ozone-X-Med-v32.ttf')  format('truetype'),
+         url('fonts/DB-Ozone-X-Med-v32.svg#DB Ozone X') format('svg');
+}
+
 {
     box-sizing:border-box;
     }
     .img {
 
-    float: right;
+    position : absolute;
+    top:50%;
+    left:55%;
+    z-index:1;
     
 }
     
 .p {
-        font-family: 'FC Iconic', 'FC Iconic', sans-serif;
+    font-family: 'DB Ozone X';
         position: absolute;
 height: 166px;
 font-style: bold;
 font-weight: 700;
-font-size: 60px;
+font-size: 600%;
 line-height: 83px;
 text-align: center;
 color: #000000;
@@ -28,11 +43,15 @@ color: #000000;
     background: #2F4F58;
 }
 body {
+    overflow:hidden;
+    margin:0;
+    height: 100%;
     background:#FFF;
-    font-family: 'FC Iconic', 'FC Iconic', sans-serif;
+    font-family: 'DB Ozone X';
+    font-style:bold;
 }
 .form{
-    font-family: 'FC Iconic', 'FC Iconic', sans-serif;
+    font-family: 'DB Ozone X';
     font-size:18px;
     font-style:bold;
     border:1px solid #000;
@@ -90,7 +109,7 @@ border-radius: 15px;
 
 }
 .form .tab-content .form-element button{
-    font-family: 'FC Iconic', 'FC Iconic', sans-serif;
+    font-family: 'DB Ozone X';
     font-size:16px;
     font-style:bold;
    margin-top:5px;
@@ -116,9 +135,12 @@ border-radius: 15px;
 </style>
 <!DOCTYPE html>
 <html>
+    <body>
         <p>ระบบจัดการการฝึกงานแบบออนไลน์สำหรับภาควิชาวิศวกรรมคอมพิวเตอร์</p>
 
   <img src="Collab-pana.png" alt="Intern" style="width: 50%; float: right;">
+    
+        
 
 <div class="form">
     <div class="tab-header">
@@ -156,6 +178,8 @@ border-radius: 15px;
     </div>
 </div>
 <div class="footer">
+
+</body>
 </html>
 <script>
         let tabPanes = document.getElementsByClassName("tab-header")
