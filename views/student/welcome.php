@@ -109,7 +109,7 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-    <a href=?controller=login&action=petition&id_s=>ใบยื่นคำขอฝึกงาน </a>
+    <a href=?controller=login&action=petition&id_s=<?php echo $student->id_s;?>>ใบยื่นคำขอฝึกงาน </a>
     <a href=?controller=status_petition&action=statusPetition&id_s=>ตรวจสอบสถานะ</a>
     <a>ประวัติการฝึกงาน</a>
     <a>ตรวจสอบคำร้อง</a>
