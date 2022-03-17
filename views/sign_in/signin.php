@@ -1,15 +1,6 @@
 
 <style>
   
-  @font-face {
-    font-family: 'DB Ozone X';
-    src: url('se/DB-Ozone-X-Med-v32.eot');
-    src: url('se/DB-Ozone-X-Med-v32.eot?#iefix') format('embedded-opentype'),
-         url('se/DB-Ozone-X-Med-v32.woff2') format('woff2'),
-         url('se/DB-Ozone-X-Med-v32.woff') format('woff'),
-         url('se/DB-Ozone-X-Med-v32.ttf')  format('truetype'),
-         url('se/DB-Ozone-X-Med-v32.svg#DB Ozone X') format('svg');
-}
 
 {
     box-sizing:border-box;
@@ -46,12 +37,12 @@ body {
     height: 100%;
     width : 100%;
     background:#FFF;
-    font-family: 'DB Ozone X' !important;
+    font-family: 'Noto Sans Thai', sans-serif;
     font-style:bold;
 }
 .form{
-    font-family: 'DB Ozone X';
-    font-size:18px;
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-size:14px;
     font-style:bold;
     border:1px solid #000;
     position:absolute;
@@ -149,6 +140,11 @@ border-radius: 15px;
 </style>
 <!DOCTYPE html>
 <html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Noto+Sans+Thai&display=swap" rel="stylesheet">
+</head>
 
 <body>
     <div class="title">
