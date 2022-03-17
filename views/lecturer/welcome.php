@@ -151,7 +151,7 @@ body {
 
 <div class="navbar">
   <a href="#home">หน้าแรก</a>
-  <a href="?controller=company&action=indexs">ค้นหาสถานประกอบการ</a>
+  <a href="?controller=company&action=index">ค้นหาสถานประกอบการ</a>
   <div class="dropdown">
     <button class="dropbtn">การฝึกงาน 
       <i class="fa fa-caret-down"></i>
