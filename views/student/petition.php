@@ -125,18 +125,45 @@ body {
   color : white ;
 }
 .greet{
-  position: fixed;
-    bottom: 59;
-    width: 100%;
-    height: 30%;
-    left: 50px;
-    right:40px;
-    background: #FF735C;
-    z-index: 0;
+  border-radius: 50px;
+  border: 2px solid #000000;
+  background: #FF735C;
+  width: 1800px;
+  height: 630px;  
+  position: absolute;
+  left: 60px;
+  top: 290px;
+  
+
+}
+.toncon{
+  position : absolute ; 
+  font-size: 38px;  
+  left : 5% ;
+  top:210px;
+
+}
+.greet .name{
+  
+  color:#FFF;
+    margin:10px 0px;
+    
+}
+.greet .name label{
+  left:30%;
+   color:#FFF;
 }
 
-.name{
-
+.greet .name input{
+  width:10%;
+    padding: 10px;
+    font-size:16px;
+    outline:none;
+    margin-top: px;
+    background: #C4C4C4;
+border: 1px solid #FFF;
+box-sizing: border-box;
+border-radius: 15px;
 }
 
 
@@ -172,17 +199,59 @@ body {
 <label> <?php echo  "คำร้องขอฝึกงาน";?> </label>
 </div>
 <div class ="greet">
+  
+  <form class="get" action="">
+    <div class="name">
+  <label>วันที่ <br><input type="date" name="date_d"/></label><br></div>
   <div class="name">
-  <form method="get" action="">
-<label>วันที่ <input type="date" name="date_d"/></label><br>
+  <label>ชื่อ <br><input type="text" name="name_s" 
+    value="<?php echo "$student->name_s $student->lastname_s";?>"/></label><br></div>
+    <div class="name">
+    <label>รหัสนิสิต <input type="text" name="id_s"
+    value="<?php echo $student->id_s;?>"/></label><br></div>
+    <div class="name">
+<label>เบอร์โทรศัพท์ <input type="text" name="phone_s"
+    value="<?php echo $student->phone_s;?>"/></label><br></div>
+    <div class="name">
+<label>ตำแหน่งที่ไปฝึก <input type="text" name="position_s"/></label><br></div>
+<div class="name">
+<label>ประเภทการฝึก <select name="id_t">
+    <?php foreach($type_List as $dep) {echo "<option value = $dep->id_t>
+    $dep->name_t</option>";}
+    ?>
+</select></label><br></div>
+<div class="name">
+<label>ชื่อผู้ที่จะให้ภาควิชาออกหนังสือให้ <input type="text" name="name_getbook"/></label><br></div>
+<div class="name">
+<label>ตำแหน่งผู้ที่จะให้ภาควิชาออกหนังสือให้ <input type="text" name="position_g"/></label><br></div>
+<div class="name">
+<label>ชื่อบริษัท <select name="id_c">
+    <?php foreach($company_List as $dep) {echo "<option value = $dep->id_c>
+    $dep->name_c</option>";}
+    ?>
+</select></label><br></div>
+
+<div class="name">
+<label>ชื่อผู้ประสานงาน <input type="text" name="name_hr"/></label><br></div>
+<div class="name">
+<label>เบอร์โทรศัพท์ <input type="text" name="phone_hr"/></label><br></div>
+<div class="name">
+<label>อีเมล <input type="text" name="email_hr"/></label><br></div>
+<div class="name">
+<label>ที่พัก <input type="text" name="apartment"/></label><br></div>
+<div class="name">
+<label>วันที่เริ่มฝึก <input type="date" name="date_start"/></label><br></div>
+<div class="name">
+<label>วันสุดท้ายของการฝึก <input type="date" name="date_end"/></label><br></div>
+
 </form>
-  </div>
+ 
   
 
 
 
 
-</div>
+
 
 
 
