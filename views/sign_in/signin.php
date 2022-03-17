@@ -14,17 +14,26 @@
     top : 13.5%;
     z-index:1;    
 }
-    
-.p {
-    font-family: 'DB Ozone X';
+.h1 {
+    text-align:center;
+    color: #000;
+
+}
+/*.p {
     position: absolute;
     height: 166px;
     font-style: bold;
     font-weight: 700;
-    font-size: 300%;
+    font-size: auto;
     line-height: 83px;
     text-align: center;
     color: #000000;
+}*/
+.body .title {
+    text-align:center;
+    font-size:50px;
+    font-family: 'Noto Sans Thai', sans-serif;
+    color:#000;
 }
 .footer {
     position: fixed;
@@ -41,18 +50,12 @@ body {
     width : 100%;
     background:#FFF;
     font-family: 'Noto Sans Thai', sans-serif;
-<<<<<<< HEAD
-}
-.form{
-    font-family: 'Noto Sans Thai', sans-serif;
-    font-size:16px;
-=======
     font-style:bold;
+    font-size: auto;
 }
 .form{
     font-family: 'Noto Sans Thai', sans-serif;
     font-size:14px;
->>>>>>> 465b65b77123f2a1d0dfc35a2195568e10571603
     font-style:bold;
     border:1px solid #000;
     position:absolute;
@@ -130,21 +133,7 @@ border-radius: 15px;
 .form .tab-content > div {
     display:none;
 }
-.title label
-{
-    position : absolute ; 
-    top : 7%; 
-    left : 20% ;
-    font-size: 500%; 
-}
 
-.title a
-{
-    position : absolute ; 
-    top : 16%; 
-    left : 19% ;
-    font-size: 500%; 
-}
 
 
 </style>
@@ -157,12 +146,11 @@ border-radius: 15px;
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet">
     </head>
 
-
 <body>
-    <div class="title">
-    <label>ระบบจัดการการฝึกงานแบบออนไลน์</label>
-    <a>สำหรับภาควิชาวิศวกรรมคอมพิวเตอร์</a>
-    </div>
+<div>
+    <h1>ระบบจัดการการฝึกงานแบบออนไลน์สำหรับภาควิชาวิศวกรรมคอมพิวเตอร์</h1> 
+</div>
+    
     
     <div class="form">
         <div class="tab-header">
