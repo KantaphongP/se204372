@@ -1,6 +1,9 @@
 
 <style>
+<<<<<<< HEAD
+=======
   
+>>>>>>> 465b65b77123f2a1d0dfc35a2195568e10571603
 
 {
     box-sizing:border-box;
@@ -18,7 +21,7 @@
     height: 166px;
     font-style: bold;
     font-weight: 700;
-    font-size: 600%;
+    font-size: 300%;
     line-height: 83px;
     text-align: center;
     color: #000000;
@@ -38,11 +41,18 @@ body {
     width : 100%;
     background:#FFF;
     font-family: 'Noto Sans Thai', sans-serif;
+<<<<<<< HEAD
+}
+.form{
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-size:16px;
+=======
     font-style:bold;
 }
 .form{
     font-family: 'Noto Sans Thai', sans-serif;
     font-size:14px;
+>>>>>>> 465b65b77123f2a1d0dfc35a2195568e10571603
     font-style:bold;
     border:1px solid #000;
     position:absolute;
@@ -140,11 +150,20 @@ border-radius: 15px;
 </style>
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet">
+    </head>
+=======
 <head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Noto+Sans+Thai&display=swap" rel="stylesheet">
 </head>
+>>>>>>> 465b65b77123f2a1d0dfc35a2195568e10571603
 
 <body>
     <div class="title">
