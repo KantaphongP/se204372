@@ -13,14 +13,12 @@
 
 {
     box-sizing:border-box;
-    }
-    .img {
-
-    position : absolute;
-    top:50%;
+}
+.img {
+    position : fixed;
     left:55%;
-    z-index:1;
-    
+    top : 13.5%;
+    z-index:1;    
 }
     
 .p {
@@ -46,6 +44,7 @@ body {
     overflow:hidden;
     margin:0;
     height: 100%;
+    width : 100%;
     background:#FFF;
     font-family: 'DB Ozone X' !important;
     font-style:bold;
@@ -133,16 +132,16 @@ border-radius: 15px;
 .title label
 {
     position : absolute ; 
-    top : 10%; 
-    left : 23% ;
+    top : 7%; 
+    left : 20% ;
     font-size: 500%; 
 }
 
 .title a
 {
     position : absolute ; 
-    top : 20%; 
-    left : 22.5% ;
+    top : 16%; 
+    left : 19% ;
     font-size: 500%; 
 }
 
@@ -156,7 +155,7 @@ border-radius: 15px;
     <label>ระบบจัดการการฝึกงานแบบออนไลน์</label>
     <a>สำหรับภาควิชาวิศวกรรมคอมพิวเตอร์</a>
     </div>
-    <img src="Collab-pana.png" alt="Intern" style="width: 50%; float: right;">
+    
     <div class="form">
         <div class="tab-header">
             <div class="active">สำหรับนิสิต</div>
@@ -191,7 +190,11 @@ border-radius: 15px;
             </div>
         </div>
     </div>
-     <div class="footer">
+    <div class="img">  
+    <img src="Collab-pana.png" alt="Intern" style="width: 100%; float: right;">
+    </div>
+    
+    <div class="footer">
 </body>
 </html>
 <script>

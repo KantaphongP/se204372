@@ -42,7 +42,8 @@ body {
 .navbar {
   overflow: hidden;
   background-color: #385a64;
-  left: 0% ;
+  width: 100% ; 
+  
 }
 
 .navbar a {
@@ -122,8 +123,8 @@ body {
 .img{
   position : absolute ; 
   z-index: 1;
-  top : 2%;
-  left : 55% ;
+  top : 0%;
+  right : 0% ;
 }
 
 .footer {
@@ -161,7 +162,6 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-
     <a href=?controller=login&action=petition&id_s=<?php echo $student->id_s;?>>ใบยื่นคำขอฝึกงาน </a>
     <a href=?controller=status_petition&action=statusPetition&id_s=<?php echo $student->id_s;?>>ตรวจสอบสถานะ</a>
 
@@ -177,7 +177,7 @@ body {
   <br><a1>สำหรับภาควิชาวิศวกรรมคอมพิวเตอร์</a1>
 </div>
 <div class="img">
-<img src="Welcome-pana.png" alt="Welcome" width="900px" height="900px">
+<img src="Welcome-pana.png" alt="Welcome" width="950px" height="950px">
 </div>
 <div class="footer">
   <label>ข่าวสารการฝึกงาน</label>
