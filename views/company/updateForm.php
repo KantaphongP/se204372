@@ -137,6 +137,14 @@ table{
   font-size:14px;
     
 }    
+.toncon{
+    position: absolute;
+  top:20%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+  font-size: 400%;  
+}
 
 .border{
   border-radius: 50px;
@@ -145,10 +153,9 @@ table{
   position: absolute;
   top: 60%;
   left: 50%;
-transform: translate(-50%,-50%);
-    width: 50%;
+  transform: translate(-50%,-50%);
+  width: 50%;
   height: 65%;  
-  
   font-size: 165%;
   z-index: 1;
 }
@@ -217,6 +224,11 @@ transform: translate(-50%,-50%);
     </div>
   </div> 
 </div>
+
+<div class="toncon">
+<label>คำร้องขอฝึกงาน </label>
+</div>
+
 <div class="border">
     <div class="update">
         <form method="get" action="">
