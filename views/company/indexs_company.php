@@ -198,7 +198,6 @@ table{
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet"></head>
-</head>
 <body>
 <div class="user">
 <label> <?php //echo  "$student->name_s  $student->lastname_s";?> </label>
