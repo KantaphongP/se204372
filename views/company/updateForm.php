@@ -14,6 +14,7 @@
 
 <input type="hidden"name="controller"value="company"/>
 <input type="hidden" name="id_c" value="<?php echo $company->id_c; ?>"/>
+<input type="hidden" name="id_l" value="<?php echo $lecturer->id_l; ?>"/>
 <button type="submit"name="action"value="index">back</button>
 <button type="submit"name="action"value="update">update</button>
 </form>

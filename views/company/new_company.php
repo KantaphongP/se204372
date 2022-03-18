@@ -9,6 +9,7 @@
 
 
 <input type="hidden" name="controller" value = "company"/>
+<input type="hidden" name="id_l" value="<?php echo $lecturer->id_l;?>"/>
 <button type="submit"name="action" value = "index"> back </button>
 <button type="submit"name="action" value= "addCompany"> save </button>
 
