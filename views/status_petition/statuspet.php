@@ -192,10 +192,10 @@ body {
   border-radius: 10px;
   border: 2px solid #000000;
   background: #E5E5E5;
-  width: 530px;
+  width: 650px;
   height: 250px;  
   position: absolute;
-  left: 900px;
+  left: 55%;
   top: 33%;
   text-align: left;
   
@@ -257,7 +257,7 @@ body {
 
 .titlecom{
     position: absolute;
-    left: 47.5%;
+    left: 55%;
     top: 26%;
     font-size: 200%;
 }
@@ -335,7 +335,7 @@ body {
             <b>ตำแหน่งที่ไปฝึก :</b> $inf_pet->position_s<br>
             <b>ชื่อผู้ที่จะให้ภาควิชาฯออกหนังสือ :</b> <br>$inf_pet->name_getbook<br>
             <b>ตำแหน่งของผู้ที่จะให้ภาควิชาฯออกหนังสือ :</b> <br>$inf_pet->position_g<br>
-            <b>ระยะการฝึกงาน :</b> <br>$inf_pet->date_start <b>ถึง</b> $inf_pet->date_end" ?></a></p>
+            <b>ระยะการฝึกงาน :</b> <br>$datee_start->date_start <b>ถึง</b> $datee_end->date_end" ?></a></p>
     </div>
 
     <div class ="titlecom">

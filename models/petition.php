@@ -224,6 +224,13 @@
         return new Petition($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d,$reason);
 
     }
+    public static function convertDate($datee){
+        if(strstr($datee,"-") || strstr($datee,'/')){
+            $datee = preg_split("/[\/]|[-]+/",$datee);
+            $datee = $datee[2].".".$datee[1].".".$datee[0];
+            return $datee;
+        }
+    }
 
 
 }
