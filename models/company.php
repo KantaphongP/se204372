@@ -100,7 +100,7 @@
      }
      public static function delete($id_c)
      {
-         require_once("connection_connect.php");
+         require("connection_connect.php");
          $sql="DELETE FROM `company` WHERE id_c='$id_c'";
          $result=$conn->query($sql);
          require("connection_close.php");
