@@ -139,7 +139,7 @@ table{
 }    
 .toncon{
     position: absolute;
-  top:20%;
+  top:25%;
   left: 50%;
   transform: translate(-50%,-50%);
   z-index: 1;
@@ -154,24 +154,22 @@ table{
   top: 60%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 50%;
-  height: 65%;  
+  width: 45%;
+  height: 58%;  
   font-size: 165%;
   z-index: 1;
 }
 
 .update {
-  position: absolute;
-  top: 55%;
-  left: 55%;
-  transform: translate(-50%,-50%);
-  height: 100%;  
+  position : absolute ; 
+  top: 5%;
+  left : 10%;
   width: 100%;
   color:#FFF;
 }
 .update input{
-
-  width:75%;
+    
+  width:80%;
   padding: 10px;
   font-size:16px;
   outline:none;
@@ -182,7 +180,7 @@ table{
   border-radius: 15px;
 }
 .update button{
-  width:75%;
+  width:80%;
   padding: 10px;
   font-size:16px;
   outline:none;
