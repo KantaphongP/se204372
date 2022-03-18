@@ -262,6 +262,13 @@ body {
     font-size: 200%;
 }
 
+.reason p{
+    position: absolute;
+    left: 55%;
+    top: 20%;
+    font-size: 200%;
+}
+
 </style>
 </head>
 <body>
@@ -302,6 +309,10 @@ body {
     <div class ="titlestatus">
         <h1 style="text-align:left;">สถานะการยื่นคำร้องขอฝึกงาน : </h1>
         <h1 id="rcorners2" style="font-size: 40px; " ><a><?php echo $inf_pet->status_approve ?></a></h1>
+    </div>
+
+    <div class ="reason">
+        <p>หมายเหตุ : <?php echo $inf_pet->reason ?></p>
     </div>
 
     <div class ="titlestu">
