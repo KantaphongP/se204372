@@ -6,6 +6,9 @@
     }
     public function indexs()
     {
+        $id_s=$_GET['id_s'];
+      
+        $student=Student::get($id_s);
         $company_List=Company::getAll();
         require_once("./views/company/indexs_company.php");
     }
@@ -51,6 +54,8 @@
     }
     public function searchs()
     {
+        $id_s=$_GET['id_s'];
+        $student=Student::get($id_s);
         $key=$_GET['key'];
         $company_List=Company::search($key);
         require_once('./views/company/indexs_company.php');

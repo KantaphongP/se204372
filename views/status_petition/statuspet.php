@@ -192,10 +192,10 @@ body {
   border-radius: 10px;
   border: 2px solid #000000;
   background: #E5E5E5;
-  width: 530px;
+  width: 650px;
   height: 250px;  
   position: absolute;
-  left: 900px;
+  left: 55%;
   top: 33%;
   text-align: left;
   
@@ -257,8 +257,15 @@ body {
 
 .titlecom{
     position: absolute;
-    left: 47.5%;
+    left: 55%;
     top: 26%;
+    font-size: 200%;
+}
+
+.reason p{
+    position: absolute;
+    left: 55%;
+    top: 20%;
     font-size: 200%;
 }
 
@@ -273,7 +280,7 @@ body {
 
 <div class="navbar">
 <a href=?controller=login&action=home&id_s=<?php echo $student_sp->id_s;?>>หน้าแรก</a>
-  <a href="?controller=company&action=indexs">ค้นหาสถานประกอบการ</a>
+<a href=?controller=company&action=indexs&id_s=<?php echo $student_sp->id_s;?>>ค้นหาสถานประกอบการ</a>
   <div class="dropdown">
     <button class="dropbtn">การฝึกงาน/ตรวจสอบสถานะ 
       <i class="fa fa-caret-down"></i>
@@ -304,6 +311,10 @@ body {
         <h1 id="rcorners2" style="font-size: 40px; " ><a><?php echo $inf_pet->status_approve ?></a></h1>
     </div>
 
+    <div class ="reason">
+        <p>หมายเหตุ : <?php echo $inf_pet->reason ?></p>
+    </div>
+
     <div class ="titlestu">
         <h3>ข้อมูลนักศึกษา</h3>
     </div>
@@ -324,7 +335,7 @@ body {
             <b>ตำแหน่งที่ไปฝึก :</b> $inf_pet->position_s<br>
             <b>ชื่อผู้ที่จะให้ภาควิชาฯออกหนังสือ :</b> <br>$inf_pet->name_getbook<br>
             <b>ตำแหน่งของผู้ที่จะให้ภาควิชาฯออกหนังสือ :</b> <br>$inf_pet->position_g<br>
-            <b>ระยะการฝึกงาน :</b> <br>$inf_pet->date_start <b>ถึง</b> $inf_pet->date_end" ?></a></p>
+            <b>ระยะการฝึกงาน :</b> <br>$datee_start <b>ถึง</b> $datee_end" ?></a></p>
     </div>
 
     <div class ="titlecom">

@@ -153,7 +153,7 @@ body {
 </div>
 
 <div class="navbar">
-  <a href="#home">หน้าแรก</a>
+<a href=?controller=lecturer&action=home&id_l=<?php echo $lecturer->id_l;?>>หน้าแรก</a>
   <a href="?controller=company&action=index">ค้นหาสถานประกอบการ</a>
   <div class="dropdown">
     <button class="dropbtn">การฝึกงาน 
