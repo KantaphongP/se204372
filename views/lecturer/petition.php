@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="css/style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -8,6 +9,57 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+
+form {
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.search {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.search_input {
+  font-family: 'Noto Sans Thai', sans-serif;
+  width:50%;
+  height:40px;
+  font-size: 18px;
+  color:#2F4F58;
+  border: 2px solid #2F4F58;
+  padding: 15px 30px;
+  border-radius: 50px;
+  margin-right: -50px;
+  margin-top: 10px;
+  transition: all 0.2s;
+}
+.search_input:focus {
+  outline: none;
+  width: 60%;
+  background-color: #f0eeee;
+}
+.search_input:-webkit-input-placehoder {
+  font-family: 'Noto Sans Thai', sans-serif;
+  font-size : 18px;
+  color: #2F4F58;
+}
+.search_button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.search_button:focus {
+  outline:none;
+}
+.search_button:active {
+  transform: translateY(2px);
+}
+.search_icon {
+  font-size: 18px;
+  color:#FF735C;
+}
+
 body {
   font-family: 'Noto Sans Thai', sans-serif;
   margin: 0; 
@@ -176,15 +228,18 @@ table{
   </div> 
 </div>
 
-<table class="center">
 
-<form method="get" action="">
-        <input type="text" name="key">
+
+<form method="get" action="" class="search">
+<input type="text" name="key" placeholder="Search" class="search_input">
         <input type="hidden" name="controller" value="lecturer">
         <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l; ?>"/>
-        <button type="submit" name="action" value="search">
-search</button>
+        <button type="submit" name="action" value="search" class="search_button">
+        <i class="fas fa-search search_icon"></i>
+        </button>
 </form>
+
+<table class="center">
 <tr><th>วันที่ส่ง</th><th>ชื่อ</th><th>นามสกุล</th><th>คำร้อง</th><th>การอนุมัติ</th></tr>
 <?php foreach($petition_List as $petition)
 {
