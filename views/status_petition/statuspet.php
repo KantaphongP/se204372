@@ -170,40 +170,45 @@ body {
   border-radius: 10px;
   border: 2px solid #000000;
   background: #E5E5E5;
-  width: 500px;
-  height: 150px;  
+  width: 530px;
+  height: 170px;  
   position: absolute;
   left: 80px;
-  top: 350px;
+  top: 33%;
   text-align: left;
   
 }
 
 #rcorners3 a{
     position: absolute;
-    top:15%;
-    left: 5%;
+    top:50%;
+    left: 55%;
     line-height: 35px;
+    transform: translate(-50%,-50%);
+    width: 100%;
 }
 
 #rcorners4 {
   border-radius: 10px;
   border: 2px solid #000000;
   background: #E5E5E5;
-  width: 500px;
-  height: 200px;  
+  width: 530px;
+  height: 250px;  
   position: absolute;
   left: 900px;
-  top: 350px;
+  top: 33%;
   text-align: left;
   
 }
 
 #rcorners4 a{
     position: absolute;
-    top:8%;
-    left: 5%;
+    top:50%;
+    left: 55%;
     line-height: 35px;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    
 }
 
 #rcorners5 {
@@ -214,16 +219,19 @@ body {
   height: 320px;  
   position: absolute;
   left: 80px;
-  top: 590px;
+  top: 60%;
   text-align: left;
+  
   
 }
 
 #rcorners5 a{
     position: absolute;
-    top:8%;
-    left: 5%;
+    top:50%;
+    left: 55%;
     line-height: 35px;
+    transform: translate(-50%,-50%);
+    width: 100%;
 }
 
 .titlestatus{
@@ -236,7 +244,7 @@ body {
 .titlestu{
     position: absolute;
     left: 4.5%;
-    top: 28%;
+    top: 26%;
     font-size: 200%;
 }
 
@@ -250,7 +258,7 @@ body {
 .titlecom{
     position: absolute;
     left: 47.5%;
-    top: 28%;
+    top: 26%;
     font-size: 200%;
 }
 
@@ -301,7 +309,8 @@ body {
     </div>
 
     <div class= "boxstudent">
-        <p id="rcorners3" style="font-size: 28px;" ><a><?php echo "<b>ชื่อ : </b> $student_sp->name_s $student_sp->lastname_s <b>รหัสนิสิต :</b> $student_sp->id_s <br>
+        <p id="rcorners3" style="font-size: 28px;" ><a><?php echo "<b>ชื่อ : </b> $student_sp->name_s $student_sp->lastname_s <br>
+            <b>รหัสนิสิต :</b> $student_sp->id_s <br>
             <b>เบอร์โทรศัพท์ :</b> $student_sp->phone_s<br>
             <b>อีเมล :</b> $student_sp->email" ?></a></p>
     </div>
@@ -326,7 +335,7 @@ body {
         <p id="rcorners4" style="font-size: 28px;"><a><?php echo "<b>ชื่อสถานประกอบการ :</b> $inf_pet->name_c<br>
             <b>สถานที่ตั้ง :</b> $inf_pet->address_c<br>
             <b>จำนวนค่าตอบแทน :</b> $inf_pet->income บาท/วัน<br>
-            <b>ชื่อผู้ประสานงาน :</b> $inf_pet->name_hr 
+            <b>ชื่อผู้ประสานงาน :</b> $inf_pet->name_hr <br>
             <b>เบอร์โทรศัพท์ :</b> $inf_pet->phone_hr<br>
             <b>ที่พัก :</b> $inf_pet->apartment" ?></a></p>
     </div>
