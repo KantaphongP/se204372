@@ -43,6 +43,7 @@ body {
   overflow: hidden;
   background-color: #385a64;
   left: 0% ;
+  z-index: 2;
 }
 
 .navbar a {
@@ -68,6 +69,7 @@ body {
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+  
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
@@ -80,7 +82,7 @@ body {
   background-color: #385a64;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 2;
 }
 
 .dropdown-content a {
@@ -129,7 +131,7 @@ body {
 .toncon{
   position : absolute ; 
   left : 5% ;
-  font-size: 38px;  
+  font-size: 400%;  
   
   top:210px;
 
