@@ -188,6 +188,16 @@
         return ;
         
      }
+     public static function Add($id_t,$id_c,$id_s,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$date_d)
+     {
+        require("connection_connect.php");
+        $sql = "INSERT INTO `petition`(`date_d`, `id_t`, `id_c`, `id_s`, `status_ap_company`, `position_s`, `name_getbook`, `position_g`, `name_hr`, `phone_hr`, `email_hr`, `apartment`, `date_start`, `date_end`, `status_approve`) VALUES
+         ('$date_d',$id_t,$id_c,'$id_s','รอดำเนินการ','$position_s','$name_getbook','$position_g','$name_hr','$phone_hr','$email_hr','$apartment','$date_start','$date_end','รอดำเนินการ')";
+        $result = $conn->query($sql);
+  
+        require("connection_close.php");
+        return  ;
+     }
     
 
      public static function getInf($id_s)

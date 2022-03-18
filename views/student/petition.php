@@ -264,8 +264,9 @@ body {
 </div>
   
 <div class="border">
+  <form class="get" action="">
   <div class="col1">
-    <form class="get" action="">
+    
       <label>วันที่ <br><input type="date" name="date_d"/></label><br><br>
       <label>ชื่อ <br><input type="text" name="name_s" value="<?php echo "$student->name_s $student->lastname_s";?>"/></label><br><br>
       <label>รหัสนิสิต<br> <input type="text" name="id_s"value="<?php echo $student->id_s;?>"/></label><br><br>
@@ -275,11 +276,9 @@ body {
       <?php foreach($type_List as $dep) {echo "<option value = $dep->id_t>
       $dep->name_t</option>";}
       ?></select></label><br><br>
-    </form>
   <div>
 
   <div class="col2">
-    <form class="get" action="">
     <label>ชื่อผู้ที่จะให้ภาควิชาออกหนังสือให้ <br><input type="text" name="name_getbook"/></label><br><br>
     <label>ตำแหน่งผู้ที่จะให้ภาควิชาออกหนังสือให้ <br><input type="text" name="position_g"/></label><br><br>
     <label>ชื่อบริษัท<br> <select name="id_c">
@@ -289,19 +288,16 @@ body {
     <label>ชื่อผู้ประสานงาน <br><input type="text" name="name_hr"/></label><br><br>
     <label>เบอร์โทรศัพท์ <br><input type="text" name="phone_hr"/></label><br><br>
     <label>อีเมล <br><input type="text" name="email_hr"/></label><br><br>
-    </form>
   <div>
 
   <div class="col3">
-    <form class="get" action="">
     <label>ที่พัก <br><input type="text" name="apartment"/></label><br><br>
     <label>วันที่เริ่มฝึก <br><input type="date" name="date_start"/></label><br><br>
     <label>วันสุดท้ายของการฝึก <br><input type="date" name="date_end"/></label><br><br><br><br>
     <input type="hidden" name="controller" value="login"/>
     <button type="submit" name="action" value ="index">back</button><br><br>
     <button type="submit" name="action" value ="addpetition">save</button><br><br>
-    </form>
-
   <div>
+  </form>
 <div>
 
