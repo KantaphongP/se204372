@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 18, 2022 at 06:43 PM
+-- Generation Time: Mar 18, 2022 at 08:45 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -42,9 +42,9 @@ CREATE TABLE `company` (
 
 INSERT INTO `company` (`id_c`, `name_c`, `address_c`, `phone_c`, `quantity`, `income`) VALUES
 (1, 'โกไฟต์กับใคร', 'สมุดหนังสือ', '9999999', 9, 400),
-(2, 'yyy', 'gg', '33333', 5, 6000),
 (5, 'เต๋าชั่ย', 'ที่นี่', '44444444', 5, 7888),
-(6, 'มหาชัยคนรักบ้าน', 'บ้านนี้ที่รอคอย', '7777777', 1, 100000);
+(6, 'มหาชัยคนรักบ้าน', 'บ้านนี้ที่รอคอย', '7777777', 1, 100000),
+(7, 'เดินดาวคอมพานี', 'สามย่าน', '7777777', 3, 3000000);
 
 -- --------------------------------------------------------
 
@@ -86,7 +86,8 @@ CREATE TABLE `lecturer` (
 --
 
 INSERT INTO `lecturer` (`id_l`, `name_l`, `lastname_l`, `passwords`) VALUES
-('jjjjj', 'อนุมัติ', 'อนุมัติ', 'jjjjj');
+('jjjjj', 'อนุมัติ', 'อนุมัติ', 'jjjjj'),
+('rrr', 'บุษบา ', 'นานาน่า', 'rrr');
 
 -- --------------------------------------------------------
 
@@ -119,8 +120,9 @@ CREATE TABLE `petition` (
 --
 
 INSERT INTO `petition` (`id_p`, `date_d`, `id_t`, `id_c`, `id_s`, `status_ap_company`, `position_s`, `name_getbook`, `position_g`, `name_hr`, `phone_hr`, `email_hr`, `apartment`, `date_start`, `date_end`, `status_approve`, `reason`) VALUES
-(3, '2022-03-02', 1, 1, 'b6220503555', 'รอดำเนินการ', 'เล่นเกม', 'มี่', 'หัวหน้าหมู', 'มี่', '7777777', 'thidarat.pi@ku.th', 'มี', '2022-03-01', '2022-03-01', 'ไม่อนุมัติ', 'เหตุผลข้อเดียวเท่านั้น'),
-(4, '2022-03-24', 1, 6, 'b6220503555', 'รอดำเนินการ', 'eryery5ht', 'rhrtht', 'htrhtt', 'hhhhhhtrh', 'rhtrh', 'trhthth', 'มี', '2022-03-14', '2022-04-01', 'รอดำเนินการ', NULL);
+(3, '2022-03-02', 1, 1, 'b6220503555', 'รอดำเนินการ', 'เล่นเกม', 'มี่', 'หัวหน้าหมู', 'มี่', '7777777', 'thidarat.pi@ku.th', 'มี', '2022-03-01', '2022-03-01', 'ไม่อนุมัติ', ''),
+(4, '2022-03-24', 1, 6, 'b6220503555', 'รอดำเนินการ', 'eryery5ht', 'rhrtht', 'htrhtt', 'hhhhhhtrh', 'rhtrh', 'trhthth', 'มี', '2022-03-14', '2022-04-01', 'ไม่อนุมัติ', 'เหตุผลข้อเดียวเท่านั้น'),
+(5, '2022-03-01', 1, 5, 'b6220504444', 'รอดำเนินการ', 'เล่นเกม', 'มาเรียม คงคี', 'ชั้นเป็นเจ้านายแก', 'ดาวเด่น ดวงเดือน', '7777777', '', 'ไม่มี', '2022-03-14', '2022-04-09', 'รอดำเนินการ', NULL);
 
 -- --------------------------------------------------------
 
@@ -142,7 +144,8 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`id_s`, `name_s`, `lastname_s`, `passwords`, `email`, `phone_s`) VALUES
-('b6220503555', ',มาติกาน', 'โทรหาใคร', 'lovebabe', 'matikarn.t@ku.th', '555555');
+('b6220503555', ',มาติกาน', 'โทรหาใคร', 'lovebabe', 'matikarn.t@ku.th', '555555'),
+('b6220504444', 'สารสาส', 'ราไปก่อน', 'vvvv', 'sarasas@ku.th', '09875432');
 
 -- --------------------------------------------------------
 
@@ -222,13 +225,13 @@ ALTER TABLE `type`
 -- AUTO_INCREMENT for table `company`
 --
 ALTER TABLE `company`
-  MODIFY `id_c` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_c` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `petition`
 --
 ALTER TABLE `petition`
-  MODIFY `id_p` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_p` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `type`
