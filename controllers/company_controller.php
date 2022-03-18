@@ -82,9 +82,7 @@
         $id_l=$_GET['id_l'];
         $lecturer=Lecturer::get($id_l);
         $id_c=$_GET['id_c'];
-        echo $id_c;
         Company::delete($id_c);
-        echo "jjj";
         CompanyController::index();
 
     }
