@@ -8,7 +8,7 @@
         $id_l=$_GET['id_l'];
         $passwords=$_GET['passwords'];
         $check=Lecturer::sign($id_l,$passwords);
-       echo $check;
+       //echo $check;
        if($check ==1)
        {
         require_once("./views/sign_in/signin.php");
