@@ -99,49 +99,48 @@ body {
   display: block;
 }
 
-.greet label{
-  position : absolute ; 
-  top : 33%; 
-  left : 12% ;
-  font-size: 600%; 
+td, th {
+  text-align: center;
+  padding: 1em;
+  background: #ddd;
+  border: 1px solid #FFF;
+  
+}
+    tr:hover td {
+    	background-color: #FF735C;
+        color:#FFF;
+        
+    }
+    .css-mine {
+  margin-top: 1em;
+  clear: both;
+}
+th {
+        background-color:#2F4F58;
+        color:#FFF;
+        font-size:16px;
+        
 }
 
-.greet a{
-  position : absolute ; 
-  top : 45%; 
-  left : 16.2% ;
-  font-size: 250%;
-}
-.greet a1{
-  position : absolute ; 
-  top : 50%; 
-  left : 15.7% ;
-  font-size: 250%;
-}
-.img{
-  position : absolute ; 
-  z-index: 1;
-  top : 2%;
-  left : 55% ;
+body {
+  margin: 1.5em;
+  position : center;
+  font-family : "FC Iconic"  ,"FC Iconic", sans-serif ;
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden
 }
 
-.footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 30%;
-    left: 0px;
-    background: #2F4F58;
-    z-index: 0;
-}
-
-.footer label{
-  position : absolute ; 
-  top : 8%; 
-  left : 2.5% ;
-  font-size: 250%;
-  color : white ;
-}
+table{
+  width: 50%;
+  border-collapse: collapse;
+  border-radius: 1em;
+  overflow: hidden;	
+  border: 1px solid #000;
+  font-family: 'Noto Sans Thai', sans-serif;
+  font-size:14px;
+    
+}    
 
 </style>
 </head>
@@ -175,7 +174,7 @@ body {
         <button type="submit" name="action" value="search">
 search</button>
 </form>
-<tr><td>วันที่ส่ง</td><td>ชื่อ</td><td>นามสกุล</td><td>คำร้อง</td><td>การอนุมัติ</td></tr>
+<tr><th>วันที่ส่ง</th><th>ชื่อ</th><th>นามสกุล</th><th>คำร้อง</th><th>การอนุมัติ</th></tr>
 <?php foreach($petition_List as $petition)
 {
         echo "<tr><td>$petition->date_d</td>
