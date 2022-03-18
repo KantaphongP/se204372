@@ -272,6 +272,13 @@ body {
     top: 20%;
     font-size: 200%;
 }
+.hh{
+     position: absolute;
+    left: 50%;
+    top:63%;
+    font-size: 150%;
+}
+
 
 .vv {
   position : absolute ; 
@@ -385,12 +392,16 @@ body {
             <b>เบอร์โทรศัพท์ :</b> $petition->phone_hr<br>
             <b>ที่พัก :</b> $petition->apartment" ?></a></p>
     </div>
+    <div class="hh">
+    <h3>เหตุผล</h3>
+</div>
     <div class="border">
+    
  <form method="get" action="">
     <div class="vv">
    
           
-          <label>เหตุผล <br><input type="text" name="reason"/></label><br>
+          <label><input type="text" name="reason"/></label><br>
   
           <input type="hidden"name="controller"value="lecturer"/>
           <input type="hidden" name="id_p" value="<?php echo $petition->id_p; ?>"/>
