@@ -128,9 +128,9 @@ body {
     outline:none;
     margin-top: 3px;
     background: #C4C4C4;
-border: 1px solid #FFF;
-box-sizing: border-box;
-border-radius: 15px;
+    order: 1px solid #FFF;
+    box-sizing: border-box;
+    border-radius: 15px;
 }
 .form .tab-content .form-element label{
     left:30%;
@@ -138,7 +138,7 @@ border-radius: 15px;
 
 }
 .form .tab-content .form-element button{
-    font-family: 'DB Ozone X';
+    font-family: 'Noto Sans Thai', sans-serif;
     font-size:16px;
     font-style:bold;
    margin-top:5px;

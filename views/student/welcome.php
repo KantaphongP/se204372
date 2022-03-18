@@ -9,7 +9,7 @@ body {
   font-family : "FC Iconic"  ,"FC Iconic", sans-serif ;
   margin: 0; 
   height: 100%; 
-  overflow: hidden
+  overflow: hidden;
 }
 
 .user {
