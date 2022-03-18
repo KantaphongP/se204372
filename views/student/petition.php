@@ -125,7 +125,7 @@ body {
   font-size: 250%;
   color : white ;
 }
-.greet{
+.border{
   border-radius: 50px;
   border: 2px solid #000000;
   background: #FF735C;
@@ -134,29 +134,21 @@ body {
   position: absolute;
   left: 60px;
   top: 290px;
-  
-
 }
 .toncon{
   position : absolute ; 
-  font-size: 38px;  
   left : 5% ;
+  font-size: 38px;  
+  
   top:210px;
 
 }
-.greet .name{
-  
+.row1 {
+  width: 33.33%;
   color:#FFF;
-    margin:10px 0px;
-    
 }
-.greet .name label{
-  left:30%;
-   color:#FFF;
-}
-
-.greet .name input{
-  width:10%;
+.row1 input{
+  width:50%;
     padding: 10px;
     font-size:16px;
     outline:none;
@@ -166,6 +158,7 @@ border: 1px solid #FFF;
 box-sizing: border-box;
 border-radius: 15px;
 }
+
 
 
 
@@ -195,107 +188,43 @@ border-radius: 15px;
     </div>
   </div> 
 </div>
+
 <div class="toncon">
 <label> <?php echo  "คำร้องขอฝึกงาน";?> </label>
 </div>
-<div class ="greet">
   
-  <form class="get" action="">
-    <div class="name">
-  <label>วันที่ <br><input type="date" name="date_d"/></label><br></div>
-  <div class="name">
-  <label>ชื่อ <br><input type="text" name="name_s" 
-    value="<?php echo "$student->name_s $student->lastname_s";?>"/></label><br></div>
-    <div class="name">
-    <label>รหัสนิสิต <input type="text" name="id_s"
-    value="<?php echo $student->id_s;?>"/></label><br></div>
-    <div class="name">
-<label>เบอร์โทรศัพท์ <input type="text" name="phone_s"
-    value="<?php echo $student->phone_s;?>"/></label><br></div>
-    <div class="name">
-<label>ตำแหน่งที่ไปฝึก <input type="text" name="position_s"/></label><br></div>
-<div class="name">
-<label>ประเภทการฝึก <select name="id_t">
-    <?php foreach($type_List as $dep) {echo "<option value = $dep->id_t>
-    $dep->name_t</option>";}
-    ?>
-</select></label><br></div>
-<div class="name">
-<label>ชื่อผู้ที่จะให้ภาควิชาออกหนังสือให้ <input type="text" name="name_getbook"/></label><br></div>
-<div class="name">
-<label>ตำแหน่งผู้ที่จะให้ภาควิชาออกหนังสือให้ <input type="text" name="position_g"/></label><br></div>
-<div class="name">
-<label>ชื่อบริษัท <select name="id_c">
+<div class="border">
+  <div class="row1">
+    <form class="get" action="">
+      <label>วันที่ <br><input type="date" name="date_d"/></label><br>
+      <label>ชื่อ <br><input type="text" name="name_s" value="<?php echo "$student->name_s $student->lastname_s";?>"/></label><br>
+      <label>รหัสนิสิต<br> <input type="text" name="id_s"value="<?php echo $student->id_s;?>"/></label><br>
+      <label>เบอร์โทรศัพท์ <br><input type="text" name="phone_s"value="<?php echo $student->phone_s;?>"/></label><br>
+      <label>ตำแหน่งที่ไปฝึก <br><input type="text" name="position_s"/></label><br>
+    </form>
+  <div>
+
+  <div class="row2">
+    <label>ประเภทการฝึก <select name="id_t">
+      <?php foreach($type_List as $dep) {echo "<option value = $dep->id_t>
+      $dep->name_t</option>";}
+      ?></select></label><br>
+      <label>ชื่อผู้ที่จะให้ภาควิชาออกหนังสือให้ <input type="text" name="name_getbook"/></label><br>
+      <label>ตำแหน่งผู้ที่จะให้ภาควิชาออกหนังสือให้ <input type="text" name="position_g"/></label><br>
+    <label>ชื่อบริษัท <select name="id_c">
     <?php foreach($company_List as $dep) {echo "<option value = $dep->id_c>
     $dep->name_c</option>";}
-    ?>
-</select></label><br></div>
+    ?></select></label><br>
+    <label>ชื่อผู้ประสานงาน <input type="text" name="name_hr"/></label><br>
+  <div>
 
-<div class="name">
-<label>ชื่อผู้ประสานงาน <input type="text" name="name_hr"/></label><br></div>
-<div class="name">
-<label>เบอร์โทรศัพท์ <input type="text" name="phone_hr"/></label><br></div>
-<div class="name">
-<label>อีเมล <input type="text" name="email_hr"/></label><br></div>
-<div class="name">
-<label>ที่พัก <input type="text" name="apartment"/></label><br></div>
-<div class="name">
-<label>วันที่เริ่มฝึก <input type="date" name="date_start"/></label><br></div>
-<div class="name">
-<label>วันสุดท้ายของการฝึก <input type="date" name="date_end"/></label><br></div>
+  <div class="row3">
+    <label>เบอร์โทรศัพท์ <input type="text" name="phone_hr"/></label><br>
+    <label>อีเมล <input type="text" name="email_hr"/></label><br>
+    <label>ที่พัก <input type="text" name="apartment"/></label><br>
+    <label>วันที่เริ่มฝึก <input type="date" name="date_start"/></label><br>
+    <label>วันสุดท้ายของการฝึก <input type="date" name="date_end"/></label><br>
+  <div>
 
-</form>
- 
-  
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>
-<form method="get" action="">
-<label>วันที่ <input type="date" name="date_d"/></label><br>
-<label>ชื่อ <input type="text" name="name_s" 
-    value="<?php echo $student->name_s;?>"/></label><br>
-<label>รหัสนิสิต <input type="text" name="id_s"
-    value="<?php echo $student->id_s;?>"/></label><br>
-<label>เบอร์โทรศัพท์ <input type="text" name="phone_s"
-    value="<?php echo $student->phone_s;?>"/></label><br>
-<label>ตำแหน่งที่ไปฝึก <input type="text" name="position_s"/></label><br>
-<label>ประเภทการฝึก <select name="id_t">
-    <?php foreach($type_List as $dep) {echo "<option value = $dep->id_t>
-    $dep->name_t</option>";}
-    ?>
-</select></label><br>
-
-<label>ชื่อผู้ที่จะให้ภาควิชาออกหนังสือให้ <input type="text" name="name_getbook"/></label><br>
-<label>ตำแหน่งผู้ที่จะให้ภาควิชาออกหนังสือให้ <input type="text" name="position_g"/></label><br>
-<label>ชื่อบริษัท <select name="id_c">
-    <?php foreach($company_List as $dep) {echo "<option value = $dep->id_c>
-    $dep->name_c</option>";}
-    ?>
-</select></label><br>
-
-
-<label>ชื่อผู้ประสานงาน <input type="text" name="name_hr"/></label><br>
-<label>เบอร์โทรศัพท์ <input type="text" name="phone_hr"/></label><br>
-<label>อีเมล <input type="text" name="email_hr"/></label><br>
-<label>ที่พัก <input type="text" name="apartment"/></label><br>
-<label>วันที่เริ่มฝึก <input type="date" name="date_start"/></label><br>
-<label>วันสุดท้ายของการฝึก <input type="date" name="date_end"/></label><br>
-
-<input type="hidden"name="controller"value="login"/>
-<button type= "submit"name="action"value="index">back</button>
-<button type= "submit"name="action"value="addpetition">save</button>
-
-</form>
-
-
-
+<div>
 
