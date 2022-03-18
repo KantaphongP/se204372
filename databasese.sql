@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 15, 2022 at 08:01 PM
+-- Generation Time: Mar 18, 2022 at 03:56 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -108,15 +108,16 @@ CREATE TABLE `petition` (
   `apartment` varchar(5) NOT NULL,
   `date_start` date NOT NULL,
   `date_end` date NOT NULL,
-  `status_approve` varchar(12) NOT NULL
+  `status_approve` varchar(12) NOT NULL,
+  `reason` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `petition`
 --
 
-INSERT INTO `petition` (`id_p`, `date_d`, `id_t`, `id_c`, `id_s`, `status_ap_company`, `position_s`, `name_getbook`, `position_g`, `name_hr`, `phone_hr`, `email_hr`, `apartment`, `date_start`, `date_end`, `status_approve`) VALUES
-(3, '2022-03-02', 1, 1, 'b6220503555', 'รอดำเนินการ', 'เล่นเกม', 'มี่', 'หัวหน้าหมู', 'มี่', '7777777', 'thidarat.pi@ku.th', 'มี', '2022-03-01', '2022-03-01', 'อนุมัติ');
+INSERT INTO `petition` (`id_p`, `date_d`, `id_t`, `id_c`, `id_s`, `status_ap_company`, `position_s`, `name_getbook`, `position_g`, `name_hr`, `phone_hr`, `email_hr`, `apartment`, `date_start`, `date_end`, `status_approve`, `reason`) VALUES
+(3, '2022-03-02', 1, 1, 'b6220503555', 'รอดำเนินการ', 'เล่นเกม', 'มี่', 'หัวหน้าหมู', 'มี่', '7777777', 'thidarat.pi@ku.th', 'มี', '2022-03-01', '2022-03-01', 'ไม่อนุมัติ', 'เหตุผลข้อเดียวเท่านั้น');
 
 -- --------------------------------------------------------
 
