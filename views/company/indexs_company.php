@@ -1,8 +1,56 @@
+
 <!DOCTYPE html>
 <html>
+<style>
+form {
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.search {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 
-        <style>
-                
+}
+.search_input {
+  font-family: 'Noto Sans Thai', sans-serif;
+  width:50%;
+  height:40px;
+  font-size: 18px;
+  color:#2F4F58;
+  border: 2px solid #2F4F58;
+  padding: 15px 30px;
+  border-radius: 50px;
+  margin-right: -50px;
+  margin-top: 10px;
+  transition: all 0.2s;
+}
+.search_input:focus {
+  outline: none;
+  width: 60%;
+  background-color: #f0eeee;
+}
+.search_input:-webkit-input-placehoder {
+  font-family: 'Noto Sans Thai', sans-serif;
+  font-size : 18px;
+  color: #2F4F58;
+}
+.search_button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.search_button:focus {
+  outline:none;
+}
+.search_button:active {
+  transform: translateY(2px);
+}
+.search_icon {
+  font-size: 18px;
+  color:#FF735C;
+}
 .user {
   overflow: hidden;
   background-color: #385a64;
@@ -91,7 +139,7 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
-                .center {
+.center {
   margin-left: auto;
   margin-right: auto;
 }
@@ -119,10 +167,10 @@ th {
 }
 
 body {
-  margin: 1.5em;
-  position : center;
-  font-family : "FC Iconic"  ,"FC Iconic", sans-serif ;
+
+  font-family: 'Noto Sans Thai', sans-serif;
   margin: 0; 
+  width: 100%;
   height: 100%; 
   overflow: hidden
 }
@@ -137,29 +185,36 @@ table{
   font-size:14px;
     
 }    
+.s {
+  position: absolute;
+  top: 30%;
+  left:100%;
+  transform :translate(-50%,-50%);
+  width :100%;
+}
 </style>
 <head>
-        <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet">
-    </head>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet"></head>
+</head>
 <body>
 <div class="user">
-<label> <?php echo  "$student->name_s  $student->lastname_s";?> </label>
+<label> <?php //echo  "$student->name_s  $student->lastname_s";?> </label>
 <br><br><a href="?controller=login&action=signin">logout</a>
 </div>
 
 <div class="navbar">
-<a href=?controller=login&action=home&id_s=<?php echo $student->id_s;?>>หน้าแรก</a>
-<a href=?controller=company&action=indexs&id_s=<?php echo $student->id_s;?>>ค้นหาสถานประกอบการ</a>
+  <a href="#home">หน้าแรก</a>
+  <a href="?controller=company&action=indexs">ค้นหาสถานประกอบการ</a>
   <div class="dropdown">
     <button class="dropbtn">การฝึกงาน 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-    <a href=?controller=login&action=petition&id_s=<?php echo $student->id_s;?>>ใบยื่นคำขอฝึกงาน </a>
-    <a href=?controller=status_petition&action=statusPetition&id_s=<?php echo $student->id_s;?>>ตรวจสอบสถานะ</a>
+    <a href=?controller=login&action=petition&id_s=<?php //echo $student->id_s;?>>ใบยื่นคำขอฝึกงาน </a>
+    <a href=?controller=status_petition&action=statusPetition&id_s=<?php// echo $student->id_s;?>>ตรวจสอบสถานะ</a>
 
     <a>ประวัติการฝึกงาน</a>
     <a>ตรวจสอบคำร้อง</a>
@@ -167,14 +222,16 @@ table{
     </div>
   </div> 
 </div>
-<table class="center">
-<form method="get" action="">
-        <input type="text" name="key">
+
+  <form method="get" action="" class="search">
+        <input type="text" name="key" placeholder="Search" class="search_input">
         <input type="hidden" name="controller" value="company">
-        <input type="hidden" name="id_s" value="<?php echo $student->id_s; ?>"/>
-        <button type="submit" name="action" value="searchs">
-search</button>
-</form>
+        <input type="hidden" name="id_s" value="<?php echo $student->id_s;?>"/>
+        <button type="submit" name="action" value="searchs" class="search_button">
+          <i class="fas fa-search search_icon"></i></a>
+        </button>
+  </form>
+<table class="center">
 <tr><th>ชื่อสถานประกอบการ</th><th>จำนวนที่เปิดรับ</th><th>ค่าตอบแทน</th></tr>
 <?php foreach($company_List as $company)
 {
@@ -185,7 +242,7 @@ search</button>
 }
 echo "</table>";
 ?>
-
+</div>
 
 </body>
 </html>
