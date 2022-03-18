@@ -26,6 +26,12 @@
         require_once("./views/student/welcome.php");
        }
     }
+    public function home()
+    {
+        $id_s=$_GET['id_s'];
+        $student=Student::get($id_s);
+        require_once("./views/student/welcome.php");
+    }
     public function petition()
     {
         $id_s=$_GET['id_s'];
