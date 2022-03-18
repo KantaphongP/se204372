@@ -44,8 +44,9 @@
     public function detailpet()
     {
         $id_p=$_GET['id_p'];
-        echo $id_p;
         $petition=Petition::get($id_p);
+        $date_s=Petition::convertDate($petition->date_start);
+        $date_e=Petition::convertDate($petition->date_end);
         require_once('./views/lecturer/detail.php');
     }
     public function approve()
