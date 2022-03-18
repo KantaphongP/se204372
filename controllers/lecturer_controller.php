@@ -31,6 +31,7 @@
         //echo 'jjjjj';
         //$id_l='jjjjj';
         $lecturer=Lecturer::get($id_l);
+        
         $petition_List=Petition::getAll();
         require_once("./views/lecturer/petition.php");
     }

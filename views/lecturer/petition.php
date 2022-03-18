@@ -99,6 +99,11 @@ body {
   display: block;
 }
 
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 td, th {
   text-align: center;
   padding: 1em;
@@ -166,7 +171,7 @@ table{
   </div> 
 </div>
 
-<table border=1>
+<table class="center">
 
 <form method="get" action="">
         <input type="text" name="key">
@@ -177,7 +182,8 @@ search</button>
 <tr><th>วันที่ส่ง</th><th>ชื่อ</th><th>นามสกุล</th><th>คำร้อง</th><th>การอนุมัติ</th></tr>
 <?php foreach($petition_List as $petition)
 {
-        echo "<tr><td>$petition->date_d</td>
+        $datee_d = Petition::convertDate($petition->date_d);
+        echo "<tr><td>$datee_d</td>
         <td>$petition->name_s</td>
         <td>$petition->lastname_s</td>
        <td>
