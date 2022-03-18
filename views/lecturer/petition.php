@@ -165,6 +165,7 @@ table{
     </button>
     <div class="dropdown-content">
     <a href=?controller=lecturer&action=petition&id_l=<?php echo $lecturer->id_l;?>> คำร้องขอฝึกงานทั้งหมด</a>
+    <a href=?controller=company&action=newCompany&id_l=<?php echo $lecturer->id_l;?>> เพิ่มสถานประกอบการ</a>
     <a>ตรวจสอบคำร้อง</a>
     <a>ตรวจสอบประวัติ </a>
     </div>
