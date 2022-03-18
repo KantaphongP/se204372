@@ -269,6 +269,40 @@ body {
     font-size: 200%;
 }
 
+.vv {
+  position : absolute ; 
+  top: 70%;
+  left : 50%;
+  width: 45%;
+  color:#FFF;
+}
+.vv input{
+  width:75%;
+  padding: 10px;
+  font-size:16px;
+  outline:none;
+  margin-top: px;
+  background: #C4C4C4;
+  border: 1px solid #FFF;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+.vv button{
+  width:75%;
+  padding: 10px;
+  font-size:16px;
+  outline:none;
+  margin-top: px;
+  background: #385a64;
+  border: 1px solid #FFF;
+  box-sizing: border-box;
+  border-radius: 15px;
+  color:#FFF;
+  z-index: 2;
+  cursor: pointer;
+}
+
+
 </style>
 </head>
 <body>
@@ -346,8 +380,23 @@ body {
             <b>เบอร์โทรศัพท์ :</b> $petition->phone_hr<br>
             <b>ที่พัก :</b> $petition->apartment" ?></a></p>
     </div>
-
-
+    <div class="border">
+ <form method="get" action="">
+    <div class="vv">
+   
+          
+          <label>เหตุผล <br><input type="text" name="reason"/></label><br>
+  
+          <input type="hidden"name="controller"value="lecturer"/>
+          <input type="hidden" name="id_p" value="<?php echo $petition->id_p; ?>"/>
+          <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l; ?>"/>
+          
+           <button type="submit"name="action"value="approve">/</button>
+           <button type="submit"name="action"value="no">X</button>
+          <button type="submit"name="action"value="petition">back</button>
+</div>
+ </form>
+</div >
 
 
 </body>
