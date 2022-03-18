@@ -121,7 +121,7 @@ th {
 body {
   margin: 1.5em;
   position : center;
-  font-family : "FC Iconic"  ,"FC Iconic", sans-serif ;
+  font-family: 'Noto Sans Thai', sans-serif;
   margin: 0; 
   height: 100%; 
   overflow: hidden
