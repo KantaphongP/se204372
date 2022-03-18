@@ -146,7 +146,7 @@ table{
     </head>
 <body>
 <div class="user">
-<label> <?php //echo  "$student->name_s  $student->lastname_s";?> </label>
+<label> <?php echo  "$student->name_s  $student->lastname_s";?> </label>
 <br><br><a href="?controller=login&action=signin">logout</a>
 </div>
 

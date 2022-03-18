@@ -19,6 +19,12 @@
         require_once("./views/lecturer/welcome.php");
        }
     }
+    public function home()
+    {
+        $id_l=$_GET['id_l'];
+        $lecturer=Lecturer::get($id_l);
+        require_once("./views/lecturer/welcome.php");
+    }
     public function petition()
     {
         $petition_List=Petition::getAll();
