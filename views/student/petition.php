@@ -125,16 +125,7 @@ body {
   font-size: 250%;
   color : white ;
 }
-.border{
-  border-radius: 50px;
-  border: 2px solid #000000;
-  background: #FF735C;
-  width: 1800px;
-  height: 630px;  
-  position: absolute;
-  left: 60px;
-  top: 290px;
-}
+
 .toncon{
   position : absolute ; 
   left : 5% ;
@@ -143,23 +134,100 @@ body {
   top:210px;
 
 }
-.row1 {
+
+.border{
+  border-radius: 50px;
+  border: 2px solid #000000;
+  background: #FF735C;
+  position: absolute;
+  width: 90%;
+  height: 65%;  
+  position: absolute;
+  left: 5%;
+  top: 30%;
+  font-size: 165%;
+  z-index: 1;
+}
+.col1 {
+  position : absolute ; 
+  top: 5%;
+  left : 2%;
   width: 33.33%;
   color:#FFF;
 }
-.row1 input{
-  width:50%;
-    padding: 10px;
-    font-size:16px;
-    outline:none;
-    margin-top: px;
-    background: #C4C4C4;
-border: 1px solid #FFF;
-box-sizing: border-box;
-border-radius: 15px;
+.col1 input{
+  width:75%;
+  padding: 10px;
+  font-size:16px;
+  outline:none;
+  margin-top: px;
+  background: #C4C4C4;
+  border: 1px solid #FFF;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+.col1 select{
+  width:75%;
+  padding: 10px;
+  font-size:16px;
+  outline:none;
+  margin-top: px;
+  background: #C4C4C4;
+  border: 1px solid #FFF;
+  box-sizing: border-box;
+  border-radius: 15px;
 }
 
-
+.col2 {
+  position : absolute ; 
+  top: 0%;
+  left : 98%;
+  width: 100%;
+  color:#FFF;
+}
+.col2 input{
+  width:75%;
+  padding: 10px;
+  font-size:16px;
+  outline:none;
+  margin-top: px;
+  background: #C4C4C4;
+  border: 1px solid #FFF;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+.col3 {
+  position : absolute ; 
+  top: 0%;
+  left : 98%;
+  width: 100%;
+  color:#FFF;
+}
+.col3 input{
+  width:75%;
+  padding: 10px;
+  font-size:16px;
+  outline:none;
+  margin-top: px;
+  background: #C4C4C4;
+  border: 1px solid #FFF;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+.col3 button{
+  width:75%;
+  padding: 10px;
+  font-size:16px;
+  outline:none;
+  margin-top: px;
+  background: #385a64;
+  border: 1px solid #FFF;
+  box-sizing: border-box;
+  border-radius: 15px;
+  color:#FFF;
+  z-index: 2;
+  cursor: pointer;
+}
 
 
 </style>
@@ -194,37 +262,41 @@ border-radius: 15px;
 </div>
   
 <div class="border">
-  <div class="row1">
+  <div class="col1">
     <form class="get" action="">
-      <label>วันที่ <br><input type="date" name="date_d"/></label><br>
-      <label>ชื่อ <br><input type="text" name="name_s" value="<?php echo "$student->name_s $student->lastname_s";?>"/></label><br>
-      <label>รหัสนิสิต<br> <input type="text" name="id_s"value="<?php echo $student->id_s;?>"/></label><br>
-      <label>เบอร์โทรศัพท์ <br><input type="text" name="phone_s"value="<?php echo $student->phone_s;?>"/></label><br>
-      <label>ตำแหน่งที่ไปฝึก <br><input type="text" name="position_s"/></label><br>
+      <label>วันที่ <br><input type="date" name="date_d"/></label><br><br>
+      <label>ชื่อ <br><input type="text" name="name_s" value="<?php echo "$student->name_s $student->lastname_s";?>"/></label><br><br>
+      <label>รหัสนิสิต<br> <input type="text" name="id_s"value="<?php echo $student->id_s;?>"/></label><br><br>
+      <label>เบอร์โทรศัพท์ <br><input type="text" name="phone_s"value="<?php echo $student->phone_s;?>"/></label><br><br>
+      <label>ตำแหน่งที่ไปฝึก <br><input type="text" name="position_s"/></label><br><br>
+      <label>ประเภทการฝึก <br><select name="id_t">
+      <?php foreach($type_List as $dep) {echo "<option value = $dep->id_t>
+      $dep->name_t</option>";}
+      ?></select></label><br><br>
     </form>
   <div>
 
-  <div class="row2">
-    <label>ประเภทการฝึก <select name="id_t">
-      <?php foreach($type_List as $dep) {echo "<option value = $dep->id_t>
-      $dep->name_t</option>";}
-      ?></select></label><br>
-      <label>ชื่อผู้ที่จะให้ภาควิชาออกหนังสือให้ <input type="text" name="name_getbook"/></label><br>
-      <label>ตำแหน่งผู้ที่จะให้ภาควิชาออกหนังสือให้ <input type="text" name="position_g"/></label><br>
-    <label>ชื่อบริษัท <select name="id_c">
+  <div class="col2">
+    <label>ชื่อผู้ที่จะให้ภาควิชาออกหนังสือให้ <br><input type="text" name="name_getbook"/></label><br><br>
+    <label>ตำแหน่งผู้ที่จะให้ภาควิชาออกหนังสือให้ <br><input type="text" name="position_g"/></label><br><br>
+    <label>ชื่อบริษัท<br> <select name="id_c">
     <?php foreach($company_List as $dep) {echo "<option value = $dep->id_c>
     $dep->name_c</option>";}
-    ?></select></label><br>
-    <label>ชื่อผู้ประสานงาน <input type="text" name="name_hr"/></label><br>
+    ?></select></label><br><br>
+    <label>ชื่อผู้ประสานงาน <br><input type="text" name="name_hr"/></label><br><br>
+    <label>เบอร์โทรศัพท์ <br><input type="text" name="phone_hr"/></label><br><br>
+    <label>อีเมล <br><input type="text" name="email_hr"/></label><br><br>
   <div>
 
-  <div class="row3">
-    <label>เบอร์โทรศัพท์ <input type="text" name="phone_hr"/></label><br>
-    <label>อีเมล <input type="text" name="email_hr"/></label><br>
-    <label>ที่พัก <input type="text" name="apartment"/></label><br>
-    <label>วันที่เริ่มฝึก <input type="date" name="date_start"/></label><br>
-    <label>วันสุดท้ายของการฝึก <input type="date" name="date_end"/></label><br>
-  <div>
+  <div class="col3">
+    <label>ที่พัก <br><input type="text" name="apartment"/></label><br><br>
+    <label>วันที่เริ่มฝึก <br><input type="date" name="date_start"/></label><br><br>
+    <label>วันสุดท้ายของการฝึก <br><input type="date" name="date_end"/></label><br><br><br><br>
 
+    <input type="hidden" name="controller" value="login"/>
+    <button type="submit" name="action" value ="index">back</button><br><br>
+    <button type="submit" name="action" value ="addpetition">save</button><br><br>
+
+  <div>
 <div>
 
