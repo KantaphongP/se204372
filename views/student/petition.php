@@ -130,10 +130,11 @@ body {
 
 .toncon{
   position : absolute ; 
+  top:20%;
   left : 5% ;
   font-size: 400%;  
   
-  top:210px;
+  
 
 }
 
@@ -145,8 +146,9 @@ body {
   width: 90%;
   height: 65%;  
   position: absolute;
-  left: 5%;
-  top: 30%;
+  top: 60%;
+  left: 50%;
+transform: translate(-50%,-50%);
   font-size: 165%;
   z-index: 1;
 }
