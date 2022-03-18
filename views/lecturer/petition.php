@@ -158,13 +158,14 @@ table{
 
 <div class="navbar">
 <a href=?controller=lecturer&action=home&id_l=<?php echo $lecturer->id_l;?>>หน้าแรก</a>
-  <a href="?controller=company&action=index">ค้นหาสถานประกอบการ</a>
+  <a href=?controller=company&action=index&id_l=<?php echo $lecturer->id_l;?>>ค้นหาสถานประกอบการ</a>
   <div class="dropdown">
     <button class="dropbtn">การฝึกงาน/คำร้องขอฝึกงานทั้งหมด 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
     <a href=?controller=lecturer&action=petition&id_l=<?php echo $lecturer->id_l;?>> คำร้องขอฝึกงานทั้งหมด</a>
+    <a href=?controller=company&action=newCompany&id_l=<?php echo $lecturer->id_l;?>> เพิ่มสถานประกอบการ</a>
     <a>ตรวจสอบคำร้อง</a>
     <a>ตรวจสอบประวัติ </a>
     </div>
@@ -176,6 +177,7 @@ table{
 <form method="get" action="">
         <input type="text" name="key">
         <input type="hidden" name="controller" value="lecturer">
+        <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l; ?>"/>
         <button type="submit" name="action" value="search">
 search</button>
 </form>
@@ -187,7 +189,7 @@ search</button>
         <td>$petition->name_s</td>
         <td>$petition->lastname_s</td>
        <td>
-        <a href=?controller=lecturer&action=detailpet&id_p=$petition->id_p>see</a>
+        <a href=?controller=lecturer&action=detailpet&id_p=$petition->id_p&id_l=$lecturer->id_l>see</a>
         </td> <td>$petition->status_approve</td></tr>";
 }
 echo "</table>";
