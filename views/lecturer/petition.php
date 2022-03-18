@@ -158,7 +158,7 @@ table{
 
 <div class="navbar">
 <a href=?controller=lecturer&action=home&id_l=<?php echo $lecturer->id_l;?>>หน้าแรก</a>
-  <a href="?controller=company&action=index">ค้นหาสถานประกอบการ</a>
+  <a href=?controller=company&action=index&id_l=<?php echo $lecturer->id_l;?>>ค้นหาสถานประกอบการ</a>
   <div class="dropdown">
     <button class="dropbtn">การฝึกงาน/คำร้องขอฝึกงานทั้งหมด 
       <i class="fa fa-caret-down"></i>
