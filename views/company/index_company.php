@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-  
+body {
+  font-family: 'Noto Sans Thai', sans-serif;
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden
+}
+
 .user {
   overflow: hidden;
   background-color: #385a64;
@@ -32,7 +44,8 @@
 .navbar {
   overflow: hidden;
   background-color: #385a64;
-  left: 0% ;
+  width: 100% ;
+  z-index:2;
 }
 
 .navbar a {
@@ -47,6 +60,7 @@
 .dropdown {
   float: left;
   overflow: hidden;
+  
 }
 
 .dropdown .dropbtn {
@@ -70,7 +84,7 @@
   background-color: #385a64;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 2;
 }
 
 .dropdown-content a {
@@ -90,11 +104,12 @@
   display: block;
 }
 
-                .center {
+.center {
   margin-left: auto;
   margin-right: auto;
 }
- td, th {
+
+td, th {
   text-align: center;
   padding: 1em;
   background: #ddd;
@@ -136,6 +151,7 @@ table{
   font-size:14px;
     
 }    
+
 </style>
 <head>
         <link rel="stylesheet" href="css/style.css">
