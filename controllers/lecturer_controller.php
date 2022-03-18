@@ -27,6 +27,10 @@
     }
     public function petition()
     {
+        $id_l=$_GET['id_l'];
+        //echo 'jjjjj';
+        //$id_l='jjjjj';
+        $lecturer=Lecturer::get($id_l);
         $petition_List=Petition::getAll();
         require_once("./views/lecturer/petition.php");
     }
