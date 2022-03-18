@@ -39,14 +39,16 @@
     }
     public function approve()
     {
+        $reason=$_GET['reason'];
         $id_p=$_GET['id_p'];
-        Petition::update($id_p);
+        Petition::update($id_p,$reason);
         LecturerController::petition();
     }
     public function no()
     {
+        $reason=$_GET['reason'];
         $id_p=$_GET['id_p'];
-        Petition::update2($id_p);
+        Petition::update2($id_p,$reason);
         LecturerController::petition();
     }
    

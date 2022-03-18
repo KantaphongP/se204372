@@ -20,6 +20,8 @@
         
 ?>
 <form method="get" action="">
+          
+        <label>เหตุผล <br><input type="text" name="reason"/></label><br>
 
         <input type="hidden"name="controller"value="lecturer"/>
         <input type="hidden" name="id_p" value="<?php echo $petition->id_p; ?>"/>
