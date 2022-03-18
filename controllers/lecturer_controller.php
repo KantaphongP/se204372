@@ -37,6 +37,8 @@
     }
     public function search()
     {
+        $id_l=$_GET['id_l'];
+        $lecturer=Lecturer::get($id_l);
         $key=$_GET['key'];
         $petition_List=Petition::search($key);
         require_once('./views/lecturer/petition.php');
@@ -44,6 +46,8 @@
     public function detailpet()
     {
         $id_p=$_GET['id_p'];
+        $id_l=$_GET['id_l'];
+        $lecturer=Lecturer::get($id_l);
         $petition=Petition::get($id_p);
         $date_s=Petition::convertDate($petition->date_start);
         $date_e=Petition::convertDate($petition->date_end);

@@ -274,23 +274,19 @@ body {
 <body>
 
 <div class="user">
-<label> <?php echo  "$petition->name_s  $petition->lastname_s";?> </label>
+<label> <?php echo  "$lecturer->name_l  $lecturer->lastname_l";?> </label>
 <br><br><a href="?controller=login&action=signin">logout</a>
 </div>
 
 <div class="navbar">
-<a href=?controller=login&action=home&id_s=<?php echo $petition->id_s;?>>หน้าแรก</a>
-<a href=?controller=company&action=indexs&id_s=<?php echo $petition->id_s;?>>ค้นหาสถานประกอบการ</a>
+<a href=?controller=lecturer&action=home&id_l=<?php echo $lecturer->id_l;?>>หน้าแรก</a>
+  <a href=?controller=company&action=index&id_l=<?php echo $lecturer->id_l;?>>ค้นหาสถานประกอบการ</a>
   <div class="dropdown">
-    <button class="dropbtn">การฝึกงาน/ตรวจสอบสถานะ 
+    <button class="dropbtn">การฝึกงาน/คำร้องขอฝึกงานทั้งหมด 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-
-    <a href=?controller=login&action=petition&id_s=<?php echo $petition->id_s;?>>ใบยื่นคำขอฝึกงาน </a>
-    <a href=?controller=status_petition&action=statusPetition&id_s=<?php echo $petition->id_s;?>>ตรวจสอบสถานะ</a>
-
-    <a>ประวัติการฝึกงาน</a>
+    <a href=?controller=lecturer&action=petition&id_l=<?php echo $lecturer->id_l;?>> คำร้องขอฝึกงานทั้งหมด</a>
     <a>ตรวจสอบคำร้อง</a>
     <a>ตรวจสอบประวัติ </a>
     </div>
