@@ -41,7 +41,7 @@ body {
 .navbar {
   overflow: hidden;
   background-color: #385a64;
-  left: 0% ;
+  width: 100% ;
 }
 
 .navbar a {
