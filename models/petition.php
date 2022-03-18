@@ -227,7 +227,7 @@
     public static function convertDate($datee){
         if(strstr($datee,"-") || strstr($datee,'/')){
             $datee = preg_split("/[\/]|[-]+/",$datee);
-            $datee = $datee[2].".".$datee[1].".".$datee[0];
+            $datee = $datee[2]."/".$datee[1]."/".$datee[0];
             return $datee;
         }
     }

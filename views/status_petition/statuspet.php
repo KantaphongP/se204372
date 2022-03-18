@@ -335,7 +335,7 @@ body {
             <b>ตำแหน่งที่ไปฝึก :</b> $inf_pet->position_s<br>
             <b>ชื่อผู้ที่จะให้ภาควิชาฯออกหนังสือ :</b> <br>$inf_pet->name_getbook<br>
             <b>ตำแหน่งของผู้ที่จะให้ภาควิชาฯออกหนังสือ :</b> <br>$inf_pet->position_g<br>
-            <b>ระยะการฝึกงาน :</b> <br>$datee_start->date_start <b>ถึง</b> $datee_end->date_end" ?></a></p>
+            <b>ระยะการฝึกงาน :</b> <br>$datee_start <b>ถึง</b> $datee_end" ?></a></p>
     </div>
 
     <div class ="titlecom">
