@@ -155,7 +155,7 @@ table{
   left: 50%;
   transform: translate(-50%,-50%);
   width: 45%;
-  height: 58%;  
+  height: 63%;  
   font-size: 165%;
   z-index: 1;
 }
@@ -180,7 +180,10 @@ table{
   border-radius: 15px;
 }
 .update button{
-  width:80%;
+  position: absolute;
+  left : 40%;
+  transform: translate(-50%,-50%);
+  width:30%;
   padding: 10px;
   font-size:16px;
   outline:none;
@@ -234,13 +237,13 @@ table{
             <label> ที่อยู่ <br><input type="text" name="address_c"value="<?php echo $company->address_c;?>"/> </label><br>
             <label> เบอร์โทร <br><input type="text" name="phone_c"value="<?php echo $company->phone_c;?>"/> </label><br>
             <label> จำนวนรับ <br><input type="number" name="quantity"value="<?php echo $company->quantity;?>"/> </label><br>
-            <label> ค่าตอบแทน <br><input type="number" name="income"value="<?php echo $company->income;?>"/> </label><br>
+            <label> ค่าตอบแทน <br><input type="number" name="income"value="<?php echo $company->income;?>"/> </label><br><br>
 
 
             <input type="hidden"name="controller"value="company"/>
-            <input type="hidden" name="id_c" value="<?php echo $company->id_c; ?>"/><br>
-            <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l; ?>"/><br>
-            <button type="submit"name="action"value="index">back</button><br><br>
+            <input type="hidden" name="id_c" value="<?php echo $company->id_c; ?>"/>
+            <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l; ?>"/>
+            <button type="submit"name="action"value="index">back</button><br>
             <button type="submit"name="action"value="update">update</button><br>
             </form>
     </div>
