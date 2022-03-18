@@ -160,8 +160,11 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
+
     <a href=?controller=lecturer&action=petition> คำร้องขอฝึกงานทั้งหมด</a>
     <a href=?controller=company&action=newCompany&id_l=<?php echo $lecturer->id_l;?>> เพิ่มสถานประกอบการ</a>
+
+
     <a>ตรวจสอบคำร้อง</a>
     <a>ตรวจสอบประวัติ </a>
     </div>
