@@ -44,7 +44,8 @@ body {
 .navbar {
   overflow: hidden;
   background-color: #385a64;
-  width: 100% ; 
+  width: 100% ;
+  z-index:2;
 }
 
 .navbar a {
@@ -59,6 +60,7 @@ body {
 .dropdown {
   float: left;
   overflow: hidden;
+  
 }
 
 .dropdown .dropbtn {
@@ -82,7 +84,7 @@ body {
   background-color: #385a64;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 2;
 }
 
 .dropdown-content a {

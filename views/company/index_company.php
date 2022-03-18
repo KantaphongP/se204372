@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-
-        <style>
-                
+<style>
+  
 .user {
   overflow: hidden;
   background-color: #385a64;
@@ -33,8 +32,7 @@
 .navbar {
   overflow: hidden;
   background-color: #385a64;
-  width: 100% ; 
-  
+  left: 0% ;
 }
 
 .navbar a {
@@ -91,6 +89,7 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
                 .center {
   margin-left: auto;
   margin-right: auto;
