@@ -30,7 +30,7 @@
     color: #000000;
 }*/
 .title {
-    position : absolute ;
+    position : static ;
   width : 100% ;
   height : 100% ; 
   top : 4%; 
@@ -40,17 +40,17 @@
 .title h1{
     position : absolute ; 
   top : 0%; 
-  left : 1% ;
+  left : 26% ;
   float : center ; 
-  font-size: 500%;
+  font-size: 400%;
 }
 
 .title h2{
     position : absolute ; 
   top : 8%; 
-  left : 0% ;
+  left : 25% ;
   float : center ; 
-  font-size: 500%;   
+  font-size: 400%;   
 }
 
 .body .title {
@@ -77,6 +77,7 @@ body {
     font-family: 'Noto Sans Thai', sans-serif;
     font-style:bold;
     font-size: auto;
+    position: static;
 }
 .form{
     font-family: 'Noto Sans Thai', sans-serif;
