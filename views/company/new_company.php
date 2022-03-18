@@ -229,6 +229,10 @@ table{
   </div> 
 </div>
 
+<div class="toncon">
+<label>เพิ่มสถานประกอบการ </label>
+</div>
+
 <div class="border">
     <div class="add">
         <form method="get" action="">
@@ -241,7 +245,7 @@ table{
 
 
             <input type="hidden" name="controller" value = "company"/>
-            <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l;?>"/><br>
+            <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l;?>"/><br><br>
             <button type="submit"name="action" value = "index"> back </button><br><br>
             <button type="submit"name="action" value= "addCompany"> save </button><br>
 
