@@ -195,7 +195,10 @@ table{
     border-radius: 15px;
   }
   .add button{
-    width:80%;
+    position: absolute;
+  left : 40%;
+  transform: translate(-50%,-50%);
+    width:30%;
     padding: 10px;
     font-size:16px;
     outline:none;
@@ -246,12 +249,12 @@ table{
             <label> ที่อยู่ <br><input type="text" name="address_c"/> </label><br>
             <label> เบอร์โทร <br><input type="text" name="phone_c"/> </label><br>
             <label> จำนวนรับ <br><input type="number" name="quantity"/> </label><br>
-            <label> ค่าตอบแทน <br><input type="number" name="income"/> </label><br>
+            <label> ค่าตอบแทน <br><input type="number" name="income"/> </label><br><br>
 
 
             <input type="hidden" name="controller" value = "company"/>
-            <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l;?>"/><br><br>
-            <button type="submit"name="action" value = "index"> back </button><br><br>
+            <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l;?>"/>
+            <button type="submit"name="action" value = "index"> back </button><br>
             <button type="submit"name="action" value= "addCompany"> save </button><br>
 
         </form>
