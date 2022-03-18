@@ -56,7 +56,7 @@
     $apartment=$_GET['apartment'];
     $date_start=$_GET['date_start'];
     $date_end=$_GET['date_end'];
-    echo $date_d;
+    
     Petition::Add($id_t,$id_c,$id_s,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$date_d);
     SigninController::index();
    }
