@@ -280,7 +280,7 @@ body {
 
 <div class="navbar">
 <a href=?controller=login&action=home&id_s=<?php echo $student_sp->id_s;?>>หน้าแรก</a>
-  <a href="?controller=company&action=indexs">ค้นหาสถานประกอบการ</a>
+<a href=?controller=company&action=indexs&id_s=<?php echo $student_sp->id_s;?>>ค้นหาสถานประกอบการ</a>
   <div class="dropdown">
     <button class="dropbtn">การฝึกงาน/ตรวจสอบสถานะ 
       <i class="fa fa-caret-down"></i>
