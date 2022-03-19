@@ -328,7 +328,7 @@ transform: translate(-50%,-50%);
     <label>ที่พัก <br><input type="text" name="apartment"/></label><br><br>
     <label>วันที่เริ่มฝึก <br><input type="date" name="date_start"/></label><br><br>
     <label>วันสุดท้ายของการฝึก <br><input type="date" name="date_end"/></label><br><br>
-    <label>ปีการศึกษา <br><input type="text" name="apartment"/></label><br><br>
+    <label>ปีการศึกษา <br><input type="text" name="year"/></label><br><br>
     <input type="hidden" name="controller" value="login"/>
     <div class ="b">
         <div class="back-btn ">

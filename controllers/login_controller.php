@@ -56,8 +56,8 @@
     $apartment=$_GET['apartment'];
     $date_start=$_GET['date_start'];
     $date_end=$_GET['date_end'];
-    
-    Petition::Add($id_t,$id_c,$id_s,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$date_d);
+    $year =$_GET['year'];
+    Petition::Add($id_t,$id_c,$id_s,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$date_d,$year);
     SigninController::index();
    }
 
