@@ -156,8 +156,8 @@ body {
   padding: 20px; 
   width: 180px;
   height: 15px;  
-  left: 650px;
-  top: 23px;
+  left: 660px;
+  top: 20px;
   position: absolute;
   text-align: center;
 }
@@ -187,7 +187,7 @@ body {
     position: absolute;
     top:50%;
     left: 55%;
-    line-height: 35px;
+    line-height: 37px;
     transform: translate(-50%,-50%);
     width: 100%;
 }
@@ -209,7 +209,7 @@ body {
     position: absolute;
     top:50%;
     left: 55%;
-    line-height: 35px;
+    line-height: 37px;
     transform: translate(-50%,-50%);
     width: 100%;
     
@@ -233,7 +233,7 @@ body {
     position: absolute;
     top:50%;
     left: 55%;
-    line-height: 35px;
+    line-height: 37px;
     transform: translate(-50%,-50%);
     width: 100%;
 }
@@ -242,34 +242,34 @@ body {
     position: absolute;
     left: 4.5%;
     top: 17%;
-    font-size: 200%;
+    font-size: 160%;
 }
 
 .titlestu{
     position: absolute;
     left: 4.5%;
     top: 26%;
-    font-size: 200%;
+    font-size: 180%;
 }
 
 .titleintern{
     position: absolute;
     left: 4.5%;
     top: 53%;
-    font-size: 200%;
+    font-size: 180%;
 }
 
 .titlecom{
     position: absolute;
     left: 55%;
     top: 26%;
-    font-size: 200%;
+    font-size: 180%;
 }
 
 .reason p{
     position: absolute;
     left: 55%;
-    top: 20%;
+    top: 19%;
     font-size: 200%;
 }
 .hh{
@@ -350,7 +350,7 @@ body {
     
     <div class ="titlestatus">
         <h1 style="text-align:left;">สถานะการยื่นคำร้องขอฝึกงาน : </h1>
-        <h1 id="rcorners2" style="font-size: 40px; " ><a><?php echo $petition->status_approve ?></a></h1>
+        <h1 id="rcorners2" style="font-size: 35px; " ><a><?php echo $petition->status_approve ?></a></h1>
     </div>
 
     <div class ="reason">
@@ -362,7 +362,7 @@ body {
     </div>
 
     <div class= "boxstudent">
-        <p id="rcorners3" style="font-size: 28px;" ><a><?php echo "<b>ชื่อ : </b> $petition->name_s $petition->lastname_s <br>
+        <p id="rcorners3" style="font-size: 25px;" ><a><?php echo "<b>ชื่อ : </b> $petition->name_s $petition->lastname_s <br>
             <b>รหัสนิสิต :</b> $petition->id_s <br>
             <b>เบอร์โทรศัพท์ :</b> $petition->phone_s<br>
             <b>อีเมล :</b> $petition->email_s" ?></a></p>
@@ -373,7 +373,7 @@ body {
     </div>
 
     <div class="boxintern">
-        <p id="rcorners5" style="font-size: 28px;"><a><?php echo "<b>ชื่อสถานประกอบการ :</b> $petition->name_c<br>
+        <p id="rcorners5" style="font-size: 25px;"><a><?php echo "<b>ชื่อสถานประกอบการ :</b> $petition->name_c<br>
             <b>ตำแหน่งที่ไปฝึก :</b> $petition->position_s<br>
             <b>ชื่อผู้ที่จะให้ภาควิชาฯออกหนังสือ :</b> <br>$petition->name_getbook<br>
             <b>ตำแหน่งของผู้ที่จะให้ภาควิชาฯออกหนังสือ :</b> <br>$petition->position_g<br>
@@ -385,7 +385,7 @@ body {
     </div>
 
     <div class="boxcom">
-        <p id="rcorners4" style="font-size: 28px;"><a><?php echo "<b>ชื่อสถานประกอบการ :</b> $petition->name_c<br>
+        <p id="rcorners4" style="font-size: 25px;"><a><?php echo "<b>ชื่อสถานประกอบการ :</b> $petition->name_c<br>
             <b>สถานที่ตั้ง :</b> $petition->address_c<br>
             <b>จำนวนค่าตอบแทน :</b> $petition->income บาท/วัน<br>
             <b>ชื่อผู้ประสานงาน :</b> $petition->name_hr <br>
