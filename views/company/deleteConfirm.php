@@ -10,8 +10,8 @@
         margin-right: auto;
     }
     .popup {
-        width: 20%;
-        height: 280px;
+        width: 30%;
+        height: 33%;
         padding: 30px 20px;
         background: #f5f5f5;
         border-radius: 10px;
