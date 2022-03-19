@@ -10,7 +10,7 @@
         margin-right: auto;
     }
     .popup {
-        width: 350px;
+        width: 20%;
         height: 280px;
         padding: 30px 20px;
         background: #f5f5f5;
@@ -18,6 +18,10 @@
         box-sizing:border-box;
         z-index:2;
         text-align:center;
+        position: absolute;
+  top: 20%;
+  left: 50%;
+transform: translate(-50%,-50%);
     }
     .popup .icon {
         margin: 5px 0px;
@@ -46,7 +50,7 @@
     
     .popup .back-btn {
       position: absolute;
-      top:37%;
+      top:80%;
       left:55%;
 
     }
@@ -69,8 +73,8 @@
     }
     .popup .delete-btn {
       position: absolute;
-      top:37%;
-      left:38%;
+      top:80%;
+      left:30%;
     }
     .popup .delete-btn button {
         padding: 7px 10px;
@@ -109,7 +113,7 @@
             $company->name_c <br>";?>
         </div>
         <div class="b">
-          <div class="back-btn">
+          <div class="back-btn ">
             <button type="submit" name="action" value="index">back</button>
         </div>
         <div class="delete-btn">
