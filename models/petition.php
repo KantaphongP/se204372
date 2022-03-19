@@ -23,9 +23,10 @@
     public $email_s;
     public $lastname_s;
     public $reason;
+    public $year;
 
 
-    public function __construct($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d,$reason)
+    public function __construct($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d,$reason,$year)
     {
         $this->id_p = $id_p;
         $this->id_t = $id_t;
@@ -51,6 +52,7 @@
         $this->phone_s=$phone_s;
         $this->lastname_s=$lastname_s;
         $this->reason=$reason;
+        $this->year=$year;
        
      
     }
@@ -85,8 +87,9 @@
         $date_end=$my_row['date_end'];
         $status_approve=$my_row['status_approve']; 
         $reason=$my_row['reason'];
+        $year=$my_row['year'];
         require("connection_close.php");
-        return new Petition($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d,$reason);
+        return new Petition($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d,$reason,$year);
 
     }
     public static function getAll()
@@ -121,8 +124,8 @@
             $date_end=$my_row['date_end'];
             $status_approve=$my_row['status_approve']; 
             $reason=$my_row['reason'];
-          
-            $petitionList[] = new Petition($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d,$reason);
+            $year=$my_row['year'];
+            $petitionList[] = new Petition($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d,$reason,$year);
         }
         require("connection_close.php");
         return $petitionList;
@@ -161,8 +164,8 @@
             $date_end=$my_row['date_end'];
             $status_approve=$my_row['status_approve']; 
             $reason=$my_row['reason'];
-          
-            $petitionList[] = new Petition($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d,$reason);
+            $year=$my_row['year'];
+            $petitionList[] = new Petition($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d,$reason,$year);
         }
         require("connection_close.php");
         return $petitionList;
@@ -188,11 +191,11 @@
         return ;
         
      }
-     public static function Add($id_t,$id_c,$id_s,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$date_d)
+     public static function Add($id_t,$id_c,$id_s,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$date_d,$year)
      {
         require("connection_connect.php");
-        $sql = "INSERT INTO `petition`(`date_d`, `id_t`, `id_c`, `id_s`, `status_ap_company`, `position_s`, `name_getbook`, `position_g`, `name_hr`, `phone_hr`, `email_hr`, `apartment`, `date_start`, `date_end`, `status_approve`) VALUES
-         ('$date_d',$id_t,$id_c,'$id_s','รอดำเนินการ','$position_s','$name_getbook','$position_g','$name_hr','$phone_hr','$email_hr','$apartment','$date_start','$date_end','รอดำเนินการ')";
+        $sql = "INSERT INTO `petition`(`date_d`, `id_t`, `id_c`, `id_s`, `status_ap_company`, `position_s`, `name_getbook`, `position_g`, `name_hr`, `phone_hr`, `email_hr`, `apartment`, `date_start`, `date_end`, `status_approve`, `year`) VALUES
+         ('$date_d',$id_t,$id_c,'$id_s','รอดำเนินการ','$position_s','$name_getbook','$position_g','$name_hr','$phone_hr','$email_hr','$apartment','$date_start','$date_end','รอดำเนินการ','$year')";
         $result = $conn->query($sql);
   
         require("connection_close.php");
@@ -230,8 +233,9 @@
         $date_end=$my_row['date_end'];
         $status_approve=$my_row['status_approve']; 
         $reason=$my_row['reason'];
+        $year=$my_row['year'];
         require("connection_close.php");
-        return new Petition($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d,$reason);
+        return new Petition($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d,$reason$year);
 
     }
     public static function convertDate($datee){
