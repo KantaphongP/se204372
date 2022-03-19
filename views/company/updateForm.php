@@ -170,7 +170,7 @@ table{
   left: 50%;
   transform: translate(-50%,-50%);
   width: 45%;
-  height: 63%;  
+  height: 58%;  
   font-size: 165%;
   z-index: 1;
 }
@@ -195,9 +195,6 @@ table{
   border-radius: 15px;
 }
 .update button{
-  position: absolute;
-  left : 40%;
-  transform: translate(-50%,-50%);
   width:30%;
   padding: 10px;
   font-size:16px;
@@ -211,6 +208,34 @@ table{
   z-index: 2;
   cursor: pointer;
 }
+
+.update .back-btn {
+  position: absolute;
+      top:95%;
+      left:44%;
+      z-index: 3;
+      width:40%;
+}
+
+.update .back-btn button:hover {
+        color: #385a64;
+        background: #FFF;
+        border: 2px solid #385a64;
+    }
+
+.update .update-btn {
+  position: absolute;
+      top:95%;
+      left:22%;
+      z-index: 2;
+      width:40%;
+}
+
+.update .update-btn button:hover {
+        color: #385a64;
+        background: #FFF;
+        border: 2px solid #385a64;
+    }
 
 </style>
 <head>
@@ -258,8 +283,14 @@ table{
             <input type="hidden"name="controller"value="company"/>
             <input type="hidden" name="id_c" value="<?php echo $company->id_c; ?>"/>
             <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l; ?>"/>
-            <button type="submit"name="action"value="index">back</button><br>
-            <button type="submit"name="action"value="update">update</button><br>
+            <div class ="b">
+              <div class="back-btn ">
+                <button type="submit"name="action"value="index">back</button><br>
+              </div>
+              <div class="update-btn">
+                <button type="submit"name="action"value="update">update</button><br>
+              </div>
+            </div>
             </form>
     </div>
 </div>
