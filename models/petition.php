@@ -211,7 +211,9 @@
      public static function getInf($id_s)
     {
         require("connection_connect.php");
-        $sql="SELECT * FROM petition natural join student NATURAL JOIN company  WHERE id_s='$id_s'";
+        $sql="SELECT id_p,id_t,id_c,name_c,income,address_c,id_s,name_s,lastname_s,phone_s,email,date_d,status_ap_company,position_s,name_getbook,
+        position_g,name_hr,phone_hr,email_hr,apartment,date_start,date_end,status_approve,reason,year
+        FROM petition  natural join student NATURAL JOIN company INNER JOIN (SELECT MAX(date_d) AS maxdate , id_s  AS id FROM petition WHERE id_s = '$id_s') AS A ON petition.date_d = A.maxdate  AND petition.id_s = A.id;";
         $result=$conn->query($sql);
         $my_row=$result->fetch_assoc();
         $id_p=$my_row['id_p'];
