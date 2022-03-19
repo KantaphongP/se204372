@@ -19,9 +19,10 @@
         z-index:2;
         text-align:center;
         position: absolute;
-  top: 20%;
+  top: 50%;
   left: 50%;
 transform: translate(-50%,-50%);
+z-index: 1;
     }
     .popup .icon {
         margin: 5px 0px;
@@ -52,6 +53,7 @@ transform: translate(-50%,-50%);
       position: absolute;
       top:80%;
       left:55%;
+      z-index: 2;
 
     }
     .popup .back-btn button {
@@ -74,7 +76,8 @@ transform: translate(-50%,-50%);
     .popup .delete-btn {
       position: absolute;
       top:80%;
-      left:30%;
+      left:33%;
+      z-index: 2;
     }
     .popup .delete-btn button {
         padding: 7px 10px;
@@ -101,6 +104,7 @@ transform: translate(-50%,-50%);
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet">
 </head>
+<form method="get" action="">
     <div class="popup center">
         <div class="icon">
             <i class="fa fa-remove"></i>
@@ -124,7 +128,7 @@ transform: translate(-50%,-50%);
     </div>
 
 
-<form method="get" action="">
+
     <input type="hidden" name="controller" value="company"/>
     <input type="hidden" name="id_c" value="<?php echo $company->id_c;?>"/>
     <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l;?>"/>
