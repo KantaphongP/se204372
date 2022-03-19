@@ -1,6 +1,7 @@
 <?php class Petition{
      public $id_p;
      public $id_t;
+     public $name_t;
      public $name_s;
      public $id_c;
      public $id_s;
@@ -26,10 +27,11 @@
     public $year;
 
 
-    public function __construct($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d,$reason,$year)
+    public function __construct($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d,$reason,$year,$name_t)
     {
         $this->id_p = $id_p;
         $this->id_t = $id_t;
+        $this->name_t=$name_t;
         $this->id_c = $id_c;
         $this->id_s=$id_s;
         $this->name_s=$name_s;
@@ -60,11 +62,12 @@
     public static function get($id_p)
     {
         require("connection_connect.php");
-        $sql="SELECT * FROM petition natural join student natural join company WHERE id_p='$id_p'";
+        $sql="SELECT * FROM petition natural join student natural join company natural join type WHERE id_p='$id_p'";
         $result=$conn->query($sql);
         $my_row=$result->fetch_assoc();
         $id_p=$my_row['id_p'];
         $id_t=$my_row['id_t'];
+        $name_t=$my_row['name_t'];
         $id_c=$my_row['id_c'];
         $name_c=$my_row['name_c'];
         $income=$my_row['income'];
@@ -89,19 +92,20 @@
         $reason=$my_row['reason'];
         $year=$my_row['year'];
         require("connection_close.php");
-        return new Petition($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d,$reason,$year);
+        return new Petition($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d,$reason,$year,$name_t);
 
     }
     public static function getAll()
     {
         $petitionList=[];
         require("connection_connect.php");
-        $sql="SELECT * FROM petition natural join student natural join company ";
+        $sql="SELECT * FROM petition natural join student natural join company natural join type ";
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
             $id_p=$my_row['id_p'];
             $id_t=$my_row['id_t'];
+            $name_t=$my_row['name_t'];
             $id_c=$my_row['id_c'];
             $name_c=$my_row['name_c'];
             $income=$my_row['income'];
@@ -125,7 +129,7 @@
             $status_approve=$my_row['status_approve']; 
             $reason=$my_row['reason'];
             $year=$my_row['year'];
-            $petitionList[] = new Petition($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d,$reason,$year);
+            $petitionList[] = new Petition($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d,$reason,$year,$name_t);
         }
         require("connection_close.php");
         return $petitionList;
@@ -136,12 +140,13 @@
     {
         $petitionList=[];
         require("connection_connect.php");
-        $sql="SELECT * FROM petition natural join student natural join company WHERE date_d like '%$key%' or name_s like '%$key%' or lastname_s like '%$key%' or status_approve like '%$key%' ";
+        $sql="SELECT * FROM petition natural join student natural join company natural join type WHERE date_d like '%$key%' or name_s like '%$key%' or lastname_s like '%$key%' or status_approve like '%$key%' or year like '%$key%' or name_t like '%$key%'";
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
             $id_p=$my_row['id_p'];
             $id_t=$my_row['id_t'];
+            $name_t=$my_row['name_t'];
             $id_c=$my_row['id_c'];
             $name_c=$my_row['name_c'];
             $income=$my_row['income'];
@@ -165,7 +170,7 @@
             $status_approve=$my_row['status_approve']; 
             $reason=$my_row['reason'];
             $year=$my_row['year'];
-            $petitionList[] = new Petition($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d,$reason,$year);
+            $petitionList[] = new Petition($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d,$reason,$year,$name_t);
         }
         require("connection_close.php");
         return $petitionList;
@@ -211,6 +216,7 @@
         $my_row=$result->fetch_assoc();
         $id_p=$my_row['id_p'];
         $id_t=$my_row['id_t'];
+        $name_t=$my_row['name_t'];
         $id_c=$my_row['id_c'];
         $name_c=$my_row['name_c'];
         $income=$my_row['income'];
@@ -235,7 +241,7 @@
         $reason=$my_row['reason'];
         $year=$my_row['year'];
         require("connection_close.php");
-        return new Petition($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d,$reason,$year);
+        return new Petition($lastname_s,$name_c,$income,$address_c,$email_s,$phone_s,$id_p,$name_s,$id_t,$id_c,$id_s,$status_ap_company,$position_s,$name_getbook,$position_g,$name_hr,$phone_hr,$email_hr,$apartment,$date_start,$date_end,$status_approve,$date_d,$reason,$year,$name_t);
 
     }
     public static function convertDate($datee){

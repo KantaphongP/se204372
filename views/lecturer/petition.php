@@ -240,7 +240,7 @@ table{
 </form>
 
 <table class="center">
-<tr><th>วันที่ส่ง</th><th>ปีการศึกษา</th><th>ชื่อ</th><th>นามสกุล</th><th>บริษัทที่ส่ง</th><th>คำร้อง</th><th>การอนุมัติ</th></tr>
+<tr><th>วันที่ส่ง</th><th>ปีการศึกษา</th><th>ชื่อ</th><th>นามสกุล</th><th>บริษัทที่ส่ง</th><th>ประเภทการฝึก</th><th>คำร้อง</th><th>การอนุมัติ</th></tr>
 <?php foreach($petition_List as $petition)
 {
         $datee_d = Petition::convertDate($petition->date_d);
@@ -249,6 +249,7 @@ table{
         <td>$petition->name_s</td>
         <td>$petition->lastname_s</td>
         <td>$petition->name_c</td>
+        <td>$petition->name_t</td>
        <td>
         <a href=?controller=lecturer&action=detailpet&id_p=$petition->id_p&id_l=$lecturer->id_l>see</a>
         </td> <td>$petition->status_approve</td></tr>";
