@@ -242,7 +242,7 @@ table{
 </div>
 
 <div class="toncon">
-<label>คำร้องขอฝึกงาน </label>
+<label>แก้ไขสถานประกอบการ </label>
 </div>
 
 <div class="border">
