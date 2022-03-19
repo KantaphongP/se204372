@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 18, 2022 at 08:45 PM
+-- Generation Time: Mar 19, 2022 at 04:38 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -20,74 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `databasese`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `company`
---
-
-CREATE TABLE `company` (
-  `id_c` int(11) NOT NULL,
-  `name_c` varchar(50) NOT NULL,
-  `address_c` varchar(50) NOT NULL,
-  `phone_c` varchar(10) NOT NULL,
-  `quantity` int(5) NOT NULL,
-  `income` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `company`
---
-
-INSERT INTO `company` (`id_c`, `name_c`, `address_c`, `phone_c`, `quantity`, `income`) VALUES
-(1, 'โกไฟต์กับใคร', 'สมุดหนังสือ', '9999999', 9, 400),
-(5, 'เต๋าชั่ย', 'ที่นี่', '44444444', 5, 7888),
-(6, 'มหาชัยคนรักบ้าน', 'บ้านนี้ที่รอคอย', '7777777', 1, 100000),
-(7, 'เดินดาวคอมพานี', 'สามย่าน', '7777777', 3, 3000000);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `crq`
---
-
-CREATE TABLE `crq` (
-  `id_p` int(11) NOT NULL,
-  `status_crq` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `internship_record`
---
-
-CREATE TABLE `internship_record` (
-  `id_p` int(11) NOT NULL,
-  `result` varchar(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `lecturer`
---
-
-CREATE TABLE `lecturer` (
-  `id_l` varchar(11) NOT NULL,
-  `name_l` varchar(50) NOT NULL,
-  `lastname_l` varchar(50) NOT NULL,
-  `passwords` varchar(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `lecturer`
---
-
-INSERT INTO `lecturer` (`id_l`, `name_l`, `lastname_l`, `passwords`) VALUES
-('jjjjj', 'อนุมัติ', 'อนุมัติ', 'jjjjj'),
-('rrr', 'บุษบา ', 'นานาน่า', 'rrr');
 
 -- --------------------------------------------------------
 
@@ -112,89 +44,24 @@ CREATE TABLE `petition` (
   `date_start` date NOT NULL,
   `date_end` date NOT NULL,
   `status_approve` varchar(12) NOT NULL,
-  `reason` varchar(50) DEFAULT NULL
+  `reason` varchar(50) DEFAULT NULL,
+  `year` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `petition`
 --
 
-INSERT INTO `petition` (`id_p`, `date_d`, `id_t`, `id_c`, `id_s`, `status_ap_company`, `position_s`, `name_getbook`, `position_g`, `name_hr`, `phone_hr`, `email_hr`, `apartment`, `date_start`, `date_end`, `status_approve`, `reason`) VALUES
-(3, '2022-03-02', 1, 1, 'b6220503555', 'รอดำเนินการ', 'เล่นเกม', 'มี่', 'หัวหน้าหมู', 'มี่', '7777777', 'thidarat.pi@ku.th', 'มี', '2022-03-01', '2022-03-01', 'ไม่อนุมัติ', ''),
-(4, '2022-03-24', 1, 6, 'b6220503555', 'รอดำเนินการ', 'eryery5ht', 'rhrtht', 'htrhtt', 'hhhhhhtrh', 'rhtrh', 'trhthth', 'มี', '2022-03-14', '2022-04-01', 'ไม่อนุมัติ', 'เหตุผลข้อเดียวเท่านั้น'),
-(5, '2022-03-01', 1, 5, 'b6220504444', 'รอดำเนินการ', 'เล่นเกม', 'มาเรียม คงคี', 'ชั้นเป็นเจ้านายแก', 'ดาวเด่น ดวงเดือน', '7777777', '', 'ไม่มี', '2022-03-14', '2022-04-09', 'รอดำเนินการ', NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `student`
---
-
-CREATE TABLE `student` (
-  `id_s` varchar(11) NOT NULL,
-  `name_s` varchar(50) DEFAULT NULL,
-  `lastname_s` varchar(50) DEFAULT NULL,
-  `passwords` varchar(50) DEFAULT NULL,
-  `email` varchar(50) DEFAULT NULL,
-  `phone_s` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `student`
---
-
-INSERT INTO `student` (`id_s`, `name_s`, `lastname_s`, `passwords`, `email`, `phone_s`) VALUES
-('b6220503555', ',มาติกาน', 'โทรหาใคร', 'lovebabe', 'matikarn.t@ku.th', '555555'),
-('b6220504444', 'สารสาส', 'ราไปก่อน', 'vvvv', 'sarasas@ku.th', '09875432');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `type`
---
-
-CREATE TABLE `type` (
-  `id_t` int(11) NOT NULL,
-  `name_t` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `type`
---
-
-INSERT INTO `type` (`id_t`, `name_t`) VALUES
-(1, 'ภาคฤดูร้อน'),
-(2, 'สหกิจ');
+INSERT INTO `petition` (`id_p`, `date_d`, `id_t`, `id_c`, `id_s`, `status_ap_company`, `position_s`, `name_getbook`, `position_g`, `name_hr`, `phone_hr`, `email_hr`, `apartment`, `date_start`, `date_end`, `status_approve`, `reason`, `year`) VALUES
+(3, '2022-03-02', 1, 1, 'b6220503555', 'รอดำเนินการ', 'เล่นเกม', 'มี่', 'หัวหน้าหมู', 'มี่', '7777777', 'thidarat.pi@ku.th', 'มี', '2022-03-01', '2022-03-01', 'ไม่อนุมัติ', '', '2564'),
+(4, '2022-03-24', 1, 6, 'b6220503555', 'รอดำเนินการ', 'eryery5ht', 'rhrtht', 'htrhtt', 'hhhhhhtrh', 'rhtrh', 'trhthth', 'มี', '2022-03-14', '2022-04-01', 'ไม่อนุมัติ', 'เหตุผลข้อเดียวเท่านั้น', '2564'),
+(5, '2022-03-01', 1, 5, 'b6220504444', 'รอดำเนินการ', 'เล่นเกม', 'มาเรียม คงคี', 'ชั้นเป็นเจ้านายแก', 'ดาวเด่น ดวงเดือน', '7777777', '', 'ไม่มี', '2022-03-14', '2022-04-09', 'รอดำเนินการ', NULL, '2563'),
+(6, '2022-03-25', 2, 1, 'b6220504444', 'รอดำเนินการ', 'kkkk', 'vfdvfdbfd', 'advffdafv', 'vfdvfdv', 'vfdvfvf', 'vfdavfdv', '2564', '2022-03-22', '2022-03-31', 'รอดำเนินการ', NULL, '2563'),
+(7, '2022-03-09', 2, 5, 'b6220504444', 'รอดำเนินการ', 'dvdvd', 'cvdv', 'vxvd', 'dxvd', 'vdvdxv', 'vdxvdddd', 'dvdv', '2022-03-16', '2022-03-30', 'รอดำเนินการ', NULL, '2564');
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `company`
---
-ALTER TABLE `company`
-  ADD PRIMARY KEY (`id_c`);
-
---
--- Indexes for table `crq`
---
-ALTER TABLE `crq`
-  ADD PRIMARY KEY (`id_p`),
-  ADD KEY `id_p` (`id_p`);
-
---
--- Indexes for table `internship_record`
---
-ALTER TABLE `internship_record`
-  ADD PRIMARY KEY (`id_p`),
-  ADD KEY `id_p` (`id_p`);
-
---
--- Indexes for table `lecturer`
---
-ALTER TABLE `lecturer`
-  ADD PRIMARY KEY (`id_l`);
 
 --
 -- Indexes for table `petition`
@@ -206,54 +73,18 @@ ALTER TABLE `petition`
   ADD KEY `id_s` (`id_s`);
 
 --
--- Indexes for table `student`
---
-ALTER TABLE `student`
-  ADD PRIMARY KEY (`id_s`);
-
---
--- Indexes for table `type`
---
-ALTER TABLE `type`
-  ADD PRIMARY KEY (`id_t`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `company`
---
-ALTER TABLE `company`
-  MODIFY `id_c` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `petition`
 --
 ALTER TABLE `petition`
-  MODIFY `id_p` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `type`
---
-ALTER TABLE `type`
-  MODIFY `id_t` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_p` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `crq`
---
-ALTER TABLE `crq`
-  ADD CONSTRAINT `crq_ibfk_1` FOREIGN KEY (`id_p`) REFERENCES `petition` (`id_p`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `internship_record`
---
-ALTER TABLE `internship_record`
-  ADD CONSTRAINT `internship_record_ibfk_1` FOREIGN KEY (`id_p`) REFERENCES `petition` (`id_p`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `petition`
