@@ -134,7 +134,7 @@ body {
 
 .toncon{
   position : absolute ; 
-  top:20%;
+  top:18%;
   left : 5% ;
   font-size: 400%;  
   
@@ -148,7 +148,7 @@ body {
   background: #FF735C;
   position: absolute;
   width: 90%;
-  height: 65%;  
+  height: 67%;  
   position: absolute;
   top: 60%;
   left: 50%;
@@ -237,6 +237,34 @@ transform: translate(-50%,-50%);
   cursor: pointer;
 }
 
+.col3 .back-btn {
+  position: absolute;
+      top:100%;
+      left:44%;
+      z-index: 3;
+      width:40%;
+}
+
+.col3 .back-btn button:hover {
+        color: #385a64;
+        background: #FFF;
+        border: 2px solid #385a64;
+    }
+
+.col3 .save-btn {
+  position: absolute;
+      top:100%;
+      left:0%;
+      z-index: 2;
+      width:40%;
+}
+
+.col3 .save-btn button:hover {
+        color: #385a64;
+        background: #FFF;
+        border: 2px solid #385a64;
+    }
+
 
 </style>
 </head>
@@ -299,10 +327,16 @@ transform: translate(-50%,-50%);
   <div class="col3">
     <label>ที่พัก <br><input type="text" name="apartment"/></label><br><br>
     <label>วันที่เริ่มฝึก <br><input type="date" name="date_start"/></label><br><br>
-    <label>วันสุดท้ายของการฝึก <br><input type="date" name="date_end"/></label><br><br><br><br>
+    <label>วันสุดท้ายของการฝึก <br><input type="date" name="date_end"/></label><br><br>
+    <label>ปีการศึกษา <br><input type="text" name="apartment"/></label><br><br>
     <input type="hidden" name="controller" value="login"/>
-    <button type="submit" name="action" value ="index">back</button><br><br>
-    <button type="submit" name="action" value ="addpetition">save</button><br><br>
+    <div class ="b">
+        <div class="back-btn ">
+          <button type="submit" name="action" value ="index">back</button><br><br>
+        </div>
+        <div class="save-btn">
+        <button type="submit" name="action" value ="addpetition">save</button><br><br>
+    </div>
   <div>
   </form>
 <div>
