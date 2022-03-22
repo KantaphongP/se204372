@@ -153,7 +153,7 @@ body {
   top: 60%;
   left: 50%;
 transform: translate(-50%,-50%);
-  font-size: 165%;
+  font-size: 120%;
   z-index: 1;
 }
 .col1 {
