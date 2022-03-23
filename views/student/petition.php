@@ -297,11 +297,11 @@ transform: translate(-50%,-50%);
   <form class="get" action="">
   <div class="col1">
     
-      <label>วันที่ <br><input type="date" name="date_d"/></label><br><br>
+      <label>วันที่ <br><input type="date" name="date_d" required/></label><br><br>
       <label>ชื่อ <br><input type="text" name="name_s" value="<?php echo "$student->name_s $student->lastname_s";?>"/></label><br><br>
       <label>รหัสนิสิต<br> <input type="text" name="id_s"value="<?php echo $student->id_s;?>"/></label><br><br>
       <label>เบอร์โทรศัพท์ <br><input type="text" name="phone_s"value="<?php echo $student->phone_s;?>"/></label><br><br>
-      <label>ตำแหน่งที่ไปฝึก <br><input type="text" name="position_s"/></label><br><br>
+      <label>ตำแหน่งที่ไปฝึก <br><input type="text" name="position_s"  placeholder="กรอกตำแหน่ง" required/></label><br><br>
       <label>ประเภทการฝึก <br><select name="id_t">
       <?php foreach($type_List as $dep) {echo "<option value = $dep->id_t>
       $dep->name_t</option>";}
@@ -309,22 +309,22 @@ transform: translate(-50%,-50%);
   <div>
 
   <div class="col2">
-    <label>ชื่อผู้ที่จะให้ภาควิชาออกหนังสือให้ <br><input type="text" name="name_getbook"/></label><br><br>
-    <label>ตำแหน่งผู้ที่จะให้ภาควิชาออกหนังสือให้ <br><input type="text" name="position_g"/></label><br><br>
+    <label>ชื่อผู้ที่จะให้ภาควิชาออกหนังสือให้ <br><input type="text" name="name_getbook" placeholder="กรอกชื่อ" required/></label><br><br>
+    <label>ตำแหน่งผู้ที่จะให้ภาควิชาออกหนังสือให้ <br><input type="text" name="position_g" placeholder="กรอกตำแหน่ง" required/></label><br><br>
     <label>ชื่อบริษัท<br> <select name="id_c">
     <?php foreach($company_List as $dep) {echo "<option value = $dep->id_c>
     $dep->name_c</option>";}
     ?></select></label><br><br>
-    <label>ชื่อผู้ประสานงาน <br><input type="text" name="name_hr"/></label><br><br>
-    <label>เบอร์โทรศัพท์ <br><input type="text" name="phone_hr"/></label><br><br>
-    <label>อีเมล <br><input type="text" name="email_hr"/></label><br><br>
+    <label>ชื่อผู้ประสานงาน <br><input type="text" name="name_hr" placeholder="กรอกชื่อ" required/></label><br><br>
+    <label>เบอร์โทรศัพท์ <br><input type="text" name="phone_hr" placeholder="กรอกเบอร์โทรศัพท์" required/></label><br><br>
+    <label>อีเมล <br><input type="text" name="email_hr" placeholder="กรอกอีเมล" required/></label><br><br>
   <div>
 
   <div class="col3">
     <label>ที่พัก <br><input type="text" name="apartment"/></label><br><br>
-    <label>วันที่เริ่มฝึก <br><input type="date" name="date_start"/></label><br><br>
-    <label>วันสุดท้ายของการฝึก <br><input type="date" name="date_end"/></label><br><br>
-    <label>ปีการศึกษา <br><input type="text" name="year"/></label><br><br>
+    <label>วันที่เริ่มฝึก <br><input type="date" name="date_start" required/></label><br><br>
+    <label>วันสุดท้ายของการฝึก <br><input type="date" name="date_end" required/></label><br><br>
+    <label>ปีการศึกษา <br><input type="text" name="year" placeholder="กรอกปีการศึกษา" required/></label><br><br>
     <input type="hidden" name="controller" value="login"/>
     <div class ="b">
         <div class="back-btn ">
