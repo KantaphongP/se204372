@@ -271,7 +271,7 @@ table{
 
             <label> ชื่อ <br><input type="text" name="name_c" placeholder="กรอกชื่อ" required /> </label><br>
             <label> ที่อยู่ <br><input type="text" name="address_c" placeholder="กรอกที่อยู่" required/> </label><br>
-            <label> เบอร์โทร <br><input type="text" name="phone_c" placeholder="กรอกเบอร์โทรศัพท์" required/> </label><br>
+            <label> เบอร์โทร <br><input type="text" name="phone_c" pattern="^0([8|9|6])([0-9]{8}$)" autocomplete="off" placeholder="กรอกเบอร์โทรศัพท์" required/> </label><br>
             <label> จำนวนรับ <br><input type="number" name="quantity" placeholder="กรอกจำนวน" required/> </label><br>
             <label> ค่าตอบแทน <br><input type="number" name="income" placeholder="กรอกจำนวนเงิน" required/> </label><br><br>
 
