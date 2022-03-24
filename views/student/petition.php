@@ -321,8 +321,16 @@ transform: translate(-50%,-50%);
   <div>
 
   <div class="col3">
-    <label>ที่พัก <br><input type="text" name="apartment"/></label><br><br>
-    <label>วันที่เริ่มฝึก <br><input type="date" name="date_start" required/></label><br><br>
+  <label> ที่พัก <br>มี 
+      <input type="radio" checked="checked" name="apartment" value="มี">
+        
+            </label> <br>
+    <label >ไม่มี 
+    <input type="radio" name="apartment" value="ไม่มี">
+    
+       </label>
+   
+    <br><label>วันที่เริ่มฝึก <br><input type="date" name="date_start" required/></label><br><br>
     <label>วันสุดท้ายของการฝึก <br><input type="date" name="date_end" required/></label><br><br>
     <label>ปีการศึกษา <br><input type="text" name="year" placeholder="กรอกปีการศึกษา" required/></label><br><br>
     <input type="hidden" name="controller" value="login"/>
