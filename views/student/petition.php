@@ -254,7 +254,7 @@ transform: translate(-50%,-50%);
 .col3 .save-btn {
   position: absolute;
       top:100%;
-      left:0%;
+      left:20%;
       z-index: 2;
       width:40%;
 }

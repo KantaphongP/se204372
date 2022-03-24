@@ -225,7 +225,7 @@ table{
 .add .update-btn {
   position: absolute;
       top:95%;
-      left:22%;
+      left:33%;
       z-index: 2;
       width:40%;
 }
