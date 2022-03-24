@@ -196,8 +196,8 @@ body {
   border-radius: 10px;
   border: 2px solid #000000;
   background: #E5E5E5;
-  width: 650px;
-  height: 250px;  
+  width: 770px;
+  height: 280px;  
   position: absolute;
   left: 55%;
   top: 33%;
@@ -275,20 +275,20 @@ body {
 .hh{
      position: absolute;
     left: 55%;
-    top:62%;
+    top:65%;
     font-size: 150%;
 }
 
 
 .vv {
   position : absolute ; 
-  top: 70%;
+  top: 73%;
   left : 55%;
   width: 45%;
   color:#FFF;
 }
 .vv input{
-  width:75%;
+  width:89%;
   padding: 10px;
   font-size:16px;
   outline:none;
@@ -299,7 +299,7 @@ body {
   border-radius: 15px;
 }
 .vv button{
-  width:75%;
+  width:89%;
   padding: 10px;
   font-size:16px;
   outline:none;
@@ -384,7 +384,7 @@ body {
 
     <div class="boxcom">
         <p id="rcorners4" style="font-size: 25px;"><a><?php echo "<b>ชื่อสถานประกอบการ :</b> $petition->name_c<br>
-            <b>สถานที่ตั้ง :</b> $petition->address_c<br>
+            <b>สถานที่ตั้ง :</b> <br>$petition->address_c<br>
             <b>จำนวนค่าตอบแทน :</b> $petition->income บาท/วัน<br>
             <b>ชื่อผู้ประสานงาน :</b> $petition->name_hr <br>
             <b>เบอร์โทรศัพท์ :</b> $petition->phone_hr<br>
