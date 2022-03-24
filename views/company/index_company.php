@@ -243,16 +243,16 @@ table{
         </button>
 </form>
 <table class="center">
-<tr><th>name_c</th><th>quantity</th><th>income</th><th>update</th><th>delete</th></tr>
+<tr><th>ชื่อสถานประกอบการ</th><th>จำนวนที่เปิดรับ</th><th>จำนวนค่าตอบแทน</th><th>แก้ไข</th><th>ลบ</th></tr>
 <?php foreach($company_List as $company)
 {
         echo "<tr><td>$company->name_c</td>
         <td>$company->quantity</td>
         <td>$company->income</td>
        <td>
-        <a href=?controller=company&action=updateForm&id_c=$company->id_c&id_l=$lecturer->id_l>update</a>
+        <a href=?controller=company&action=updateForm&id_c=$company->id_c&id_l=$lecturer->id_l>แก้ไข</a>
         </td><td>
-        <a href=?controller=company&action=deleteConfirm&id_c=$company->id_c&id_l=$lecturer->id_l>delete</a>
+        <a href=?controller=company&action=deleteConfirm&id_c=$company->id_c&id_l=$lecturer->id_l>ลบ</a>
         </td></tr>";
 }
 echo "</table>";
