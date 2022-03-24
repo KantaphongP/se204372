@@ -32,6 +32,7 @@
         //$id_l='jjjjj';
         $lecturer=Lecturer::get($id_l);
         $year_List=Year::getAll();
+        $date_d_List=date_d::getAll();
         $petition_List=Petition::getAll();
         require_once("./views/lecturer/petition.php");
     }
@@ -40,8 +41,19 @@
         $id_l=$_GET['id_l'];
         $lecturer=Lecturer::get($id_l);
         $year_List=Year::getAll();
+        $date_d_List=date_d::getAll();
         $key=$_GET['key'];
         $petition_List=Petition::search($key);
+        require_once('./views/lecturer/petition.php');
+    }
+    public function date_d()
+    {
+        $id_l=$_GET['id_l'];
+        $lecturer=Lecturer::get($id_l);
+        $year_List=Year::getAll();
+        $date_d_List=date_d::getAll();
+        $key=$_GET['key'];
+        $petition_List=Petition::date_d($key);
         require_once('./views/lecturer/petition.php');
     }
     public function status()
@@ -49,6 +61,7 @@
         $id_l=$_GET['id_l'];
         $lecturer=Lecturer::get($id_l);
         $year_List=Year::getAll();
+        $date_d_List=date_d::getAll();
         $key=$_GET['key'];
         $petition_List=Petition::status($key);
         require_once('./views/lecturer/petition.php');

@@ -258,6 +258,16 @@ table{
     <button type= "submit"name="action"value="status">go</button>
       
 </form>
+<form method="get" action="" class="search">
+<label>วันที่ส่ง<select name="key">
+<?php foreach($date_d_List as $dep) {echo "<option value = $dep->date_d>
+    $dep->date_d</option>";}
+    ?></select></label>
+    <input type="hidden" name="controller" value="lecturer">
+    <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l; ?>"/>
+    <button type= "submit"name="action"value="date_d">go</button>
+      
+</form>
 
 <table class="center">
 <tr><th>วันที่ส่ง</th><th>ปีการศึกษา</th><th>ชื่อ</th><th>นามสกุล</th><th>บริษัทที่ส่ง</th><th>ประเภทการฝึก</th><th>คำร้อง</th><th>การอนุมัติ</th></tr>
