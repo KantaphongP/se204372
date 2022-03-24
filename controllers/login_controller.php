@@ -70,5 +70,14 @@
         require_once("./views/student/all_petition.php");
     }
 
+    public function search()
+    {
+        $id_s=$_GET['id_s'];
+        $student=Student::get($id_s);
+        $key=$_GET['key'];
+        $petition_List=Petition::search($key);
+        require_once("./views/student/all_petition.php");
+    }
+
 }
 ?>

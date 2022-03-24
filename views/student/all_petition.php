@@ -228,16 +228,16 @@ table{
 </div>
 
 
-<!--
+
 <form method="get" action="" class="search">
 <input type="text" name="key" placeholder="Search" class="search_input">
-        <input type="hidden" name="controller" value="lecturer">
-        <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l; ?>"/>
+        <input type="hidden" name="controller" value="login">
+        <input type="hidden" name="id_s" value="<?php echo $student->id_s; ?>"/>
         <button type="submit" name="action" value="search" class="search_button">
         <i class="fas fa-search search_icon"></i>
         </button>
 </form>
--->
+
 <table class="center">
 <tr><th>วันที่ส่ง</th><th>ปีการศึกษา</th><th>ชื่อ</th><th>นามสกุล</th><th>บริษัทที่ส่ง</th><th>ประเภทการฝึก</th><th>คำร้อง</th><th>การอนุมัติ</th></tr>
 <?php foreach($petition_List as $petition)
