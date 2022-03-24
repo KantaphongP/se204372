@@ -1,7 +1,7 @@
 <?php
 
 
-$controllers = array('pages'=>['home','error'],'company'=>['index','indexs','searchs','newCompany','addCompany','search','updateForm','update','deleteConfirm','delete'],'login'=>['signin','check','home','petition','index','addpetition','allPetition'],'lecturer'=>['signin','check','status','date_d','home','petition','search','detailpet','approve','no'],'status_petition'=>['statusPetition']) ; 
+$controllers = array('pages'=>['home','error'],'company'=>['index','indexs','searchs','newCompany','addCompany','search','updateForm','update','deleteConfirm','delete'],'login'=>['signin','check','home','petition','index','addpetition','allPetition','search'],'lecturer'=>['signin','check','status','date_d','home','petition','search','detailpet','approve','no'],'status_petition'=>['statusPetition']) ; 
 
 
 

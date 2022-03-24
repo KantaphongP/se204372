@@ -34,7 +34,10 @@ form {
   margin-top: 10px;
   transition: all 0.2s;
 }
-.search_input:focus {
+
+
+
+/*.search_input:focus {
   outline: none;
   width: 60%;
   background-color: #f0eeee;
@@ -43,7 +46,8 @@ form {
   font-family: 'Noto Sans Thai', sans-serif;
   font-size : 18px;
   color: #2F4F58;
-}
+}*/
+
 .search_button {
   border: none;
   background-color: transparent;
@@ -52,9 +56,9 @@ form {
 .search_button:focus {
   outline:none;
 }
-.search_button:active {
+/*.search_button:active {
   transform: translateY(2px);
-}
+}*/
 .search_icon {
   font-size: 18px;
   color:#FF735C;
@@ -201,7 +205,35 @@ table{
   font-family: 'Noto Sans Thai', sans-serif;
   font-size:14px;
     
-}    
+}
+
+.dropdown-1 .year label {
+  margin: left 10px;
+  width: 30%;
+}
+.dropdown-1 select {
+  border-radius: 10px;
+  width:10%;
+  height:3%;
+  border: 2px solid #2F4F58;
+  background: #ddd;
+}
+.dropdown-1 select option {
+  text-align: center;
+  font-family:'Noto Sans Thai', sans-serif;
+}
+.dropdown-1 button {
+  font-family:'Noto Sans Thai', sans-serif;
+  width:5%;
+  height:3%;
+  border-radius: 10px;
+  background:#FF735C;
+  border: 2px solid #2F4F58;
+  margin: left 5px;
+  color:white;
+  cursor: pointer;
+}
+
 
 </style>
 </head>
@@ -237,40 +269,47 @@ table{
         <i class="fas fa-search search_icon"></i>
         </button>
 </form>
-<form method="get" action="" class="search">
-<label>ปีการศึกษา<select name="key">
+  <div class="dropdown-1">
+    <form method="get" action="" class="search">
+    <label>ปีการศึกษา</label>
+    <select name="key">
     <?php foreach($year_List as $dep) {echo "<option value = $dep->year>
-    $dep->year</option>";}
-    ?></select></label>
+    $dep->year</option>";}?></select>
     <input type="hidden" name="controller" value="lecturer">
     <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l; ?>"/>
     <button type= "submit"name="action"value="search">go</button>
-      
-</form>
-<form method="get" action="" class="search">
-<label>สถานะ<select name="key">
+    </form>
+
+    <form method="get" action="" class="search">
+    <label>สถานะ</label>
+    <select name="key">
     <?php {echo "<option value = อนุมัติ> อนุมัติ</option>";
             echo "<option value = ไม่อนุมัติ> ไม่อนุมัติ</option>";
             echo "<option value = รอดำเนินการ> รอดำเนินการ</option>";}
-    ?></select></label>
+    ?></select>
     <input type="hidden" name="controller" value="lecturer">
     <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l; ?>"/>
     <button type= "submit"name="action"value="status">go</button>
-      
-</form>
-<form method="get" action="" class="search">
-<label>วันที่ส่ง<select name="key">
-<?php foreach($date_d_List as $dep) {echo "<option value = $dep->date_d>
+    </form>
+
+    <form method="get" action="" class="search">
+    <label>วันที่ส่ง</label>
+    <select name="key">
+    <?php foreach($date_d_List as $dep) {echo "<option value = $dep->date_d>
     $dep->date_d</option>";}
-    ?></select></label>
+    ?></select>
     <input type="hidden" name="controller" value="lecturer">
     <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l; ?>"/>
     <button type= "submit"name="action"value="date_d">go</button>
+    </form>
+  </div>
+
       
-</form>
+
+
 
 <table class="center">
-<tr><th>วันที่ส่ง</th><th>ปีการศึกษา</th><th>ชื่อ</th><th>นามสกุล</th><th>บริษัทที่ส่ง</th><th>ประเภทการฝึก</th><th>คำร้อง</th><th>การอนุมัติ</th></tr>
+<tr><th>วันที่ส่ง</th><th>ปีการศึกษา </th><th>ชื่อ</th><th>นามสกุล</th><th>บริษัทที่ส่ง</th><th>ประเภทการฝึก</th><th>คำร้อง</th><th>การอนุมัติ</th></tr>
 <?php foreach($petition_List as $petition)
 {
         $datee_d = Petition::convertDate($petition->date_d);
@@ -281,7 +320,7 @@ table{
         <td>$petition->name_c</td>
         <td>$petition->name_t</td>
        <td>
-        <a href=?controller=lecturer&action=detailpet&id_p=$petition->id_p&id_l=$lecturer->id_l>see</a>
+        <a href=?controller=lecturer&action=detailpet&id_p=$petition->id_p&id_l=$lecturer->id_l>ดู</a>
         </td> <td>$petition->status_approve</td></tr>";
 }
 echo "</table>";

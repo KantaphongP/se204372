@@ -75,7 +75,7 @@
         $id_s=$_GET['id_s'];
         $student=Student::get($id_s);
         $key=$_GET['key'];
-        $petition_List=Petition::search($key);
+        $petition_List=Petition::searchStudent($key,$id_s);
         require_once("./views/student/all_petition.php");
     }
 
