@@ -140,7 +140,7 @@
     {
         $petitionList=[];
         require("connection_connect.php");
-        $sql="SELECT * FROM petition natural join student natural join company natural join type WHERE date_d like '%$key%' or name_s like '%$key%' or lastname_s like '%$key%' or status_approve like '%$key%' or year like '%$key%' or name_t like '%$key%'";
+        $sql="SELECT * FROM petition natural join student natural join company natural join type WHERE date_d like '%$key%' or name_s like '%$key%' or lastname_s like '%$key%' or status_approve like '%$key%' or year like '%$key%' or name_t like '%$key%' or name_c like '%$key%'";
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
