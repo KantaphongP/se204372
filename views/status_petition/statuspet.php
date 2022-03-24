@@ -291,7 +291,7 @@ body {
     </button>
     <div class="dropdown-content">
     <a href=?controller=login&action=petition&id_s=<?php echo $student_sp->id_s;?>>ใบยื่นคำขอฝึกงาน </a>
-    <a href=?controller=status_petition&action=statusPetition&id_s=<?php echo $student_sp->id_s;?>>ตรวจสอบสถานะ</a>
+    <a href=?controller=login&action=allPetition&id_s=<?php echo $student_sp->id_s;?>>ตรวจสอบสถานะ</a>
     </div>
   </div> 
 </div>
@@ -307,11 +307,11 @@ body {
     
     <div class ="titlestatus">
         <h1 style="text-align:left;">สถานะการยื่นคำร้องขอฝึกงาน : </h1>
-        <h1 id="rcorners2" style="font-size: 35px; " ><a><?php echo $inf_pet->status_approve ?></a></h1>
+        <h1 id="rcorners2" style="font-size: 35px; " ><a><?php echo $petition->status_approve ?></a></h1>
     </div>
 
     <div class ="reason">
-        <p>หมายเหตุ : <?php echo $inf_pet->reason ?></p>
+        <p>หมายเหตุ : <?php echo $petition->reason ?></p>
     </div>
 
     <div class ="titlestu">
@@ -330,10 +330,10 @@ body {
     </div>
 
     <div class="boxintern">
-        <p id="rcorners5" style="font-size: 25px;"><a><?php echo "<b>ชื่อสถานประกอบการ :</b> $inf_pet->name_c<br>
-            <b>ตำแหน่งที่ไปฝึก :</b> $inf_pet->position_s<br>
-            <b>ชื่อผู้ที่จะให้ภาควิชาฯออกหนังสือ :</b> <br>$inf_pet->name_getbook<br>
-            <b>ตำแหน่งของผู้ที่จะให้ภาควิชาฯออกหนังสือ :</b> <br>$inf_pet->position_g<br>
+        <p id="rcorners5" style="font-size: 25px;"><a><?php echo "<b>ชื่อสถานประกอบการ :</b> $petition->name_c<br>
+            <b>ตำแหน่งที่ไปฝึก :</b> $petition->position_s<br>
+            <b>ชื่อผู้ที่จะให้ภาควิชาฯออกหนังสือ :</b> <br>$petition->name_getbook<br>
+            <b>ตำแหน่งของผู้ที่จะให้ภาควิชาฯออกหนังสือ :</b> <br>$petition->position_g<br>
             <b>ระยะการฝึกงาน :</b> <br>$datee_start <b>ถึง</b> $datee_end" ?></a></p>
     </div>
 
@@ -342,12 +342,12 @@ body {
     </div>
 
     <div class="boxcom">
-        <p id="rcorners4" style="font-size: 25px;"><a><?php echo "<b>ชื่อสถานประกอบการ :</b> $inf_pet->name_c<br>
-            <b>สถานที่ตั้ง :</b> $inf_pet->address_c<br>
-            <b>จำนวนค่าตอบแทน :</b> $inf_pet->income บาท/วัน<br>
-            <b>ชื่อผู้ประสานงาน :</b> $inf_pet->name_hr <br>
-            <b>เบอร์โทรศัพท์ :</b> $inf_pet->phone_hr<br>
-            <b>ที่พัก :</b> $inf_pet->apartment" ?></a></p>
+        <p id="rcorners4" style="font-size: 25px;"><a><?php echo "<b>ชื่อสถานประกอบการ :</b> $petition->name_c<br>
+            <b>สถานที่ตั้ง :</b> $petition->address_c<br>
+            <b>จำนวนค่าตอบแทน :</b> $petition->income บาท/วัน<br>
+            <b>ชื่อผู้ประสานงาน :</b> $petition->name_hr <br>
+            <b>เบอร์โทรศัพท์ :</b> $petition->phone_hr<br>
+            <b>ที่พัก :</b> $petition->apartment" ?></a></p>
     </div>
 
 

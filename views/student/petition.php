@@ -264,6 +264,16 @@ transform: translate(-50%,-50%);
         background: #FFF;
         border: 2px solid #385a64;
     }
+.col3 .flex-row label{
+  width:30%
+}
+.col3 .flex-row label:after{
+  width:30%
+}
+.col3 .flex-row input{
+  width:10%;
+  accent-color: #2F4F58;
+}
 
 
 </style>
@@ -284,7 +294,7 @@ transform: translate(-50%,-50%);
     </button>
     <div class="dropdown-content">
     <a href=?controller=login&action=petition&id_s=<?php echo $student->id_s;?>>ใบยื่นคำขอฝึกงาน </a>
-    <a href=?controller=status_petition&action=statusPetition&id_s=<?php echo $student->id_s;?>>ตรวจสอบสถานะ</a>
+    <a href=?controller=login&action=allPetition&id_s=<?php echo $student->id_s;?>>ตรวจสอบสถานะ</a>
     </div>
   </div> 
 </div>
@@ -321,15 +331,13 @@ transform: translate(-50%,-50%);
   <div>
 
   <div class="col3">
-  <label> ที่พัก <br>มี 
-      <input type="radio" checked="checked" name="apartment" value="มี">
-        
-            </label> <br>
-    <label >ไม่มี 
-    <input type="radio" name="apartment" value="ไม่มี">
-    
-       </label>
-   
+    ที่พัก
+      <div class="flex-row">
+          <input type="radio" checked="checked" name="apartment" value="มี">
+        <label for="มี">มี</label>
+          <input type="radio" name="apartment" value="ไม่มี">
+        <label for="ไม่มี">ไม่มี</label>
+      </div>
     <br><label>วันที่เริ่มฝึก <br><input type="date" name="date_start" required/></label><br><br>
     <label>วันสุดท้ายของการฝึก <br><input type="date" name="date_end" required/></label><br><br>
     <label>ปีการศึกษา <br><input type="text" name="year" placeholder="กรอกปีการศึกษา" required/></label><br><br>
