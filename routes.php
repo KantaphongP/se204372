@@ -1,10 +1,9 @@
 <?php
 
-<<<<<<< HEAD
+
 $controllers = array('pages'=>['home','error'],'company'=>['index','indexs','searchs','newCompany','addCompany','search','updateForm','update','deleteConfirm','delete'],'login'=>['signin','check','home','petition','index','addpetition','allPetition'],'lecturer'=>['signin','check','status','date_d','home','petition','search','detailpet','approve','no'],'status_petition'=>['statusPetition']) ; 
-=======
-$controllers = array('pages'=>['home','error'],'company'=>['index','indexs','searchs','newCompany','addCompany','search','updateForm','update','deleteConfirm','delete'],'login'=>['signin','check','home','petition','index','addpetition','allPetition','search'],'lecturer'=>['signin','check','status','home','petition','search','detailpet','approve','no'],'status_petition'=>['statusPetition']) ; 
->>>>>>> 897e04ebeb28f7afee524395b2110106e3385d1e
+
+
 
 function call($controller ,$action){
     //echo "routes to ".$controller."-".$action."<br>" ;
