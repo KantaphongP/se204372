@@ -182,7 +182,7 @@ body {
   </div> 
 </div>
 <div class ="greet">
-  <label>Welcome <?php echo  "$student->name_s!";?></label>
+  <label>สวัสดี <?php echo  "$student->name_s!";?></label>
   <br><a> ระบบจัดการการฝึกงานแบบออนไลน์</a>
   <br><a1>สำหรับภาควิชาวิศวกรรมคอมพิวเตอร์</a1>
 </div>
