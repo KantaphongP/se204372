@@ -275,7 +275,7 @@ body {
 .hh{
      position: absolute;
     left: 55%;
-    top:63%;
+    top:62%;
     font-size: 150%;
 }
 
@@ -303,7 +303,7 @@ body {
   padding: 10px;
   font-size:16px;
   outline:none;
-  margin-top: px;
+  margin-top: 15px;
   background: #385a64;
   border: 1px solid #FFF;
   box-sizing: border-box;
