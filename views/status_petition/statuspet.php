@@ -272,6 +272,38 @@ body {
     top: 19%;
     font-size: 200%;
 }
+.vv {
+  position : absolute ; 
+  top: 70%;
+  left : 50%;
+  width: 45%;
+  color:#FFF;
+}
+.vv input{
+  width:75%;
+  padding: 10px;
+  font-size:16px;
+  outline:none;
+  margin-top: px;
+  background: #C4C4C4;
+  border: 1px solid #FFF;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+.vv button{
+  width:75%;
+  padding: 10px;
+  font-size:16px;
+  outline:none;
+  margin-top: px;
+  background: #385a64;
+  border: 1px solid #FFF;
+  box-sizing: border-box;
+  border-radius: 15px;
+  color:#FFF;
+  z-index: 2;
+  cursor: pointer;
+}
 
 </style>
 </head>
@@ -350,8 +382,16 @@ body {
             <b>ที่พัก :</b> $petition->apartment" ?></a></p>
     </div>
 
-
-
+    <div class="border">
+    <form method="get" action="">
+    <div class="vv">
+    
+    <input type="hidden" name="id_s" value="<?php echo $student->id_s; ?>"/>
+    <input type="hidden"name="controller"value="login"/>
+      <button type="submit"name="action"value="allPetition">back</button>
+      </div>
+    </form>
+    </div >
 
 </body>
 </html>
