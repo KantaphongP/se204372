@@ -307,11 +307,11 @@ body {
     
     <div class ="titlestatus">
         <h1 style="text-align:left;">สถานะการยื่นคำร้องขอฝึกงาน : </h1>
-        <h1 id="rcorners2" style="font-size: 35px; " ><a><?php echo $inf_pet->status_approve ?></a></h1>
+        <h1 id="rcorners2" style="font-size: 35px; " ><a><?php echo $petition->status_approve ?></a></h1>
     </div>
 
     <div class ="reason">
-        <p>หมายเหตุ : <?php echo $inf_pet->reason ?></p>
+        <p>หมายเหตุ : <?php echo $petition->reason ?></p>
     </div>
 
     <div class ="titlestu">
@@ -330,7 +330,7 @@ body {
     </div>
 
     <div class="boxintern">
-        <p id="rcorners5" style="font-size: 25px;"><a><?php echo "<b>ชื่อสถานประกอบการ :</b> $inf_pet->name_c<br>
+        <p id="rcorners5" style="font-size: 25px;"><a><?php echo "<b>ชื่อสถานประกอบการ :</b> $petition->name_c<br>
             <b>ตำแหน่งที่ไปฝึก :</b> $petition->position_s<br>
             <b>ชื่อผู้ที่จะให้ภาควิชาฯออกหนังสือ :</b> <br>$petition->name_getbook<br>
             <b>ตำแหน่งของผู้ที่จะให้ภาควิชาฯออกหนังสือ :</b> <br>$petition->position_g<br>
@@ -342,7 +342,7 @@ body {
     </div>
 
     <div class="boxcom">
-        <p id="rcorners4" style="font-size: 25px;"><a><?php echo "<b>ชื่อสถานประกอบการ :</b> $inf_pet->name_c<br>
+        <p id="rcorners4" style="font-size: 25px;"><a><?php echo "<b>ชื่อสถานประกอบการ :</b> $petition->name_c<br>
             <b>สถานที่ตั้ง :</b> $petition->address_c<br>
             <b>จำนวนค่าตอบแทน :</b> $petition->income บาท/วัน<br>
             <b>ชื่อผู้ประสานงาน :</b> $petition->name_hr <br>
