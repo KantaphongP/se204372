@@ -327,9 +327,9 @@ transform: translate(-50%,-50%);
     <label>ปีการศึกษา <br><input type="text" name="year" placeholder="กรอกปีการศึกษา" required/></label><br><br>
     <input type="hidden" name="controller" value="login"/>
     <div class ="b">
-        <div class="back-btn ">
+        <!-- <div class="back-btn ">
           <button type="submit" name="action" value ="index">back</button><br><br>
-        </div>
+        </div> -->
         <div class="save-btn">
         <button type="submit" name="action" value ="addpetition">save</button><br><br>
     </div>

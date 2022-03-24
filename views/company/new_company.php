@@ -268,19 +268,19 @@ table{
     <div class="add">
         <form method="get" action="">
 
-            <label> ชื่อ <br><input type="text" name="name_c"/> </label><br>
-            <label> ที่อยู่ <br><input type="text" name="address_c"/> </label><br>
-            <label> เบอร์โทร <br><input type="text" name="phone_c"/> </label><br>
-            <label> จำนวนรับ <br><input type="number" name="quantity"/> </label><br>
-            <label> ค่าตอบแทน <br><input type="number" name="income"/> </label><br><br>
+            <label> ชื่อ <br><input type="text" name="name_c" placeholder="กรอกชื่อ" required /> </label><br>
+            <label> ที่อยู่ <br><input type="text" name="address_c" placeholder="กรอกที่อยู่" required/> </label><br>
+            <label> เบอร์โทร <br><input type="text" name="phone_c" placeholder="กรอกเบอร์โทรศัพท์" required/> </label><br>
+            <label> จำนวนรับ <br><input type="number" name="quantity" placeholder="กรอกจำนวน" required/> </label><br>
+            <label> ค่าตอบแทน <br><input type="number" name="income" placeholder="กรอกจำนวนเงิน" required/> </label><br><br>
 
 
             <input type="hidden" name="controller" value = "company"/>
             <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l;?>"/>
             <div class ="b">
-              <div class="back-btn ">
+              <!-- <div class="back-btn ">
                 <button type="submit"name="action" value = "index"> back </button><br>
-              </div>
+              </div> -->
               <div class="update-btn">
                 <button type="submit"name="action" value= "addCompany"> save </button><br>
               </div>
