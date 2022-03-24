@@ -61,5 +61,14 @@
     SigninController::index();
    }
 
+   public function allPetition()
+    {
+        $id_s=$_GET['id_s'];
+        //echo $id_s;
+        $student=Student::get($id_s);
+        $petition_List= Petition :: getAllMe($id_s);
+        require_once("./views/student/all_petition.php");
+    }
+
 }
 ?>
