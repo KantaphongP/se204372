@@ -311,7 +311,7 @@ body {
 
 <div class="user">
 <label> <?php echo  "$student_sp->name_s  $student_sp->lastname_s";?> </label>
-<br><br><a href="?controller=login&action=signin">logout</a>
+<br><br><a href="?controller=login&action=signin">ออกจากระบบ</a>
 </div>
 
 <div class="navbar">
@@ -388,7 +388,7 @@ body {
     
     <input type="hidden" name="id_s" value="<?php echo $student_sp->id_s; ?>"/>
     <input type="hidden"name="controller"value="login"/>
-      <button type="submit"name="action"value="allPetition">back</button>
+      <button type="submit"name="action"value="allPetition">กลับ</button>
       </div>
     </form>
     </div >

@@ -241,7 +241,7 @@ table{
 
 <div class="user">
 <label> <?php echo  "$lecturer->name_l  $lecturer->lastname_l";?> </label>
-<br><br><a href="?controller=login&action=signin">logout</a>
+<br><br><a href="?controller=login&action=signin">ออกจากระบบ</a>
 </div>
 
 <div class="navbar">
@@ -262,7 +262,7 @@ table{
 
 
 <form method="get" action="" class="search">
-<input type="text" name="key" placeholder="Search" class="search_input">
+<input type="text" name="key" placeholder="ค้นหา" class="search_input">
         <input type="hidden" name="controller" value="lecturer">
         <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l; ?>"/>
         <button type="submit" name="action" value="search" class="search_button">
@@ -277,7 +277,7 @@ table{
     $dep->year</option>";}?></select>
     <input type="hidden" name="controller" value="lecturer">
     <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l; ?>"/>
-    <button type= "submit"name="action"value="search">go</button>
+    <button type= "submit"name="action"value="search">ไป</button>
     </form>
 
     <form method="get" action="" class="search">
@@ -289,7 +289,7 @@ table{
     ?></select>
     <input type="hidden" name="controller" value="lecturer">
     <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l; ?>"/>
-    <button type= "submit"name="action"value="status">go</button>
+    <button type= "submit"name="action"value="status">ไป</button>
     </form>
 
     <form method="get" action="" class="search">
@@ -300,7 +300,7 @@ table{
     ?></select>
     <input type="hidden" name="controller" value="lecturer">
     <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l; ?>"/>
-    <button type= "submit"name="action"value="date_d">go</button>
+    <button type= "submit"name="action"value="date_d">ไป</button>
     </form>
   </div>
 

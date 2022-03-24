@@ -320,7 +320,7 @@ body {
 
 <div class="user">
 <label> <?php echo  "$lecturer->name_l  $lecturer->lastname_l";?> </label>
-<br><br><a href="?controller=login&action=signin">logout</a>
+<br><br><a href="?controller=login&action=signin">ออกจากระบบ</a>
 </div>
 
 <div class="navbar">
@@ -405,9 +405,9 @@ body {
           <input type="hidden" name="id_p" value="<?php echo $petition->id_p; ?>"/>
           <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l; ?>"/>
           
-           <button type="submit"name="action"value="approve">approve</button>
-           <button type="submit"name="action"value="no">disapprove</button>
-          <button type="submit"name="action"value="petition">back</button>
+           <button type="submit"name="action"value="approve">อนุมัติ</button>
+           <button type="submit"name="action"value="no">ไม่อนุมัติ</button>
+          <button type="submit"name="action"value="petition">กลับ</button>
 </div>
  </form>
 </div >

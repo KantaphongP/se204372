@@ -243,7 +243,7 @@ table{
 
 <div class="user">
 <label> <?php echo  "$lecturer->name_l  $lecturer->lastname_l";?> </label>
-<br><br><a href="?controller=login&action=signin">logout</a>
+<br><br><a href="?controller=login&action=signin">ออกจากระบบ</a>
 </div>
 
 <div class="navbar">
@@ -282,7 +282,7 @@ table{
                 <button type="submit"name="action" value = "index"> back </button><br>
               </div> -->
               <div class="update-btn">
-                <button type="submit"name="action" value= "addCompany"> save </button><br>
+                <button type="submit"name="action" value= "addCompany"> บันทึก </button><br>
               </div>
         </form>
     </div>

@@ -163,7 +163,7 @@ body {
 
 <div class="user">
 <label> <?php echo  "$lecturer->name_l  $lecturer->lastname_l";?> </label>
-<br><br><a href="?controller=login&action=signin">logout</a>
+<br><br><a href="?controller=login&action=signin">ออกจากระบบ</a>
 </div>
 
 <div class="navbar">
@@ -181,7 +181,7 @@ body {
   </div> 
 </div>
 <div class ="greet">
-  <label>Welcome <?php echo  "$lecturer->name_l!";?></label>
+  <label>สวัสดี <?php echo  "$lecturer->name_l!";?></label>
   <br><a> ระบบจัดการการฝึกงานแบบออนไลน์</a>
   <br><a1>สำหรับภาควิชาวิศวกรรมคอมพิวเตอร์</a1>
 </div>

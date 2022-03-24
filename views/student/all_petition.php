@@ -209,7 +209,7 @@ table{
 
 <div class="user">
 <label> <?php echo  "$student->name_s  $student->lastname_s";?> </label>
-<br><br><a href="?controller=login&action=signin">logout</a>
+<br><br><a href="?controller=login&action=signin">ออกจากระบบ</a>
 </div>
 
 <div class="navbar">
@@ -230,7 +230,7 @@ table{
 
 
 <form method="get" action="" class="search">
-<input type="text" name="key" placeholder="Search" class="search_input">
+<input type="text" name="key" placeholder="ค้นหา" class="search_input">
         <input type="hidden" name="controller" value="login">
         <input type="hidden" name="id_s" value="<?php echo $student->id_s; ?>"/>
         <button type="submit" name="action" value="search" class="search_button">

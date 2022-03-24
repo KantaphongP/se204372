@@ -118,10 +118,10 @@ z-index: 1;
         </div>
         <div class="b">
           <div class="back-btn ">
-            <button type="submit" name="action" value="index">back</button>
+            <button type="submit" name="action" value="index">กลับ</button>
         </div>
         <div class="delete-btn">
-            <button type="submit" name="action" value="delete">delete</button>
+            <button type="submit" name="action" value="delete">ลบ</button>
         </div>
         </div>
         

@@ -282,7 +282,7 @@ transform: translate(-50%,-50%);
 
 <div class="user">
 <label> <?php echo  "$student->name_s  $student->lastname_s";?> </label>
-<br><br><a href="?controller=login&action=signin">logout</a>
+<br><br><a href="?controller=login&action=signin">ออกจากระบบ</a>
 </div>
 
 <div class="navbar">
@@ -347,7 +347,7 @@ transform: translate(-50%,-50%);
           <button type="submit" name="action" value ="index">back</button><br><br>
         </div> -->
         <div class="save-btn">
-        <button type="submit" name="action" value ="addpetition">save</button><br><br>
+        <button type="submit" name="action" value ="addpetition">บันทึก</button><br><br>
     </div>
   <div>
   </form>

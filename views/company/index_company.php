@@ -214,7 +214,7 @@ table{
 <body>
 <div class="user">
 <label> <?php echo  "$lecturer->name_l  $lecturer->lastname_l";?> </label>
-<br><br><a href="?controller=login&action=signin">logout</a>
+<br><br><a href="?controller=login&action=signin">ออกจากระบบ</a>
 </div>
 
 <div class="navbar">
@@ -234,7 +234,7 @@ table{
 
 
 <form method="get" action="" class="search">
-        <input type="text" name="key" placeholder="Search" class="search_input">
+        <input type="text" name="key" placeholder="ค้นหา" class="search_input">
         <!--<input type="text" name="key">-->
         <input type="hidden" name="controller" value="company">
         <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l; ?>"/>
