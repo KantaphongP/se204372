@@ -35,34 +35,9 @@ form {
   transition: all 0.2s;
 }
 
-.dropdown-1 .year label {
-  margin: left 10px;
-  width: 30%;
-}
-.dropdown-1 select {
-  border-radius: 10px;
-  width:10%;
-  height:3%;
-  border: 2px solid #2F4F58;
-  background: #ddd;
-}
-.dropdown-1 select option {
-  text-align: center;
-  font-family:'Noto Sans Thai', sans-serif;
-}
-.dropdown-1 button {
-  font-family:'Noto Sans Thai', sans-serif;
-  width:5%;
-  height:3%;
-  border-radius: 10px;
-  background:#FF735C;
-  border: 2px solid #2F4F58;
-  margin: left 5px;
-  color:white;
-  cursor: pointer;
-}
 
-.search_input:focus {
+
+/*.search_input:focus {
   outline: none;
   width: 60%;
   background-color: #f0eeee;
@@ -71,7 +46,8 @@ form {
   font-family: 'Noto Sans Thai', sans-serif;
   font-size : 18px;
   color: #2F4F58;
-}
+}*/
+
 .search_button {
   border: none;
   background-color: transparent;
@@ -80,9 +56,9 @@ form {
 .search_button:focus {
   outline:none;
 }
-.search_button:active {
+/*.search_button:active {
   transform: translateY(2px);
-}
+}*/
 .search_icon {
   font-size: 18px;
   color:#FF735C;
@@ -231,6 +207,34 @@ table{
     
 }
 
+.dropdown-1 .year label {
+  margin: left 10px;
+  width: 30%;
+}
+.dropdown-1 select {
+  border-radius: 10px;
+  width:10%;
+  height:3%;
+  border: 2px solid #2F4F58;
+  background: #ddd;
+}
+.dropdown-1 select option {
+  text-align: center;
+  font-family:'Noto Sans Thai', sans-serif;
+}
+.dropdown-1 button {
+  font-family:'Noto Sans Thai', sans-serif;
+  width:5%;
+  height:3%;
+  border-radius: 10px;
+  background:#FF735C;
+  border: 2px solid #2F4F58;
+  margin: left 5px;
+  color:white;
+  cursor: pointer;
+}
+
+
 </style>
 </head>
 <body>
@@ -265,10 +269,8 @@ table{
         <i class="fas fa-search search_icon"></i>
         </button>
 </form>
-
   <div class="dropdown-1">
-
-  <form method="get" action="" class="search">
+    <form method="get" action="" class="search">
     <label>ปีการศึกษา</label>
     <select name="key">
     <?php foreach($year_List as $dep) {echo "<option value = $dep->year>
@@ -289,7 +291,6 @@ table{
     <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l; ?>"/>
     <button type= "submit"name="action"value="status">go</button>
     </form>
-
 
     <form method="get" action="" class="search">
     <label>วันที่ส่ง</label>
