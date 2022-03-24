@@ -291,7 +291,7 @@ body {
     </button>
     <div class="dropdown-content">
     <a href=?controller=login&action=petition&id_s=<?php echo $student_sp->id_s;?>>ใบยื่นคำขอฝึกงาน </a>
-    <a href=?controller=status_petition&action=statusPetition&id_s=<?php echo $student_sp->id_s;?>>ตรวจสอบสถานะ</a>
+    <a href=?controller=login&action=allPetition&id_s=<?php echo $student_sp->id_s;?>>ตรวจสอบสถานะ</a>
     </div>
   </div> 
 </div>
