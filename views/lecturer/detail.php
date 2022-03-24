@@ -274,7 +274,7 @@ body {
 }
 .hh{
      position: absolute;
-    left: 50%;
+    left: 55%;
     top:63%;
     font-size: 150%;
 }
@@ -283,7 +283,7 @@ body {
 .vv {
   position : absolute ; 
   top: 70%;
-  left : 50%;
+  left : 55%;
   width: 45%;
   color:#FFF;
 }
@@ -333,8 +333,6 @@ body {
     <div class="dropdown-content">
     <a href=?controller=lecturer&action=petition&id_l=<?php echo $lecturer->id_l;?>> คำร้องขอฝึกงานทั้งหมด</a>
     <a href=?controller=company&action=newCompany&id_l=<?php echo $lecturer->id_l;?>> เพิ่มสถานประกอบการ</a>
-    <a>ตรวจสอบคำร้อง</a>
-    <a>ตรวจสอบประวัติ </a>
     </div>
   </div> 
 </div>
@@ -407,8 +405,8 @@ body {
           <input type="hidden" name="id_p" value="<?php echo $petition->id_p; ?>"/>
           <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l; ?>"/>
           
-           <button type="submit"name="action"value="approve">/</button>
-           <button type="submit"name="action"value="no">X</button>
+           <button type="submit"name="action"value="approve">approve</button>
+           <button type="submit"name="action"value="no">disapprove</button>
           <button type="submit"name="action"value="petition">back</button>
 </div>
  </form>

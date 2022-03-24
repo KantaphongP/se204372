@@ -275,7 +275,7 @@ body {
 .vv {
   position : absolute ; 
   top: 70%;
-  left : 50%;
+  left : 55%;
   width: 45%;
   color:#FFF;
 }
