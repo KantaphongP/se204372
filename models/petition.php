@@ -384,7 +384,7 @@
         $petitionList=[];
         //$id_s = $_GET['id_s'];
         require("connection_connect.php");
-        $sql="SELECT * FROM petition natural join student natural join company natural join type WHERE id_s = '$id_s'(date_d like '%$key%' or name_s like '%$key%' or lastname_s like '%$key%' or status_approve like '%$key%' or year like '%$key%' or name_t like '%$key%' or name_c like '%$key%')";
+        $sql="SELECT * FROM petition natural join student natural join company natural join type WHERE id_s = '$id_s' AND (date_d like '%$key%' or name_s like '%$key%' or lastname_s like '%$key%' or status_approve like '%$key%' or year like '%$key%' or name_t like '%$key%' or name_c like '%$key%')";
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
