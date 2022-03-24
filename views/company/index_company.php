@@ -108,6 +108,16 @@ body {
   text-decoration: none;
 }
 
+.navbar a1 {
+  float: left;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: #FF735C;
+}
+
 .dropdown {
   float: left;
   overflow: hidden;
@@ -219,7 +229,7 @@ table{
 
 <div class="navbar">
 <a href=?controller=lecturer&action=home&id_l=<?php echo $lecturer->id_l;?>>หน้าแรก</a>
-  <a href=?controller=company&action=index&id_l=<?php echo $lecturer->id_l;?>>ค้นหาสถานประกอบการ</a>
+  <a1 href=?controller=company&action=index&id_l=<?php echo $lecturer->id_l;?>>ค้นหาสถานประกอบการ</a1>
   <div class="dropdown">
     <button class="dropbtn">การฝึกงาน 
       <i class="fa fa-caret-down"></i>
