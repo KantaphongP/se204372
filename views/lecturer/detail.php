@@ -72,6 +72,7 @@ body {
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+  background-color: #FF735C;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
