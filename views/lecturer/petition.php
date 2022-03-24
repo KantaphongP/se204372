@@ -237,6 +237,27 @@ table{
         <i class="fas fa-search search_icon"></i>
         </button>
 </form>
+<form method="get" action="" class="search">
+<label>ปีการศึกษา<select name="key">
+    <?php foreach($year_List as $dep) {echo "<option value = $dep->year>
+    $dep->year</option>";}
+    ?></select></label>
+    <input type="hidden" name="controller" value="lecturer">
+    <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l; ?>"/>
+    <button type= "submit"name="action"value="search">go</button>
+      
+</form>
+<form method="get" action="" class="search">
+<label>สถานะ<select name="key">
+    <?php {echo "<option value = อนุมัติ> อนุมัติ</option>";
+            echo "<option value = ไม่อนุมัติ> ไม่อนุมัติ</option>";
+            echo "<option value = รอดำเนินการ> รอดำเนินการ</option>";}
+    ?></select></label>
+    <input type="hidden" name="controller" value="lecturer">
+    <input type="hidden" name="id_l" value="<?php echo $lecturer->id_l; ?>"/>
+    <button type= "submit"name="action"value="status">go</button>
+      
+</form>
 
 <table class="center">
 <tr><th>วันที่ส่ง</th><th>ปีการศึกษา</th><th>ชื่อ</th><th>นามสกุล</th><th>บริษัทที่ส่ง</th><th>ประเภทการฝึก</th><th>คำร้อง</th><th>การอนุมัติ</th></tr>
