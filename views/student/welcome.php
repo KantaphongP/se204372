@@ -121,14 +121,14 @@ body {
 
 .greet a{
   position : absolute ; 
-  top : 10%; 
+  top : 12%; 
   left : 4% ;
   float : center ; 
   font-size: 250%;
 }
 .greet a1{
   position : absolute ; 
-  top : 14%; 
+  top : 16%; 
   left : 3.5% ;
   float : center ; 
   font-size: 250%;
@@ -136,8 +136,8 @@ body {
 .img{
   position : absolute ; 
   z-index: 1;
-  top : 0%;
-  left : 50% ; 
+  top : 2%;
+  left : 55% ;
 }
 
 
@@ -187,7 +187,7 @@ body {
   <br><a1>สำหรับภาควิชาวิศวกรรมคอมพิวเตอร์</a1>
 </div>
 <div class="img">
-<img src="Welcome-pana.png" alt="Welcome" width="100%" height="100%">
+<img src="Welcome-pana.png" alt="Welcome" width="1000px" height="1000px">
 </div>
 <div class="footer">
 </div>
