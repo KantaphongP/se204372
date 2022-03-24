@@ -316,7 +316,7 @@ transform: translate(-50%,-50%);
     $dep->name_c</option>";}
     ?></select></label><br><br>
     <label>ชื่อผู้ประสานงาน <br><input type="text" name="name_hr" placeholder="กรอกชื่อ" required/></label><br><br>
-    <label>เบอร์โทรศัพท์ <br><input type="text" name="phone_hr" placeholder="กรอกเบอร์โทรศัพท์" required/></label><br><br>
+    <label>เบอร์โทรศัพท์ <br><input type="text" name="phone_hr"  pattern="^0([8|9|6])([0-9]{8}$)" autocomplete="off" placeholder="กรอกเบอร์โทรศัพท์" required/></label><br><br>
     <label>อีเมล <br><input type="text" name="email_hr" placeholder="กรอกอีเมล" required/></label><br><br>
   <div>
 
