@@ -386,7 +386,7 @@ body {
     <form method="get" action="">
     <div class="vv">
     
-    <input type="hidden" name="id_s" value="<?php echo $student->id_s; ?>"/>
+    <input type="hidden" name="id_s" value="<?php echo $student_sp->id_s; ?>"/>
     <input type="hidden"name="controller"value="login"/>
       <button type="submit"name="action"value="allPetition">back</button>
       </div>
