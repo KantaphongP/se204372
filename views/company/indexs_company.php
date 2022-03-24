@@ -24,18 +24,17 @@ form {
   border-radius: 50px;
   margin-right: -50px;
   margin-top: 10px;
-  transition: all 0.2s;
 }
-.search_input:focus {
+/*.search_input:focus {
   outline: none;
   width: 60%;
-  background-color: #f0eeee;
+  
 }
 .search_input:-webkit-input-placehoder {
   font-family: 'Noto Sans Thai', sans-serif;
   font-size : 18px;
   color: #2F4F58;
-}
+}*/
 .search_button {
   border: none;
   background-color: transparent;
@@ -43,10 +42,11 @@ form {
 }
 .search_button:focus {
   outline:none;
+  background-color: #f0eeee;
 }
-.search_button:active {
+/*.search_button:active {
   transform: translateY(2px);
-}
+}*/
 .search_icon {
   font-size: 18px;
   color:#FF735C;
