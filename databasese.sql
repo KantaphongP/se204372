@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 24, 2022 at 07:05 PM
+-- Generation Time: Mar 24, 2022 at 07:19 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -123,7 +123,9 @@ CREATE TABLE `petition` (
 --
 
 INSERT INTO `petition` (`id_p`, `date_d`, `id_t`, `id_c`, `id_s`, `status_ap_company`, `position_s`, `name_getbook`, `position_g`, `name_hr`, `phone_hr`, `email_hr`, `apartment`, `date_start`, `date_end`, `status_approve`, `reason`, `year`) VALUES
-(12, '2022-03-25', 1, 11, 'b6220503555', 'รอดำเนินการ', 'front-end', 'ศิธิชัย อำพรพรรณ', 'คณะกรรมการบริหาร', 'รกาพร ประดิษฐ์', '0944567890', 'hr@gofive.com', 'มี', '2022-04-18', '2022-05-10', 'รอดำเนินการ', NULL, '2565');
+(12, '2022-03-25', 1, 11, 'b6220503555', 'รอดำเนินการ', 'front-end', 'ศิธิชัย อำพรพรรณ', 'คณะกรรมการบริหาร', 'รกาพร ประดิษฐ์', '0944567890', 'hr@gofive.com', 'มี', '2022-04-18', '2022-05-10', 'รอดำเนินการ', NULL, '2565'),
+(13, '2022-03-25', 1, 9, 'b6220502999', 'รอดำเนินการ', 'software engineer', 'วุฐิพร สถาพร', 'คณะกรรมการบริหาร', 'มีนา รักลนา', '0864345678', 'hr@drone.com', 'มี', '2022-04-18', '2022-06-12', 'รอดำเนินการ', NULL, '2565'),
+(14, '2022-03-16', 1, 11, 'b6220502999', 'รอดำเนินการ', 'software engineer', 'ศิธิชัย อำพรพรรณ', 'คณะกรรมการบริหาร', 'รกาพร ประดิษฐ์', '0944567890', 'hr@gofive.com', 'มี', '2022-04-18', '2022-06-10', 'รอดำเนินการ', NULL, '2565');
 
 -- --------------------------------------------------------
 
@@ -145,6 +147,7 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`id_s`, `name_s`, `lastname_s`, `passwords`, `email`, `phone_s`) VALUES
+('b6220502999', 'บุษกร', 'อนันตพร', 'nongeyeye', 'busak@ku.th', '0876787888'),
 ('b6220503555', 'มาติกาน', 'โชคอนันต์', 'lovelove*gg', 'matikarn.t@ku.th', '0675463345'),
 ('b6220504444', 'สารสาส', 'สีมี', 'vvvv', 'sarasas@ku.th', '0968754993'),
 ('b6220507456', 'ราชัน', 'วิเศษทรัพย์', 'rasanvi#', 'rasan.v@ku.th', '0876433398');
@@ -233,7 +236,7 @@ ALTER TABLE `company`
 -- AUTO_INCREMENT for table `petition`
 --
 ALTER TABLE `petition`
-  MODIFY `id_p` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_p` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `type`
