@@ -250,7 +250,7 @@ table{
         <td>$petition->name_c</td>
         <td>$petition->name_t</td>
        <td>
-        <a href=?controller=status_petition&action=statusPetition&id_p=$petition->id_p&id_s=$student->id_s>see</a>
+        <a href=?controller=status_petition&action=statusPetition&id_p=$petition->id_p&id_s=$student->id_s>ดู</a>
         </td> <td>$petition->status_approve</td></tr>";
 }
 echo "</table>";

@@ -281,7 +281,7 @@ table{
         <td>$petition->name_c</td>
         <td>$petition->name_t</td>
        <td>
-        <a href=?controller=lecturer&action=detailpet&id_p=$petition->id_p&id_l=$lecturer->id_l>see</a>
+        <a href=?controller=lecturer&action=detailpet&id_p=$petition->id_p&id_l=$lecturer->id_l>ดู</a>
         </td> <td>$petition->status_approve</td></tr>";
 }
 echo "</table>";
