@@ -237,10 +237,11 @@ table{
         </button>
   </form>
 <table class="center">
-<tr><th>ชื่อสถานประกอบการ</th><th>จำนวนที่เปิดรับ</th><th>ค่าตอบแทน</th></tr>
+<tr><th>ชื่อสถานประกอบการ</th><th>เบอร์โทรติดต่อ</th><th>จำนวนที่เปิดรับ</th><th>ค่าตอบแทน</th></tr>
 <?php foreach($company_List as $company)
 {
         echo "<tr><td>$company->name_c</td>
+        <td>$company->phone_c</td>
         <td>$company->quantity</td>
         <td>$company->income</td>
        </tr>";

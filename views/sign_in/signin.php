@@ -192,7 +192,7 @@ body {
                     <div class="form-element">
                         <label > บัญชีผู้ใช้เครือข่ายนนทรี <input type="text" name="id_s" placeholder="กรอกชื่อบัญชี" required/>  </label></div>
                     <div class="form-element">
-                        <label> รหัสผ่าน <input type="text" name="passwords" placeholder="กรอกรหัสผ่าน" required/> </label></div>
+                        <label> รหัสผ่าน <input type="password" name="passwords" placeholder="กรอกรหัสผ่าน" required/> </label></div>
                     <div class="form-element">
                         <input type="hidden" name="controller" value = "login"/></div>
                     <div class="form-element">
@@ -205,7 +205,7 @@ body {
                     <div class="form-element">
                         <label> บัญชีผู้ใช้เครือข่ายนนทรี <input type="text" name="id_l" placeholder="กรอกชื่อบัญชี" required/> </label></div>
                     <div class="form-element">
-                    <label> รหัสผ่าน <input type="text" name="passwords" placeholder="กรอกรหัสผ่าน" required/> </label></div>
+                    <label> รหัสผ่าน <input type="password" name="passwords" placeholder="กรอกรหัสผ่าน" required/> </label></div>
                     <div class="form-element">
                     <input type="hidden" name="controller" value = "lecturer"/></div>
                     <div class="form-element">
